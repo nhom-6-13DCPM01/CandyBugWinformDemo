@@ -29,15 +29,13 @@ namespace CandyBugWinformDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnSetting = new FontAwesome.Sharp.IconButton();
-            this.btnMarketing = new FontAwesome.Sharp.IconButton();
+            this.btnAdmin = new FontAwesome.Sharp.IconButton();
+            this.btnStatistical = new FontAwesome.Sharp.IconButton();
             this.btnCustomer = new FontAwesome.Sharp.IconButton();
             this.btnProduct = new FontAwesome.Sharp.IconButton();
             this.btnOrder = new FontAwesome.Sharp.IconButton();
-            this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
@@ -61,12 +59,11 @@ namespace CandyBugWinformDemo
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.DarkOrange;
-            this.panelMenu.Controls.Add(this.btnSetting);
-            this.panelMenu.Controls.Add(this.btnMarketing);
+            this.panelMenu.Controls.Add(this.btnAdmin);
+            this.panelMenu.Controls.Add(this.btnStatistical);
             this.panelMenu.Controls.Add(this.btnCustomer);
             this.panelMenu.Controls.Add(this.btnProduct);
             this.panelMenu.Controls.Add(this.btnOrder);
-            this.panelMenu.Controls.Add(this.btnDashboard);
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -74,45 +71,45 @@ namespace CandyBugWinformDemo
             this.panelMenu.Size = new System.Drawing.Size(220, 600);
             this.panelMenu.TabIndex = 0;
             // 
-            // btnSetting
+            // btnAdmin
             // 
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Cogs;
-            this.btnSetting.IconColor = System.Drawing.Color.White;
-            this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 445);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnSetting.Size = new System.Drawing.Size(220, 61);
-            this.btnSetting.TabIndex = 6;
-            this.btnSetting.Text = "Setting";
-            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSetting.UseVisualStyleBackColor = true;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.IconChar = FontAwesome.Sharp.IconChar.Cogs;
+            this.btnAdmin.IconColor = System.Drawing.Color.White;
+            this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdmin.Location = new System.Drawing.Point(0, 384);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAdmin.Size = new System.Drawing.Size(220, 61);
+            this.btnAdmin.TabIndex = 6;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnSetting_Click);
             // 
-            // btnMarketing
+            // btnStatistical
             // 
-            this.btnMarketing.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMarketing.FlatAppearance.BorderSize = 0;
-            this.btnMarketing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarketing.IconChar = FontAwesome.Sharp.IconChar.Ad;
-            this.btnMarketing.IconColor = System.Drawing.Color.White;
-            this.btnMarketing.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMarketing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarketing.Location = new System.Drawing.Point(0, 384);
-            this.btnMarketing.Name = "btnMarketing";
-            this.btnMarketing.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMarketing.Size = new System.Drawing.Size(220, 61);
-            this.btnMarketing.TabIndex = 5;
-            this.btnMarketing.Text = "Marketing";
-            this.btnMarketing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarketing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMarketing.UseVisualStyleBackColor = true;
-            this.btnMarketing.Click += new System.EventHandler(this.btnMarketing_Click);
+            this.btnStatistical.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStatistical.FlatAppearance.BorderSize = 0;
+            this.btnStatistical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistical.IconChar = FontAwesome.Sharp.IconChar.Sellcast;
+            this.btnStatistical.IconColor = System.Drawing.Color.White;
+            this.btnStatistical.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnStatistical.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStatistical.Location = new System.Drawing.Point(0, 323);
+            this.btnStatistical.Name = "btnStatistical";
+            this.btnStatistical.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnStatistical.Size = new System.Drawing.Size(220, 61);
+            this.btnStatistical.TabIndex = 5;
+            this.btnStatistical.Text = "Statistical";
+            this.btnStatistical.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStatistical.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStatistical.UseVisualStyleBackColor = true;
+            this.btnStatistical.Click += new System.EventHandler(this.btnMarketing_Click);
             // 
             // btnCustomer
             // 
@@ -123,7 +120,7 @@ namespace CandyBugWinformDemo
             this.btnCustomer.IconColor = System.Drawing.Color.White;
             this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 323);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 262);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCustomer.Size = new System.Drawing.Size(220, 61);
@@ -143,7 +140,7 @@ namespace CandyBugWinformDemo
             this.btnProduct.IconColor = System.Drawing.Color.White;
             this.btnProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(0, 262);
+            this.btnProduct.Location = new System.Drawing.Point(0, 201);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnProduct.Size = new System.Drawing.Size(220, 61);
@@ -163,7 +160,7 @@ namespace CandyBugWinformDemo
             this.btnOrder.IconColor = System.Drawing.Color.White;
             this.btnOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(0, 201);
+            this.btnOrder.Location = new System.Drawing.Point(0, 140);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnOrder.Size = new System.Drawing.Size(220, 61);
@@ -173,26 +170,6 @@ namespace CandyBugWinformDemo
             this.btnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrder.UseVisualStyleBackColor = true;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.Flipboard;
-            this.btnDashboard.IconColor = System.Drawing.Color.White;
-            this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 140);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(220, 61);
-            this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // panel1
             // 
@@ -320,7 +297,6 @@ namespace CandyBugWinformDemo
             this.ForeColor = System.Drawing.Color.White;
             this.MinimumSize = new System.Drawing.Size(1100, 600);
             this.Name = "Form2";
-            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -339,10 +315,9 @@ namespace CandyBugWinformDemo
 
         #endregion
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnDashboard;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btnSetting;
-        private FontAwesome.Sharp.IconButton btnMarketing;
+        private FontAwesome.Sharp.IconButton btnAdmin;
+        private FontAwesome.Sharp.IconButton btnStatistical;
         private FontAwesome.Sharp.IconButton btnCustomer;
         private FontAwesome.Sharp.IconButton btnProduct;
         private FontAwesome.Sharp.IconButton btnOrder;

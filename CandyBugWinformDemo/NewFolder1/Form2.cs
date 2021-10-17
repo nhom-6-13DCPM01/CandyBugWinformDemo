@@ -97,7 +97,7 @@ namespace CandyBugWinformDemo
             childForm.Dock = DockStyle.None;
             panelDesktop.Controls.Add(childForm);
             panelDesktop.Tag = childForm;
-            childForm.Show();
+            childForm.ShowDialog();
             lblTittleChildForm.Text = childForm.Text;
         }
         private void Form2_Load(object sender, EventArgs e)
@@ -132,13 +132,13 @@ namespace CandyBugWinformDemo
         private void btnMarketing_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new NewFolder1.FormMarketing());
+            OpenChildForm(new NewFolder1.FormStatistical());
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new NewFolder1.FormSetting());
+            OpenChildForm(new NewFolder1.FormAdmin());
         }
 
         private void btnHome_Click(object sender, EventArgs e)

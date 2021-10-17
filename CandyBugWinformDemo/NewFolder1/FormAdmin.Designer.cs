@@ -1,7 +1,7 @@
 ﻿
 namespace CandyBugWinformDemo.NewFolder1
 {
-    partial class FormMarketing
+    partial class FormAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormMarketing";
+            this.Text = "FormSetting";
         }
 
         #endregion

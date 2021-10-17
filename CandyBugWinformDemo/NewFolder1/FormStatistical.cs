@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CandyBugWinformDemo.NewFolder1
 {
-    public partial class FormMarketing : Form
+    public partial class FormStatistical : Form
     {
-        public FormMarketing()
+        public FormStatistical()
         {
             InitializeComponent();
         }
