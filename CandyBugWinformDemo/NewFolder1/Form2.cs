@@ -97,7 +97,7 @@ namespace CandyBugWinformDemo
             childForm.Dock = DockStyle.None;
             panelDesktop.Controls.Add(childForm);
             panelDesktop.Tag = childForm;
-            childForm.ShowDialog();
+            childForm.Show();
             lblTittleChildForm.Text = childForm.Text;
         }
         private void Form2_Load(object sender, EventArgs e)
