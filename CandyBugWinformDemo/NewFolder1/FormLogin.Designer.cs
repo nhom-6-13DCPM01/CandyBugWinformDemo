@@ -87,10 +87,10 @@ namespace CandyBugWinformDemo
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(105, -11);
+            this.Logo.Location = new System.Drawing.Point(88, 0);
             this.Logo.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(175, 135);
+            this.Logo.Size = new System.Drawing.Size(245, 174);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
@@ -99,7 +99,7 @@ namespace CandyBugWinformDemo
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(121, 109);
+            this.label1.Location = new System.Drawing.Point(135, 145);
             this.label1.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 46);
