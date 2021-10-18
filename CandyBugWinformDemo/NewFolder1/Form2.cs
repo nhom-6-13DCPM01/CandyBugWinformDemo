@@ -105,11 +105,7 @@ namespace CandyBugWinformDemo
 
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new NewFolder1.FormDashboard());
-        }
+       
 
         private void btnOrder_Click(object sender, EventArgs e)
         {

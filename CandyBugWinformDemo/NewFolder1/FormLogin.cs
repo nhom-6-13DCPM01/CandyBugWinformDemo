@@ -23,7 +23,7 @@ namespace CandyBugWinformDemo
 
         }
 
-        
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -39,6 +39,7 @@ namespace CandyBugWinformDemo
             {
                 new Form2().ShowDialog();
                 this.Hide();
+                
             }
             else
             {
