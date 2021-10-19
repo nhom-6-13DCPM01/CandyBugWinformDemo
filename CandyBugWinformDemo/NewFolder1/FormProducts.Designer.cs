@@ -40,7 +40,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.txtIDProduct = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnShowProduct = new System.Windows.Forms.Button();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
@@ -188,7 +187,6 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnShowProduct);
             this.panel3.Controls.Add(this.btnUpdateProduct);
             this.panel3.Controls.Add(this.btnDeleteProduct);
             this.panel3.Controls.Add(this.btnAddProduct);
@@ -198,25 +196,12 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel3.Size = new System.Drawing.Size(565, 54);
             this.panel3.TabIndex = 5;
             // 
-            // btnShowProduct
-            // 
-            this.btnShowProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShowProduct.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnShowProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowProduct.Location = new System.Drawing.Point(390, 3);
-            this.btnShowProduct.Name = "btnShowProduct";
-            this.btnShowProduct.Size = new System.Drawing.Size(95, 46);
-            this.btnShowProduct.TabIndex = 3;
-            this.btnShowProduct.Text = "Show";
-            this.btnShowProduct.UseVisualStyleBackColor = false;
-            this.btnShowProduct.Click += new System.EventHandler(this.btnShowProduct_Click);
-            // 
             // btnUpdateProduct
             // 
             this.btnUpdateProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdateProduct.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnUpdateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProduct.Location = new System.Drawing.Point(289, 3);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(339, 3);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(95, 46);
             this.btnUpdateProduct.TabIndex = 3;
@@ -228,7 +213,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnDeleteProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteProduct.BackColor = System.Drawing.Color.OrangeRed;
             this.btnDeleteProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteProduct.Location = new System.Drawing.Point(188, 3);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(238, 3);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(95, 46);
             this.btnDeleteProduct.TabIndex = 3;
@@ -240,7 +225,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.Location = new System.Drawing.Point(87, 3);
+            this.btnAddProduct.Location = new System.Drawing.Point(137, 3);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(95, 46);
             this.btnAddProduct.TabIndex = 3;
@@ -347,7 +332,6 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Label label3;
         private ComponentFactory.Krypton.Toolkit.KryptonDomainUpDown updownPrice;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnShowProduct;
         private System.Windows.Forms.Button btnUpdateProduct;
         private System.Windows.Forms.Button btnDeleteProduct;
         private System.Windows.Forms.Button btnAddProduct;
