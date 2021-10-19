@@ -103,6 +103,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCurrentOrder)).BeginInit();
@@ -126,6 +129,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel7.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonTextBox1
@@ -615,7 +620,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Cakes.Location = new System.Drawing.Point(4, 25);
             this.Cakes.Name = "Cakes";
             this.Cakes.Padding = new System.Windows.Forms.Padding(3);
-            this.Cakes.Size = new System.Drawing.Size(687, 552);
+            this.Cakes.Size = new System.Drawing.Size(687, 592);
             this.Cakes.TabIndex = 0;
             this.Cakes.Text = "Cakes";
             this.Cakes.UseVisualStyleBackColor = true;
@@ -854,14 +859,16 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.Cakes);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 68);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(695, 581);
+            this.tabControl1.Size = new System.Drawing.Size(695, 621);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -1022,12 +1029,46 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label2.TabIndex = 0;
             this.label2.Text = "Matcha & peach";
             // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.pictureBox1);
+            this.panel14.Controls.Add(this.kryptonTextBox3);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(701, 62);
+            this.panel14.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(323, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // kryptonTextBox3
+            // 
+            this.kryptonTextBox3.Location = new System.Drawing.Point(12, 13);
+            this.kryptonTextBox3.Name = "kryptonTextBox3";
+            this.kryptonTextBox3.Size = new System.Drawing.Size(305, 39);
+            this.kryptonTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox3.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox3.StateCommon.Border.Rounding = 18;
+            this.kryptonTextBox3.TabIndex = 6;
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1178, 581);
+            this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1076,6 +1117,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel11.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1154,5 +1198,8 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Button btnD;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private System.Windows.Forms.Button btnPrintBill;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
     }
 }
