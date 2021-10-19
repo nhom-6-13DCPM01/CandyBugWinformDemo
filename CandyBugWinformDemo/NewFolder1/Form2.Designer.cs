@@ -34,7 +34,6 @@ namespace CandyBugWinformDemo
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.btnStatistical = new FontAwesome.Sharp.IconButton();
-            this.btnCustomer = new FontAwesome.Sharp.IconButton();
             this.btnProduct = new FontAwesome.Sharp.IconButton();
             this.btnOrder = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,7 +55,6 @@ namespace CandyBugWinformDemo
             this.panelMenu.BackColor = System.Drawing.Color.DarkOrange;
             this.panelMenu.Controls.Add(this.btnAdmin);
             this.panelMenu.Controls.Add(this.btnStatistical);
-            this.panelMenu.Controls.Add(this.btnCustomer);
             this.panelMenu.Controls.Add(this.btnProduct);
             this.panelMenu.Controls.Add(this.btnOrder);
             this.panelMenu.Controls.Add(this.panel1);
@@ -75,7 +73,7 @@ namespace CandyBugWinformDemo
             this.btnAdmin.IconColor = System.Drawing.Color.White;
             this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(0, 385);
+            this.btnAdmin.Location = new System.Drawing.Point(0, 320);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnAdmin.Size = new System.Drawing.Size(224, 61);
@@ -95,7 +93,7 @@ namespace CandyBugWinformDemo
             this.btnStatistical.IconColor = System.Drawing.Color.White;
             this.btnStatistical.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStatistical.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistical.Location = new System.Drawing.Point(0, 324);
+            this.btnStatistical.Location = new System.Drawing.Point(0, 259);
             this.btnStatistical.Name = "btnStatistical";
             this.btnStatistical.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnStatistical.Size = new System.Drawing.Size(224, 61);
@@ -105,26 +103,6 @@ namespace CandyBugWinformDemo
             this.btnStatistical.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistical.UseVisualStyleBackColor = true;
             this.btnStatistical.Click += new System.EventHandler(this.btnMarketing_Click);
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomer.FlatAppearance.BorderSize = 0;
-            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnCustomer.IconColor = System.Drawing.Color.White;
-            this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 259);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCustomer.Size = new System.Drawing.Size(224, 65);
-            this.btnCustomer.TabIndex = 4;
-            this.btnCustomer.Text = "Customer";
-            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCustomer.UseVisualStyleBackColor = true;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnProduct
             // 
@@ -278,7 +256,6 @@ namespace CandyBugWinformDemo
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnAdmin;
         private FontAwesome.Sharp.IconButton btnStatistical;
-        private FontAwesome.Sharp.IconButton btnCustomer;
         private FontAwesome.Sharp.IconButton btnProduct;
         private FontAwesome.Sharp.IconButton btnOrder;
         private System.Windows.Forms.PictureBox btnHome;

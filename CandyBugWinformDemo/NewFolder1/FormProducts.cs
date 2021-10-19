@@ -16,5 +16,15 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             InitializeComponent();
         }
+
+        private void kryptonTextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShowProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

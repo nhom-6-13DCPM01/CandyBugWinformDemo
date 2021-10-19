@@ -120,12 +120,7 @@ namespace CandyBugWinformDemo
             OpenChildForm(new NewFolder1.FormProducts());
         }
 
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new NewFolder1.FormCustomers());
-        }
-
+       
         private void btnMarketing_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
