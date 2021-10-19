@@ -92,7 +92,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lbTotal1 = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
             this.btnDeleteItem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnDiscount = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -163,9 +163,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.Controls.Add(this.btnClearAll);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(723, 0);
+            this.panel1.Location = new System.Drawing.Point(701, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(477, 671);
+            this.panel1.Size = new System.Drawing.Size(477, 689);
             this.panel1.TabIndex = 1;
             // 
             // tabPage2
@@ -630,16 +630,14 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.Cakes);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(709, 659);
+            this.tabControl1.Size = new System.Drawing.Size(709, 689);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -651,7 +649,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(701, 630);
+            this.tabPage1.Size = new System.Drawing.Size(701, 660);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Biscuit";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -831,6 +829,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnClearAll.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnClearAll.TabIndex = 1;
             this.btnClearAll.Values.Text = "Clear All";
+            this.btnClearAll.Visible = false;
             this.btnClearAll.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // dataGridViewCurrentOrder
@@ -872,11 +871,14 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // panel12
             // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.Controls.Add(this.panel13);
             this.panel12.Controls.Add(this.lbTotal);
             this.panel12.Controls.Add(this.lbDiscount);
             this.panel12.Controls.Add(this.label24);
-            this.panel12.Controls.Add(this.label22);
+            this.panel12.Controls.Add(this.lbTotal1);
             this.panel12.Controls.Add(this.btnSave);
             this.panel12.Controls.Add(this.btnCancel);
             this.panel12.Controls.Add(this.btnPrintBill);
@@ -884,18 +886,18 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel12.Controls.Add(this.btnDiscount);
             this.panel12.Location = new System.Drawing.Point(3, 410);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(471, 257);
+            this.panel12.Size = new System.Drawing.Size(471, 275);
             this.panel12.TabIndex = 3;
             // 
-            // label22
+            // lbTotal1
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(25, 61);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(84, 32);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Total";
+            this.lbTotal1.AutoSize = true;
+            this.lbTotal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal1.Location = new System.Drawing.Point(25, 61);
+            this.lbTotal1.Name = "lbTotal1";
+            this.lbTotal1.Size = new System.Drawing.Size(84, 32);
+            this.lbTotal1.TabIndex = 0;
+            this.lbTotal1.Text = "Total";
             // 
             // lbTotal
             // 
@@ -923,6 +925,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnDeleteItem.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnDeleteItem.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnDeleteItem.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteItem.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDeleteItem.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDeleteItem.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.btnDeleteItem.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnDeleteItem.TabIndex = 1;
@@ -965,8 +969,8 @@ namespace CandyBugWinformDemo.NewFolder1
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnSave.StateCommon.Border.Rounding = 20;
-            this.btnSave.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnSave.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSave.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnSave.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.btnSave.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
@@ -1053,7 +1057,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 671);
+            this.ClientSize = new System.Drawing.Size(1178, 689);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1166,7 +1170,7 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label lbTotal;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lbTotal1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDeleteItem;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDiscount;

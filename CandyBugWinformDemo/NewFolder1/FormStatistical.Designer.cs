@@ -71,7 +71,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(804, 327);
+            this.dataGridView1.Size = new System.Drawing.Size(838, 487);
             this.dataGridView1.TabIndex = 0;
             // 
             // kryptonDateTimePicker1
@@ -100,7 +100,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(815, 84);
+            this.panel1.Size = new System.Drawing.Size(849, 84);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -181,7 +181,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // btnReset
             // 
             this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReset.Location = new System.Drawing.Point(552, 23);
+            this.btnReset.Location = new System.Drawing.Point(586, 23);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(125, 39);
             this.btnReset.StateCommon.Back.Color1 = System.Drawing.Color.SpringGreen;
@@ -200,9 +200,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // btnExcel
             // 
             this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcel.Location = new System.Drawing.Point(683, 23);
+            this.btnExcel.Location = new System.Drawing.Point(720, 23);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(125, 39);
+            this.btnExcel.Size = new System.Drawing.Size(122, 39);
             this.btnExcel.StateCommon.Back.Color1 = System.Drawing.Color.LightSeaGreen;
             this.btnExcel.StateCommon.Back.Color2 = System.Drawing.Color.LightSeaGreen;
             this.btnExcel.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -255,7 +255,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // btnPage
             // 
             this.btnPage.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnPage.Location = new System.Drawing.Point(347, 17);
+            this.btnPage.Location = new System.Drawing.Point(364, 17);
             this.btnPage.Name = "btnPage";
             this.btnPage.Size = new System.Drawing.Size(84, 35);
             this.btnPage.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -273,7 +273,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // btnLast
             // 
             this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLast.Location = new System.Drawing.Point(719, 15);
+            this.btnLast.Location = new System.Drawing.Point(753, 15);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(84, 35);
             this.btnLast.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -291,7 +291,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // btnNext
             // 
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNext.Location = new System.Drawing.Point(620, 15);
+            this.btnNext.Location = new System.Drawing.Point(654, 15);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(84, 35);
             this.btnNext.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -314,9 +314,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel3.Controls.Add(this.btnNext);
             this.panel3.Controls.Add(this.btnPrevious);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 419);
+            this.panel3.Location = new System.Drawing.Point(0, 579);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(815, 64);
+            this.panel3.Size = new System.Drawing.Size(849, 64);
             this.panel3.TabIndex = 5;
             // 
             // FormStatistical
@@ -325,7 +325,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(815, 483);
+            this.ClientSize = new System.Drawing.Size(849, 643);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
