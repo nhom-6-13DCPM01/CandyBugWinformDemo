@@ -756,4 +756,7 @@
         0g7XUEqQUMv867y4QbtQJrOB7qH8GVn2BE6LOub7QqFWAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="panelDesktop.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

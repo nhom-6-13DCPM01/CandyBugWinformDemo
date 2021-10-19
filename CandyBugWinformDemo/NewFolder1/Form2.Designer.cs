@@ -68,7 +68,7 @@ namespace CandyBugWinformDemo
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(224, 600);
+            this.panelMenu.Size = new System.Drawing.Size(224, 682);
             this.panelMenu.TabIndex = 0;
             // 
             // btnAdmin
@@ -202,7 +202,7 @@ namespace CandyBugWinformDemo
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(224, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(958, 75);
+            this.panelTitleBar.Size = new System.Drawing.Size(1077, 75);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -210,7 +210,7 @@ namespace CandyBugWinformDemo
             // 
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(849, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(968, 12);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(19, 19);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -222,7 +222,7 @@ namespace CandyBugWinformDemo
             // 
             this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
-            this.btnMaximize.Location = new System.Drawing.Point(888, 12);
+            this.btnMaximize.Location = new System.Drawing.Point(1007, 12);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(19, 19);
             this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,7 +234,7 @@ namespace CandyBugWinformDemo
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(923, 12);
+            this.btnClose.Location = new System.Drawing.Point(1042, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(19, 19);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -270,18 +270,17 @@ namespace CandyBugWinformDemo
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(224, 75);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(958, 10);
+            this.panelShadow.Size = new System.Drawing.Size(1077, 10);
             this.panelShadow.TabIndex = 2;
             // 
             // panelDesktop
             // 
-            this.panelDesktop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDesktop.AutoSize = true;
             this.panelDesktop.BackColor = System.Drawing.Color.White;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(224, 85);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(958, 515);
+            this.panelDesktop.Size = new System.Drawing.Size(1077, 597);
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
@@ -291,7 +290,7 @@ namespace CandyBugWinformDemo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1182, 600);
+            this.ClientSize = new System.Drawing.Size(1301, 682);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
@@ -300,6 +299,7 @@ namespace CandyBugWinformDemo
             this.MinimumSize = new System.Drawing.Size(1100, 600);
             this.Name = "Form2";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panelMenu.ResumeLayout(false);
@@ -312,6 +312,7 @@ namespace CandyBugWinformDemo
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
