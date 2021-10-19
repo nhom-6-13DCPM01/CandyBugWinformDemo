@@ -40,7 +40,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnSa = new System.Windows.Forms.Button();
             this.lbTotal = new System.Windows.Forms.Label();
-            this.btnDi = new System.Windows.Forms.Button();
             this.lbDiscount = new System.Windows.Forms.Label();
             this.btnD = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
@@ -169,9 +168,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.Controls.Add(this.dataGridViewCurrentOrder);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(701, 0);
+            this.panel1.Location = new System.Drawing.Point(704, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(477, 581);
+            this.panel1.Size = new System.Drawing.Size(474, 581);
             this.panel1.TabIndex = 1;
             // 
             // btnShowProduct
@@ -179,7 +178,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnShowProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnShowProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowProduct.Location = new System.Drawing.Point(338, 17);
+            this.btnShowProduct.Location = new System.Drawing.Point(300, 17);
             this.btnShowProduct.Name = "btnShowProduct";
             this.btnShowProduct.Size = new System.Drawing.Size(95, 46);
             this.btnShowProduct.TabIndex = 4;
@@ -196,14 +195,13 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel12.Controls.Add(this.panel13);
             this.panel12.Controls.Add(this.btnSa);
             this.panel12.Controls.Add(this.lbTotal);
-            this.panel12.Controls.Add(this.btnDi);
             this.panel12.Controls.Add(this.lbDiscount);
             this.panel12.Controls.Add(this.btnD);
             this.panel12.Controls.Add(this.label24);
             this.panel12.Controls.Add(this.lbTotal1);
             this.panel12.Location = new System.Drawing.Point(3, 339);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(471, 242);
+            this.panel12.Size = new System.Drawing.Size(468, 242);
             this.panel12.TabIndex = 3;
             // 
             // btnPrintBill
@@ -211,9 +209,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnPrintBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnPrintBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintBill.Location = new System.Drawing.Point(12, 186);
+            this.btnPrintBill.Location = new System.Drawing.Point(149, 184);
             this.btnPrintBill.Name = "btnPrintBill";
-            this.btnPrintBill.Size = new System.Drawing.Size(450, 46);
+            this.btnPrintBill.Size = new System.Drawing.Size(310, 46);
             this.btnPrintBill.TabIndex = 4;
             this.btnPrintBill.Text = "PRINT BILL";
             this.btnPrintBill.UseVisualStyleBackColor = false;
@@ -224,7 +222,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnCa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCa.Location = new System.Drawing.Point(366, 121);
+            this.btnCa.Location = new System.Drawing.Point(355, 119);
             this.btnCa.Name = "btnCa";
             this.btnCa.Size = new System.Drawing.Size(95, 46);
             this.btnCa.TabIndex = 4;
@@ -236,7 +234,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel13.BackColor = System.Drawing.Color.Black;
-            this.panel13.Location = new System.Drawing.Point(30, 52);
+            this.panel13.Location = new System.Drawing.Point(27, 52);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(400, 1);
             this.panel13.TabIndex = 1;
@@ -246,7 +244,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnSa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSa.Location = new System.Drawing.Point(252, 121);
+            this.btnSa.Location = new System.Drawing.Point(252, 119);
             this.btnSa.Name = "btnSa";
             this.btnSa.Size = new System.Drawing.Size(95, 46);
             this.btnSa.TabIndex = 4;
@@ -258,23 +256,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.lbTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotal.AutoSize = true;
             this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.Location = new System.Drawing.Point(362, 67);
+            this.lbTotal.Location = new System.Drawing.Point(359, 67);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Size = new System.Drawing.Size(58, 32);
             this.lbTotal.TabIndex = 0;
             this.lbTotal.Text = "0.0";
-            // 
-            // btnDi
-            // 
-            this.btnDi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDi.Location = new System.Drawing.Point(129, 121);
-            this.btnDi.Name = "btnDi";
-            this.btnDi.Size = new System.Drawing.Size(95, 46);
-            this.btnDi.TabIndex = 4;
-            this.btnDi.Text = "Discount";
-            this.btnDi.UseVisualStyleBackColor = false;
             // 
             // lbDiscount
             // 
@@ -282,7 +268,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.lbDiscount.AutoSize = true;
             this.lbDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiscount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbDiscount.Location = new System.Drawing.Point(368, 24);
+            this.lbDiscount.Location = new System.Drawing.Point(365, 24);
             this.lbDiscount.Name = "lbDiscount";
             this.lbDiscount.Size = new System.Drawing.Size(42, 25);
             this.lbDiscount.TabIndex = 0;
@@ -293,7 +279,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnD.BackColor = System.Drawing.Color.Red;
             this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD.Location = new System.Drawing.Point(12, 121);
+            this.btnD.Location = new System.Drawing.Point(150, 119);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(95, 46);
             this.btnD.TabIndex = 4;
@@ -306,7 +292,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label24.Location = new System.Drawing.Point(25, 24);
+            this.label24.Location = new System.Drawing.Point(22, 24);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(96, 25);
             this.label24.TabIndex = 0;
@@ -317,7 +303,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.lbTotal1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotal1.AutoSize = true;
             this.lbTotal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal1.Location = new System.Drawing.Point(25, 67);
+            this.lbTotal1.Location = new System.Drawing.Point(22, 67);
             this.lbTotal1.Name = "lbTotal1";
             this.lbTotal1.Size = new System.Drawing.Size(84, 32);
             this.lbTotal1.TabIndex = 0;
@@ -335,11 +321,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Column2,
             this.Cost});
             this.dataGridViewCurrentOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dataGridViewCurrentOrder.Location = new System.Drawing.Point(10, 81);
+            this.dataGridViewCurrentOrder.Location = new System.Drawing.Point(10, 68);
             this.dataGridViewCurrentOrder.Name = "dataGridViewCurrentOrder";
             this.dataGridViewCurrentOrder.RowHeadersWidth = 51;
             this.dataGridViewCurrentOrder.RowTemplate.Height = 24;
-            this.dataGridViewCurrentOrder.Size = new System.Drawing.Size(455, 252);
+            this.dataGridViewCurrentOrder.Size = new System.Drawing.Size(461, 265);
             this.dataGridViewCurrentOrder.TabIndex = 2;
             // 
             // Column1
@@ -386,7 +372,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(687, 660);
+            this.tabPage2.Size = new System.Drawing.Size(687, 592);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Candy";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -880,7 +866,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(687, 660);
+            this.tabPage1.Size = new System.Drawing.Size(687, 592);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Biscuit";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1036,7 +1022,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(701, 62);
+            this.panel14.Size = new System.Drawing.Size(704, 62);
             this.panel14.TabIndex = 2;
             // 
             // pictureBox1
@@ -1194,7 +1180,6 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Button btnShowProduct;
         private System.Windows.Forms.Button btnCa;
         private System.Windows.Forms.Button btnSa;
-        private System.Windows.Forms.Button btnDi;
         private System.Windows.Forms.Button btnD;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private System.Windows.Forms.Button btnPrintBill;
