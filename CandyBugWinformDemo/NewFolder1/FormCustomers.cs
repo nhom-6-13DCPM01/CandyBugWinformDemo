@@ -16,5 +16,10 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             InitializeComponent();
         }
+
+        private void FormCustomers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
