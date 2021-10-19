@@ -180,7 +180,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(724, 630);
+            this.tabPage2.Size = new System.Drawing.Size(701, 630);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Candy";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -651,7 +651,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(724, 630);
+            this.tabPage1.Size = new System.Drawing.Size(701, 630);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Biscuit";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -815,7 +815,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.kryptonButton1.Location = new System.Drawing.Point(288, 23);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(113, 40);
+            this.kryptonButton1.Size = new System.Drawing.Size(125, 40);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -827,6 +827,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonButton1.TabIndex = 1;
             this.kryptonButton1.Values.Text = "Clear All";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
@@ -907,9 +909,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // btnDeleteItem
             // 
-            this.btnDeleteItem.Location = new System.Drawing.Point(34, 153);
+            this.btnDeleteItem.Location = new System.Drawing.Point(22, 153);
             this.btnDeleteItem.Name = "btnDeleteItem";
-            this.btnDeleteItem.Size = new System.Drawing.Size(113, 40);
+            this.btnDeleteItem.Size = new System.Drawing.Size(125, 40);
             this.btnDeleteItem.StateCommon.Back.Color1 = System.Drawing.Color.Red;
             this.btnDeleteItem.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDeleteItem.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -921,15 +923,17 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnDeleteItem.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnDeleteItem.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnDeleteItem.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteItem.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnDeleteItem.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnDeleteItem.TabIndex = 1;
             this.btnDeleteItem.Values.Text = "Delete ";
             this.btnDeleteItem.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // btnDiscount
             // 
-            this.btnDiscount.Location = new System.Drawing.Point(172, 152);
+            this.btnDiscount.Location = new System.Drawing.Point(171, 152);
             this.btnDiscount.Name = "btnDiscount";
-            this.btnDiscount.Size = new System.Drawing.Size(113, 40);
+            this.btnDiscount.Size = new System.Drawing.Size(125, 40);
             this.btnDiscount.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.btnDiscount.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDiscount.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
@@ -941,15 +945,18 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnDiscount.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnDiscount.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnDiscount.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiscount.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDiscount.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnDiscount.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnDiscount.TabIndex = 1;
             this.btnDiscount.Values.Text = "Discount";
             this.btnDiscount.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(311, 153);
+            this.btnSave.Location = new System.Drawing.Point(324, 154);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(113, 40);
+            this.btnSave.Size = new System.Drawing.Size(125, 40);
             this.btnSave.StateCommon.Back.Color1 = System.Drawing.Color.ForestGreen;
             this.btnSave.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSave.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -961,6 +968,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnSave.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnSave.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnSave.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnSave.TabIndex = 1;
             this.btnSave.Values.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.kryptonButton1_Click);
@@ -969,7 +978,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.btnPay.Location = new System.Drawing.Point(172, 205);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(252, 40);
+            this.btnPay.Size = new System.Drawing.Size(277, 40);
             this.btnPay.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnPay.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnPay.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -981,6 +990,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnPay.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnPay.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnPay.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnPay.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.btnPay.TabIndex = 1;
             this.btnPay.Values.Text = "PRINT BILL";
             this.btnPay.Click += new System.EventHandler(this.kryptonButton1_Click);
@@ -1017,9 +1028,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(34, 205);
+            this.kryptonButton2.Location = new System.Drawing.Point(22, 205);
             this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(113, 40);
+            this.kryptonButton2.Size = new System.Drawing.Size(125, 40);
             this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.OrangeRed;
             this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.OrangeRed;
             this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -1031,6 +1042,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton2.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonButton2.TabIndex = 1;
             this.kryptonButton2.Values.Text = "CANCEL";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton1_Click);

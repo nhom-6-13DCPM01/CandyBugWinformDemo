@@ -182,7 +182,7 @@ namespace CandyBugWinformDemo
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
