@@ -103,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="NewFolder1\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewFolder1\FormStatistical.resx">
       <DependentUpon>FormStatistical.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,6 +29,7 @@ namespace CandyBugWinformDemo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
@@ -38,22 +39,16 @@ namespace CandyBugWinformDemo
             this.btnOrder = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btnMinimize = new System.Windows.Forms.PictureBox();
-            this.btnMaximize = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.PictureBox();
             this.lblTittleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
-            this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.panelTitleBar = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
-            this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -191,57 +186,6 @@ namespace CandyBugWinformDemo
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.DarkOrange;
-            this.panelTitleBar.Controls.Add(this.btnMinimize);
-            this.panelTitleBar.Controls.Add(this.btnMaximize);
-            this.panelTitleBar.Controls.Add(this.btnClose);
-            this.panelTitleBar.Controls.Add(this.lblTittleChildForm);
-            this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(224, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(858, 75);
-            this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(749, 12);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(19, 19);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimize.TabIndex = 4;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
-            this.btnMaximize.Location = new System.Drawing.Point(788, 12);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(19, 19);
-            this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMaximize.TabIndex = 4;
-            this.btnMaximize.TabStop = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(823, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(19, 19);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnClose.TabIndex = 4;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // lblTittleChildForm
             // 
             this.lblTittleChildForm.AutoSize = true;
@@ -264,25 +208,41 @@ namespace CandyBugWinformDemo
             this.iconCurrentChildForm.TabIndex = 2;
             this.iconCurrentChildForm.TabStop = false;
             // 
-            // panelShadow
-            // 
-            this.panelShadow.BackColor = System.Drawing.Color.DarkOrange;
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(224, 75);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(858, 10);
-            this.panelShadow.TabIndex = 2;
-            // 
             // panelDesktop
             // 
+            this.panelDesktop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDesktop.AutoSize = true;
             this.panelDesktop.BackColor = System.Drawing.Color.White;
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(224, 85);
+            this.panelDesktop.Location = new System.Drawing.Point(224, 75);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(858, 468);
+            this.panelDesktop.Size = new System.Drawing.Size(858, 478);
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // kryptonPalette1
+            // 
+            this.kryptonPalette1.Common.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonPalette1.Common.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonPalette1.Common.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette1.Common.StateCommon.Border.Rounding = 16;
+            this.kryptonPalette1.Common.StateCommon.Border.Width = 0;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTitleBar.BackColor = System.Drawing.Color.DarkOrange;
+            this.panelTitleBar.Controls.Add(this.lblTittleChildForm);
+            this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
+            this.panelTitleBar.Location = new System.Drawing.Point(224, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(858, 75);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // Form2
             // 
@@ -292,12 +252,12 @@ namespace CandyBugWinformDemo
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1082, 553);
             this.Controls.Add(this.panelDesktop);
-            this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.White;
-            this.MinimumSize = new System.Drawing.Size(1100, 600);
             this.Name = "Form2";
+            this.Palette = this.kryptonPalette1;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
@@ -305,12 +265,9 @@ namespace CandyBugWinformDemo
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,13 +282,10 @@ namespace CandyBugWinformDemo
         private FontAwesome.Sharp.IconButton btnProduct;
         private FontAwesome.Sharp.IconButton btnOrder;
         private System.Windows.Forms.PictureBox btnHome;
-        private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTittleChildForm;
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
-        private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelDesktop;
-        private System.Windows.Forms.PictureBox btnMinimize;
-        private System.Windows.Forms.PictureBox btnMaximize;
-        private System.Windows.Forms.PictureBox btnClose;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private System.Windows.Forms.Panel panelTitleBar;
     }
 }

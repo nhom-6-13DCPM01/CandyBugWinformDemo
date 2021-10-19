@@ -121,33 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="kryptonPalette1.ButtonSpecs.FormClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAABGdBTUEAALGPC/xhBQAAANRJREFUOE+1
-        lLkOwjAQRPOpnA1Xw1VBQ0NDR0WDRI/4Dzo6/gZm1hmEkiyOCTxp5B3JHnltJ9k/uECrUCazhK6hDGyh
-        BzQyV58uxHV7c28MoJTAPsT5M3MVMIgTxuZ8FDQ39wEGceLQXBm15u6oCIO4oNhyB0oKEgpUywqKtuah
-        Sznk4xRqxBFi0NlcA1oQg075yJ1+hc6IL5zo2aQ+bPewvVt26UFc4F1/7cBYkNAtT8xV0IY4YWEujr6U
-        0g7XUEqQUMv867y4QbtQJrOB7qH8GVn2BE6LOub7QqFWAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="kryptonPalette1.ButtonSpecs.FormMax.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAANNJREFUOE/t
-        lMsOwUAYRhsWFhbE1kosLESQ8Bjexnt4BuKycQmxwI6w452cb2aqVWnSEUsnOdO/yfRr5++0QYIinnGD
-        K1xn9IFvtPBgSy+27viiihNbejHVUMCGs4OD2HmauibOTIN6ssA5jnHk6jQ194QlDDFBF8xjLqOae8Qe
-        hpigpSn9UE/UhhATpNfni5bYtqXhH/RJMshsyF8E7TV8E6SNW8chaoPe8KsgLaWJNdSTldH8LnxRc7u2
-        jNB348sO+7aMuKOap7tkUXOvWEFHEDwBJFs8kD6Ug3oAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="kryptonPalette1.ButtonSpecs.FormMin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAALZJREFUOE/d
-        1D0KwkAQQOFFvICVlxAL/8DGRgsPZWPh0UQCHkIrrQQNqIWi76VKESG7IIgDH+wms5Nlk0kg1nggxy2C
-        +U9sEF5YYYZ5BPOXcH24oucgITo4O3BrVk6JKS4O/rhIAx7WGAMMS5x7vQvzjMoiLWQ4Yod9ifMDtmjD
-        +LgTn+jNSQW/jRGaML53JrHxg0Xsnb6DhPB1F71jF9qNnr6V6zJ/gaKL/R/ccYJbq8t81oXsDdgxWEO/
-        wtBfAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="Logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
