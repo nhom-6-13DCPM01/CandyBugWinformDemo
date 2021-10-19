@@ -94,9 +94,10 @@ namespace CandyBugWinformDemo
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.None;
+            childForm.Dock = DockStyle.Fill;
             panelDesktop.Controls.Add(childForm);
             panelDesktop.Tag = childForm;
+            childForm.BringToFront();
             childForm.Show();
             lblTittleChildForm.Text = childForm.Text;
         }
@@ -139,7 +140,10 @@ namespace CandyBugWinformDemo
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
             Reset();
         }
         private void Reset()
@@ -178,12 +182,19 @@ namespace CandyBugWinformDemo
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void Form2_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+                FormBorderStyle = FormBorderStyle.None;
+            else
+                FormBorderStyle = FormBorderStyle.Sizable;
         }
     }
 }
