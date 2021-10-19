@@ -86,22 +86,22 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnClearAll = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridViewCurrentOrder = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.btnDeleteItem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnDiscount = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnPay = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnPrintBill = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lbDiscount = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -160,7 +160,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.dataGridViewCurrentOrder);
-            this.panel1.Controls.Add(this.kryptonButton1);
+            this.panel1.Controls.Add(this.btnClearAll);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(723, 0);
@@ -811,27 +811,27 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label21.TabIndex = 0;
             this.label21.Text = "Current Order";
             // 
-            // kryptonButton1
+            // btnClearAll
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(288, 23);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(125, 40);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnClearAll.Location = new System.Drawing.Point(288, 23);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(125, 40);
+            this.btnClearAll.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClearAll.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClearAll.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClearAll.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClearAll.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.Rounding = 20;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton1.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton1.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton1.TabIndex = 1;
-            this.kryptonButton1.Values.Text = "Clear All";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            this.btnClearAll.StateCommon.Border.Rounding = 20;
+            this.btnClearAll.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnClearAll.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnClearAll.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearAll.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnClearAll.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.btnClearAll.TabIndex = 1;
+            this.btnClearAll.Values.Text = "Clear All";
+            this.btnClearAll.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // dataGridViewCurrentOrder
             // 
@@ -873,13 +873,13 @@ namespace CandyBugWinformDemo.NewFolder1
             // panel12
             // 
             this.panel12.Controls.Add(this.panel13);
-            this.panel12.Controls.Add(this.label23);
-            this.panel12.Controls.Add(this.label25);
+            this.panel12.Controls.Add(this.lbTotal);
+            this.panel12.Controls.Add(this.lbDiscount);
             this.panel12.Controls.Add(this.label24);
             this.panel12.Controls.Add(this.label22);
             this.panel12.Controls.Add(this.btnSave);
-            this.panel12.Controls.Add(this.kryptonButton2);
-            this.panel12.Controls.Add(this.btnPay);
+            this.panel12.Controls.Add(this.btnCancel);
+            this.panel12.Controls.Add(this.btnPrintBill);
             this.panel12.Controls.Add(this.btnDeleteItem);
             this.panel12.Controls.Add(this.btnDiscount);
             this.panel12.Location = new System.Drawing.Point(3, 410);
@@ -897,15 +897,15 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label22.TabIndex = 0;
             this.label22.Text = "Total";
             // 
-            // label23
+            // lbTotal
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(362, 61);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(58, 32);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "0.0";
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Location = new System.Drawing.Point(362, 61);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(58, 32);
+            this.lbTotal.TabIndex = 0;
+            this.lbTotal.Text = "0.0";
             // 
             // btnDeleteItem
             // 
@@ -974,27 +974,27 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnSave.Values.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // btnPay
+            // btnPrintBill
             // 
-            this.btnPay.Location = new System.Drawing.Point(172, 205);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(277, 40);
-            this.btnPay.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnPay.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnPay.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnPay.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnPay.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnPrintBill.Location = new System.Drawing.Point(172, 205);
+            this.btnPrintBill.Name = "btnPrintBill";
+            this.btnPrintBill.Size = new System.Drawing.Size(277, 40);
+            this.btnPrintBill.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPrintBill.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPrintBill.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPrintBill.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPrintBill.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnPay.StateCommon.Border.Rounding = 20;
-            this.btnPay.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnPay.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnPay.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnPay.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.btnPay.TabIndex = 1;
-            this.btnPay.Values.Text = "PRINT BILL";
-            this.btnPay.Click += new System.EventHandler(this.kryptonButton1_Click);
+            this.btnPrintBill.StateCommon.Border.Rounding = 20;
+            this.btnPrintBill.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnPrintBill.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnPrintBill.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintBill.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnPrintBill.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.btnPrintBill.TabIndex = 1;
+            this.btnPrintBill.Values.Text = "PRINT BILL";
+            this.btnPrintBill.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // label24
             // 
@@ -1007,16 +1007,16 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label24.TabIndex = 0;
             this.label24.Text = "Discount";
             // 
-            // label25
+            // lbDiscount
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label25.Location = new System.Drawing.Point(368, 18);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(42, 25);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "0.0";
+            this.lbDiscount.AutoSize = true;
+            this.lbDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiscount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbDiscount.Location = new System.Drawing.Point(368, 18);
+            this.lbDiscount.Name = "lbDiscount";
+            this.lbDiscount.Size = new System.Drawing.Size(42, 25);
+            this.lbDiscount.TabIndex = 0;
+            this.lbDiscount.Text = "0.0";
             // 
             // panel13
             // 
@@ -1026,27 +1026,27 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel13.Size = new System.Drawing.Size(400, 1);
             this.panel13.TabIndex = 1;
             // 
-            // kryptonButton2
+            // btnCancel
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(22, 205);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(125, 40);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.OrangeRed;
-            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.OrangeRed;
-            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kryptonButton2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnCancel.Location = new System.Drawing.Point(22, 205);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(125, 40);
+            this.btnCancel.StateCommon.Back.Color1 = System.Drawing.Color.OrangeRed;
+            this.btnCancel.StateCommon.Back.Color2 = System.Drawing.Color.OrangeRed;
+            this.btnCancel.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCancel.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCancel.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateCommon.Border.Rounding = 20;
-            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton2.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton2.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton2.TabIndex = 1;
-            this.kryptonButton2.Values.Text = "CANCEL";
-            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton1_Click);
+            this.btnCancel.StateCommon.Border.Rounding = 20;
+            this.btnCancel.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnCancel.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnCancel.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Values.Text = "CANCEL";
+            this.btnCancel.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // FormOrders
             // 
@@ -1110,7 +1110,7 @@ namespace CandyBugWinformDemo.NewFolder1
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private System.Windows.Forms.Panel panel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnClearAll;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel28;
@@ -1165,7 +1165,7 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Label label22;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDeleteItem;
@@ -1174,10 +1174,10 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnPay;
-        private System.Windows.Forms.Label label25;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnPrintBill;
+        private System.Windows.Forms.Label lbDiscount;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel13;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancel;
     }
 }
