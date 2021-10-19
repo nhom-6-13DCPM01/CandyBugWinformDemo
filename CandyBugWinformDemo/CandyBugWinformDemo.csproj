@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Widget1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget1.Designer.cs">
+      <DependentUpon>Widget1.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewFolder1\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Widget1.resx">
+      <DependentUpon>Widget1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewFolder1\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
