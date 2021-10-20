@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\DataProvider.cs" />
+    <Compile Include="Object\Account.cs" />
     <Compile Include="Widget1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,10 +143,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Control\" />
-    <Folder Include="Object\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="picture\Biscuit\matcha and peach.jfif" />
     <Content Include="picture\Biscuit\mini.jpg" />
