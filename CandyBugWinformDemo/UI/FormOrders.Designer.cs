@@ -854,7 +854,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabControl1.Location = new System.Drawing.Point(0, 68);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(695, 621);
+            this.tabControl1.Size = new System.Drawing.Size(695, 513);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -866,7 +866,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(687, 592);
+            this.tabPage1.Size = new System.Drawing.Size(687, 484);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Biscuit";
             this.tabPage1.UseVisualStyleBackColor = true;
