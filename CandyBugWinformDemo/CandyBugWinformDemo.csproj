@@ -59,63 +59,63 @@
     <Compile Include="Widget1.Designer.cs">
       <DependentUpon>Widget1.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Form2.cs">
+    <Compile Include="UI\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewFolder1\Form2.Designer.cs">
+    <Compile Include="UI\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\FormLogin.cs">
+    <Compile Include="UI\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewFolder1\FormLogin.Designer.cs">
+    <Compile Include="UI\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\FormStatistical.cs">
+    <Compile Include="UI\FormStatistical.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewFolder1\FormStatistical.Designer.cs">
+    <Compile Include="UI\FormStatistical.Designer.cs">
       <DependentUpon>FormStatistical.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\FormOrders.cs">
+    <Compile Include="UI\FormOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewFolder1\FormOrders.Designer.cs">
+    <Compile Include="UI\FormOrders.Designer.cs">
       <DependentUpon>FormOrders.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\FormProducts.cs">
+    <Compile Include="UI\FormProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewFolder1\FormProducts.Designer.cs">
+    <Compile Include="UI\FormProducts.Designer.cs">
       <DependentUpon>FormProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\FormAdmin.cs">
+    <Compile Include="UI\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewFolder1\FormAdmin.Designer.cs">
+    <Compile Include="UI\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="NewFolder1\FormAdmin.resx">
+    <EmbeddedResource Include="UI\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewFolder1\FormProducts.resx">
+    <EmbeddedResource Include="UI\FormProducts.resx">
       <DependentUpon>FormProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewFolder1\FormStatistical.resx">
+    <EmbeddedResource Include="UI\FormStatistical.resx">
       <DependentUpon>FormStatistical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget1.resx">
       <DependentUpon>Widget1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewFolder1\Form2.resx">
+    <EmbeddedResource Include="UI\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewFolder1\FormLogin.resx">
+    <EmbeddedResource Include="UI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewFolder1\FormOrders.resx">
+    <EmbeddedResource Include="UI\FormOrders.resx">
       <DependentUpon>FormOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -142,6 +142,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Control\" />
+    <Folder Include="Object\" />
     <Folder Include="picture\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
