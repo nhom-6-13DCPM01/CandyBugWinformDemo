@@ -29,7 +29,7 @@ namespace CandyBugWinformDemo
             panelMenu.Controls.Add(leftBorderBtn);
             //form
             this.Text = string.Empty;
-            this.ControlBox = false;
+            this.ControlBox = true;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
@@ -120,12 +120,7 @@ namespace CandyBugWinformDemo
             OpenChildForm(new NewFolder1.FormProducts());
         }
 
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new NewFolder1.FormCustomers());
-        }
-
+       
         private void btnMarketing_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
@@ -167,24 +162,7 @@ namespace CandyBugWinformDemo
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
+     
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
 
@@ -196,5 +174,12 @@ namespace CandyBugWinformDemo
             else
                 FormBorderStyle = FormBorderStyle.Sizable;
         }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
     }
 }

@@ -37,8 +37,10 @@ namespace CandyBugWinformDemo
         {
             if (txtUsername.Text == "demo" && txtPassword.Text == "123")
             {
+              
                 new Form2().ShowDialog();
                 this.Hide();
+                
                 
             }
             else
