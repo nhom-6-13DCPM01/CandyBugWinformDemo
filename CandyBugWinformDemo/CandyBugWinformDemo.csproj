@@ -141,7 +141,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Control\" />
+    <Folder Include="Object\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="picture\Biscuit\matcha and peach.jfif" />
     <Content Include="picture\Biscuit\mini.jpg" />
