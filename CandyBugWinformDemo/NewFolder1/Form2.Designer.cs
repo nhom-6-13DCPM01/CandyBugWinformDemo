@@ -60,8 +60,9 @@ namespace CandyBugWinformDemo
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(224, 553);
+            this.panelMenu.Size = new System.Drawing.Size(168, 483);
             this.panelMenu.TabIndex = 0;
             // 
             // btnAdmin
@@ -73,10 +74,11 @@ namespace CandyBugWinformDemo
             this.btnAdmin.IconColor = System.Drawing.Color.White;
             this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(0, 320);
+            this.btnAdmin.Location = new System.Drawing.Point(0, 261);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAdmin.Size = new System.Drawing.Size(224, 61);
+            this.btnAdmin.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
+            this.btnAdmin.Size = new System.Drawing.Size(168, 50);
             this.btnAdmin.TabIndex = 6;
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,10 +95,11 @@ namespace CandyBugWinformDemo
             this.btnStatistical.IconColor = System.Drawing.Color.White;
             this.btnStatistical.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStatistical.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistical.Location = new System.Drawing.Point(0, 259);
+            this.btnStatistical.Location = new System.Drawing.Point(0, 211);
+            this.btnStatistical.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStatistical.Name = "btnStatistical";
-            this.btnStatistical.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnStatistical.Size = new System.Drawing.Size(224, 61);
+            this.btnStatistical.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
+            this.btnStatistical.Size = new System.Drawing.Size(168, 50);
             this.btnStatistical.TabIndex = 5;
             this.btnStatistical.Text = "Statistical";
             this.btnStatistical.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,10 +116,11 @@ namespace CandyBugWinformDemo
             this.btnProduct.IconColor = System.Drawing.Color.White;
             this.btnProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(0, 201);
+            this.btnProduct.Location = new System.Drawing.Point(0, 164);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnProduct.Size = new System.Drawing.Size(224, 58);
+            this.btnProduct.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
+            this.btnProduct.Size = new System.Drawing.Size(168, 47);
             this.btnProduct.TabIndex = 3;
             this.btnProduct.Text = "Product";
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,10 +137,11 @@ namespace CandyBugWinformDemo
             this.btnOrder.IconColor = System.Drawing.Color.White;
             this.btnOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(0, 140);
+            this.btnOrder.Location = new System.Drawing.Point(0, 114);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnOrder.Size = new System.Drawing.Size(224, 61);
+            this.btnOrder.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
+            this.btnOrder.Size = new System.Drawing.Size(168, 50);
             this.btnOrder.TabIndex = 2;
             this.btnOrder.Text = "Order";
             this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,16 +154,18 @@ namespace CandyBugWinformDemo
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(224, 140);
+            this.panel1.Size = new System.Drawing.Size(168, 114);
             this.panel1.TabIndex = 0;
             // 
             // btnHome
             // 
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(22, 0);
+            this.btnHome.Location = new System.Drawing.Point(16, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(167, 140);
+            this.btnHome.Size = new System.Drawing.Size(125, 114);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -167,9 +174,10 @@ namespace CandyBugWinformDemo
             // lblTittleChildForm
             // 
             this.lblTittleChildForm.AutoSize = true;
-            this.lblTittleChildForm.Location = new System.Drawing.Point(56, 28);
+            this.lblTittleChildForm.Location = new System.Drawing.Point(42, 23);
+            this.lblTittleChildForm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTittleChildForm.Name = "lblTittleChildForm";
-            this.lblTittleChildForm.Size = new System.Drawing.Size(45, 17);
+            this.lblTittleChildForm.Size = new System.Drawing.Size(35, 13);
             this.lblTittleChildForm.TabIndex = 3;
             this.lblTittleChildForm.Text = "Home";
             // 
@@ -180,9 +188,11 @@ namespace CandyBugWinformDemo
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.Yellow;
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(18, 21);
+            this.iconCurrentChildForm.IconSize = 24;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(14, 17);
+            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(24, 26);
             this.iconCurrentChildForm.TabIndex = 2;
             this.iconCurrentChildForm.TabStop = false;
             // 
@@ -193,19 +203,23 @@ namespace CandyBugWinformDemo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDesktop.AutoSize = true;
             this.panelDesktop.BackColor = System.Drawing.Color.White;
-            this.panelDesktop.Location = new System.Drawing.Point(224, 75);
+            this.panelDesktop.Location = new System.Drawing.Point(168, 61);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(858, 478);
+            this.panelDesktop.Size = new System.Drawing.Size(759, 422);
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // kryptonPalette1
             // 
+            this.kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kryptonPalette1.Common.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonPalette1.Common.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonPalette1.Common.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPalette1.Common.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette1.Common.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPalette1.Common.StateCommon.Border.Rounding = 16;
             this.kryptonPalette1.Common.StateCommon.Border.Width = 0;
             // 
@@ -216,23 +230,25 @@ namespace CandyBugWinformDemo
             this.panelTitleBar.BackColor = System.Drawing.Color.DarkOrange;
             this.panelTitleBar.Controls.Add(this.lblTittleChildForm);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
-            this.panelTitleBar.Location = new System.Drawing.Point(224, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(168, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(858, 75);
+            this.panelTitleBar.Size = new System.Drawing.Size(759, 61);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1082, 553);
+            this.ClientSize = new System.Drawing.Size(927, 483);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

@@ -112,9 +112,6 @@
     <EmbeddedResource Include="NewFolder1\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewFolder1\FormCustomers.resx">
-      <DependentUpon>FormCustomers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NewFolder1\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
