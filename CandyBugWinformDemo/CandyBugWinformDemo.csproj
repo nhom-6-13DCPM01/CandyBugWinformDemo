@@ -141,8 +141,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="picture\" />
+    <Content Include="picture\Biscuit\matcha and peach.jfif" />
+    <Content Include="picture\Biscuit\mini.jpg" />
+    <Content Include="picture\Biscuit\mitn.jpeg" />
+    <Content Include="picture\Biscuit\sakura.jpg" />
+    <Content Include="picture\Cakes\banana muffin.png" />
+    <Content Include="picture\Cakes\decvil%27s fudge.png" />
+    <Content Include="picture\Cakes\matcha.png" />
+    <Content Include="picture\Cakes\socola tiramisu.png" />
+    <Content Include="picture\Cakes\strawberry.png" />
+    <Content Include="picture\Candy\chocola peanut M&amp;M.png" />
+    <Content Include="picture\Candy\Chocola peanut pantry size.png" />
+    <Content Include="picture\Candy\crunchy caramel.png" />
+    <Content Include="picture\Candy\peanut butter %28egg-oeufs.jpg" />
+    <Content Include="picture\Candy\Peanut putter %28egg%29.jpeg" />
+    <Content Include="picture\Candy\salted caramel.png" />
+    <Content Include="picture\Others\CANDYBUG.png" />
+    <Content Include="picture\Others\logo.png" />
+    <Content Include="picture\Others\Market Research.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
