@@ -10,11 +10,14 @@ namespace CandyBugWinformDemo.Control
 {
     public class DataProvider
     {
+
         private static readonly object lockObject = new object();
         private static volatile DataProvider instence;
 
+        // Câu lệnh kết nối
         private string con = "Data Source=nhomsix.database.windows.net;Initial Catalog=QLBK;User ID=nhom6;Password=123456789aA";
 
+        // get set Instence
         public static DataProvider Instence 
         {
             get 
@@ -33,8 +36,11 @@ namespace CandyBugWinformDemo.Control
             }
             private set => instence = value; 
         }
+
+        // Khóa hàm tạo
         private DataProvider() {  }
 
+        //Truy vấn trả về 1 Bảng
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -64,6 +70,7 @@ namespace CandyBugWinformDemo.Control
             }
             return data;
         }
+        //Truy vấn trả về số lượng cột
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
@@ -91,6 +98,7 @@ namespace CandyBugWinformDemo.Control
             }
             return data;
         }
+        //Truy vấn trả về 1 đối tượng hoàn chỉnh
         public object ExecuteScarlar(string query, object[] parameter = null)
         {
             object data = 0;
