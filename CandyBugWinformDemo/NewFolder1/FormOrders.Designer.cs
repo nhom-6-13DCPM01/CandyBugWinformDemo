@@ -33,7 +33,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnShowProduct = new System.Windows.Forms.Button();
+            this.btnClearAll = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnPrintBill = new System.Windows.Forms.Button();
             this.btnCa = new System.Windows.Forms.Button();
@@ -78,7 +78,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel9 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -104,7 +103,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label2 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtFind = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCurrentOrder)).BeginInit();
@@ -163,27 +162,27 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.panel1.AutoScroll = true;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Controls.Add(this.btnShowProduct);
+            this.panel1.Controls.Add(this.btnClearAll);
             this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.dataGridViewCurrentOrder);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(704, 0);
+            this.panel1.Location = new System.Drawing.Point(693, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(474, 581);
+            this.panel1.Size = new System.Drawing.Size(485, 581);
             this.panel1.TabIndex = 1;
             // 
-            // btnShowProduct
+            // btnClearAll
             // 
-            this.btnShowProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShowProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnShowProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowProduct.Location = new System.Drawing.Point(300, 17);
-            this.btnShowProduct.Name = "btnShowProduct";
-            this.btnShowProduct.Size = new System.Drawing.Size(95, 46);
-            this.btnShowProduct.TabIndex = 4;
-            this.btnShowProduct.Text = "Clear All";
-            this.btnShowProduct.UseVisualStyleBackColor = false;
+            this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearAll.Location = new System.Drawing.Point(311, 17);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(95, 46);
+            this.btnClearAll.TabIndex = 4;
+            this.btnClearAll.Text = "Clear All";
+            this.btnClearAll.UseVisualStyleBackColor = false;
             // 
             // panel12
             // 
@@ -201,7 +200,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel12.Controls.Add(this.lbTotal1);
             this.panel12.Location = new System.Drawing.Point(3, 339);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(468, 242);
+            this.panel12.Size = new System.Drawing.Size(479, 242);
             this.panel12.TabIndex = 3;
             // 
             // btnPrintBill
@@ -209,7 +208,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnPrintBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnPrintBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintBill.Location = new System.Drawing.Point(149, 184);
+            this.btnPrintBill.Location = new System.Drawing.Point(160, 184);
             this.btnPrintBill.Name = "btnPrintBill";
             this.btnPrintBill.Size = new System.Drawing.Size(310, 46);
             this.btnPrintBill.TabIndex = 4;
@@ -222,7 +221,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnCa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCa.Location = new System.Drawing.Point(355, 119);
+            this.btnCa.Location = new System.Drawing.Point(366, 119);
             this.btnCa.Name = "btnCa";
             this.btnCa.Size = new System.Drawing.Size(95, 46);
             this.btnCa.TabIndex = 4;
@@ -234,7 +233,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel13.BackColor = System.Drawing.Color.Black;
-            this.panel13.Location = new System.Drawing.Point(27, 52);
+            this.panel13.Location = new System.Drawing.Point(38, 52);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(400, 1);
             this.panel13.TabIndex = 1;
@@ -244,7 +243,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnSa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSa.Location = new System.Drawing.Point(252, 119);
+            this.btnSa.Location = new System.Drawing.Point(263, 119);
             this.btnSa.Name = "btnSa";
             this.btnSa.Size = new System.Drawing.Size(95, 46);
             this.btnSa.TabIndex = 4;
@@ -256,7 +255,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.lbTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotal.AutoSize = true;
             this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.Location = new System.Drawing.Point(359, 67);
+            this.lbTotal.Location = new System.Drawing.Point(370, 67);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Size = new System.Drawing.Size(58, 32);
             this.lbTotal.TabIndex = 0;
@@ -268,7 +267,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.lbDiscount.AutoSize = true;
             this.lbDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiscount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbDiscount.Location = new System.Drawing.Point(365, 24);
+            this.lbDiscount.Location = new System.Drawing.Point(376, 24);
             this.lbDiscount.Name = "lbDiscount";
             this.lbDiscount.Size = new System.Drawing.Size(42, 25);
             this.lbDiscount.TabIndex = 0;
@@ -279,7 +278,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnD.BackColor = System.Drawing.Color.Red;
             this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD.Location = new System.Drawing.Point(150, 119);
+            this.btnD.Location = new System.Drawing.Point(161, 119);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(95, 46);
             this.btnD.TabIndex = 4;
@@ -292,7 +291,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label24.Location = new System.Drawing.Point(22, 24);
+            this.label24.Location = new System.Drawing.Point(33, 24);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(96, 25);
             this.label24.TabIndex = 0;
@@ -303,7 +302,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.lbTotal1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotal1.AutoSize = true;
             this.lbTotal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal1.Location = new System.Drawing.Point(22, 67);
+            this.lbTotal1.Location = new System.Drawing.Point(33, 67);
             this.lbTotal1.Name = "lbTotal1";
             this.lbTotal1.Size = new System.Drawing.Size(84, 32);
             this.lbTotal1.TabIndex = 0;
@@ -321,11 +320,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Column2,
             this.Cost});
             this.dataGridViewCurrentOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dataGridViewCurrentOrder.Location = new System.Drawing.Point(10, 68);
+            this.dataGridViewCurrentOrder.Location = new System.Drawing.Point(5, 68);
             this.dataGridViewCurrentOrder.Name = "dataGridViewCurrentOrder";
             this.dataGridViewCurrentOrder.RowHeadersWidth = 51;
             this.dataGridViewCurrentOrder.RowTemplate.Height = 24;
-            this.dataGridViewCurrentOrder.Size = new System.Drawing.Size(461, 265);
+            this.dataGridViewCurrentOrder.Size = new System.Drawing.Size(477, 265);
             this.dataGridViewCurrentOrder.TabIndex = 2;
             // 
             // Column1
@@ -372,7 +371,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(687, 592);
+            this.tabPage2.Size = new System.Drawing.Size(683, 484);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Candy";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -599,14 +598,13 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Cakes.Controls.Add(this.panel6);
             this.Cakes.Controls.Add(this.panel10);
             this.Cakes.Controls.Add(this.panel9);
-            this.Cakes.Controls.Add(this.kryptonButton1);
             this.Cakes.Controls.Add(this.panel5);
             this.Cakes.Controls.Add(this.panel4);
             this.Cakes.Controls.Add(this.panel3);
             this.Cakes.Location = new System.Drawing.Point(4, 25);
             this.Cakes.Name = "Cakes";
             this.Cakes.Padding = new System.Windows.Forms.Padding(3);
-            this.Cakes.Size = new System.Drawing.Size(687, 592);
+            this.Cakes.Size = new System.Drawing.Size(683, 484);
             this.Cakes.TabIndex = 0;
             this.Cakes.Text = "Cakes";
             this.Cakes.UseVisualStyleBackColor = true;
@@ -715,28 +713,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label16.Size = new System.Drawing.Size(129, 20);
             this.label16.TabIndex = 0;
             this.label16.Text = "Decvil\'s fudge";
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Location = new System.Drawing.Point(1177, 539);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(125, 40);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.ForestGreen;
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.Rounding = 20;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton1.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton1.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton1.TabIndex = 1;
-            this.kryptonButton1.Values.Text = "Save";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // panel5
             // 
@@ -854,7 +830,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabControl1.Location = new System.Drawing.Point(0, 68);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(695, 513);
+            this.tabControl1.Size = new System.Drawing.Size(691, 513);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -866,7 +842,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(687, 484);
+            this.tabPage1.Size = new System.Drawing.Size(683, 484);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Biscuit";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1018,11 +994,11 @@ namespace CandyBugWinformDemo.NewFolder1
             // panel14
             // 
             this.panel14.Controls.Add(this.pictureBox1);
-            this.panel14.Controls.Add(this.kryptonTextBox3);
+            this.panel14.Controls.Add(this.txtFind);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(704, 62);
+            this.panel14.Size = new System.Drawing.Size(693, 63);
             this.panel14.TabIndex = 2;
             // 
             // pictureBox1
@@ -1035,18 +1011,18 @@ namespace CandyBugWinformDemo.NewFolder1
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // kryptonTextBox3
+            // txtFind
             // 
-            this.kryptonTextBox3.Location = new System.Drawing.Point(12, 13);
-            this.kryptonTextBox3.Name = "kryptonTextBox3";
-            this.kryptonTextBox3.Size = new System.Drawing.Size(305, 39);
-            this.kryptonTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox3.StateCommon.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtFind.Location = new System.Drawing.Point(12, 13);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(305, 39);
+            this.txtFind.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.txtFind.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.txtFind.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateCommon.Border.Rounding = 18;
-            this.kryptonTextBox3.TabIndex = 6;
+            this.txtFind.StateCommon.Border.Rounding = 18;
+            this.txtFind.TabIndex = 6;
             // 
             // FormOrders
             // 
@@ -1177,14 +1153,13 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.Button btnShowProduct;
+        private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.Button btnCa;
         private System.Windows.Forms.Button btnSa;
         private System.Windows.Forms.Button btnD;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private System.Windows.Forms.Button btnPrintBill;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFind;
     }
 }
