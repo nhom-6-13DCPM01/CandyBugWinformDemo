@@ -320,7 +320,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Column2,
             this.Cost});
             this.dataGridViewCurrentOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dataGridViewCurrentOrder.Location = new System.Drawing.Point(5, 68);
+            this.dataGridViewCurrentOrder.Location = new System.Drawing.Point(4, 68);
             this.dataGridViewCurrentOrder.Name = "dataGridViewCurrentOrder";
             this.dataGridViewCurrentOrder.RowHeadersWidth = 51;
             this.dataGridViewCurrentOrder.RowTemplate.Height = 24;
@@ -835,6 +835,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.panel8);
             this.tabPage1.Controls.Add(this.panel7);
             this.tabPage1.Controls.Add(this.panel11);
@@ -1004,9 +1005,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(323, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(267, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 26);
+            this.pictureBox1.Size = new System.Drawing.Size(44, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -1015,7 +1016,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.txtFind.Location = new System.Drawing.Point(12, 13);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(305, 39);
+            this.txtFind.Size = new System.Drawing.Size(251, 39);
             this.txtFind.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtFind.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtFind.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
