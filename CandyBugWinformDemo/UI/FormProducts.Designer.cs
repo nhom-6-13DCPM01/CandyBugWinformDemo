@@ -287,7 +287,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // dataGridViewformProducts
             // 
-            this.dataGridViewformProducts.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewformProducts.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridViewformProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewformProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -341,9 +341,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Controls.Add(this.dataGridViewformProducts);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProducts";
             this.Text = "FormProducts";
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

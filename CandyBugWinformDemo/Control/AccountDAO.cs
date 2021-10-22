@@ -21,7 +21,7 @@ namespace CandyBugWinformDemo.Control
         public bool Login(string username, string password)
         {
             string query = "USP_Login @username , @password";
-            DataTable result = DataProvider.Instence.ExecuteQuery(query, new object[] { username, password });
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password });
             return result.Rows.Count > 0;
         }
     }
