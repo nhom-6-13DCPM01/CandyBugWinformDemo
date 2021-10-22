@@ -45,5 +45,10 @@ namespace CandyBugWinformDemo.NewFolder1
         {
 
         }
+
+        private void dataGridViewCurrentOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

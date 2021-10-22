@@ -29,6 +29,9 @@ namespace CandyBugWinformDemo.NewFolder1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrders));
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -104,6 +107,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtFind = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.dataSet1 = new CandyBugWinformDemo.DataSet1();
+            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCurrentOrder)).BeginInit();
@@ -129,6 +134,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel2.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonTextBox1
@@ -313,19 +320,42 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dataGridViewCurrentOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewCurrentOrder.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewCurrentOrder.AutoGenerateColumns = false;
+            this.dataGridViewCurrentOrder.BackgroundColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCurrentOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCurrentOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCurrentOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Cost});
-            this.dataGridViewCurrentOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dataGridViewCurrentOrder.DataSource = this.dataSet1BindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCurrentOrder.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewCurrentOrder.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridViewCurrentOrder.Location = new System.Drawing.Point(4, 68);
             this.dataGridViewCurrentOrder.Name = "dataGridViewCurrentOrder";
             this.dataGridViewCurrentOrder.RowHeadersWidth = 51;
+            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridViewCurrentOrder.RowTemplate.Height = 24;
             this.dataGridViewCurrentOrder.Size = new System.Drawing.Size(477, 265);
             this.dataGridViewCurrentOrder.TabIndex = 2;
+            this.dataGridViewCurrentOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCurrentOrder_CellContentClick);
             // 
             // Column1
             // 
@@ -604,7 +634,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Cakes.Location = new System.Drawing.Point(4, 25);
             this.Cakes.Name = "Cakes";
             this.Cakes.Padding = new System.Windows.Forms.Padding(3);
-            this.Cakes.Size = new System.Drawing.Size(683, 484);
+            this.Cakes.Size = new System.Drawing.Size(679, 484);
             this.Cakes.TabIndex = 0;
             this.Cakes.Text = "Cakes";
             this.Cakes.UseVisualStyleBackColor = true;
@@ -843,7 +873,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(683, 484);
+            this.tabPage1.Size = new System.Drawing.Size(679, 484);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Biscuit";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1025,6 +1055,16 @@ namespace CandyBugWinformDemo.NewFolder1
             this.txtFind.StateCommon.Border.Rounding = 18;
             this.txtFind.TabIndex = 6;
             // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataSet1BindingSource
+            // 
+            this.dataSet1BindingSource.DataSource = this.dataSet1;
+            this.dataSet1BindingSource.Position = 0;
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1083,6 +1123,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1162,5 +1204,7 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFind;
+        private System.Windows.Forms.BindingSource dataSet1BindingSource;
+        private DataSet1 dataSet1;
     }
 }
