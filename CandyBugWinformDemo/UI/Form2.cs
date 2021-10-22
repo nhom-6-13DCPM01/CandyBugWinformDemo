@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CandyBugWinformDemo.Object;
 using ComponentFactory.Krypton.Toolkit;
 using FontAwesome.Sharp;
 
@@ -15,15 +16,26 @@ namespace CandyBugWinformDemo
 {
     public partial class Form2 : KryptonForm
     {
+        private Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.Type); }
+        }
+
+
+
         //Fields
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
         //Constructor
-        public Form2()
+        public Form2(Account acc)
         {
             InitializeComponent();
+            this.LoginAccount = acc;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -45,8 +57,14 @@ namespace CandyBugWinformDemo
 
         }
 
-        
+
         //Method
+        void ChangeAccount(bool type)
+        {
+            btnAdmin.Enabled = type == true;
+            /*thôngTinTaiKhoanToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";*/
+        }
+
         private void ActivateButton(object senderBtn, Color color)
         {
             if(senderBtn != null)
@@ -129,8 +147,9 @@ namespace CandyBugWinformDemo
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
+
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new NewFolder1.FormAdmin());
+            OpenChildForm(new NewFolder1.FormAdmin(LoginAccount));
         }
 
         private void btnHome_Click(object sender, EventArgs e)

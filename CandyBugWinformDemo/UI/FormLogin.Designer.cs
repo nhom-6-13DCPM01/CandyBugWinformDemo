@@ -104,7 +104,6 @@ namespace CandyBugWinformDemo
             this.label1.Size = new System.Drawing.Size(148, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "LOGIN";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLogin
             // 
@@ -131,7 +130,7 @@ namespace CandyBugWinformDemo
             this.btnLogin.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.StatePressed.Back.Color1 = System.Drawing.Color.FloralWhite;
             this.btnLogin.StatePressed.Back.Color2 = System.Drawing.Color.White;
-            this.btnLogin.TabIndex = 3;
+            this.btnLogin.TabIndex = 4;
             this.btnLogin.Values.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -142,7 +141,7 @@ namespace CandyBugWinformDemo
             this.label2.Location = new System.Drawing.Point(265, 429);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 18);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Clear Fields";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -150,9 +149,9 @@ namespace CandyBugWinformDemo
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(465, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(505, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(621, 607);
+            this.pictureBox3.Size = new System.Drawing.Size(581, 607);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -175,7 +174,7 @@ namespace CandyBugWinformDemo
             this.panel1.Location = new System.Drawing.Point(48, 259);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(388, 68);
-            this.panel1.TabIndex = 10;
+            this.panel1.TabIndex = 0;
             // 
             // txtUsername
             // 
@@ -191,7 +190,7 @@ namespace CandyBugWinformDemo
             this.txtUsername.StateCommon.Border.Rounding = 18;
             this.txtUsername.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.txtUsername.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtUsername.TabIndex = 10;
+            this.txtUsername.TabIndex = 1;
             // 
             // panel2
             // 
@@ -200,7 +199,7 @@ namespace CandyBugWinformDemo
             this.panel2.Location = new System.Drawing.Point(48, 333);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(388, 68);
-            this.panel2.TabIndex = 10;
+            this.panel2.TabIndex = 2;
             // 
             // txtPassword
             // 
@@ -217,7 +216,7 @@ namespace CandyBugWinformDemo
             this.txtPassword.StateCommon.Border.Rounding = 18;
             this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.txtPassword.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.txtPassword.TabIndex = 10;
+            this.txtPassword.TabIndex = 3;
             // 
             // label3
             // 
@@ -243,10 +242,11 @@ namespace CandyBugWinformDemo
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(499, 607);
-            this.panel3.TabIndex = 11;
+            this.panel3.TabIndex = 0;
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(23F, 45F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

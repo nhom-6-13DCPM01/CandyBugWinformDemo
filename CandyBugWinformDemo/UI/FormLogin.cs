@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using System.Data.SqlClient;
 using CandyBugWinformDemo.Control;
+using CandyBugWinformDemo.Object;
 
 namespace CandyBugWinformDemo
 {
@@ -37,11 +38,13 @@ namespace CandyBugWinformDemo
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             if (Login(username, password))
             {
-                Form2 f = new Form2();
+                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(username);
+                Form2 f = new Form2(loginAccount);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
@@ -86,9 +89,5 @@ namespace CandyBugWinformDemo
             Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
