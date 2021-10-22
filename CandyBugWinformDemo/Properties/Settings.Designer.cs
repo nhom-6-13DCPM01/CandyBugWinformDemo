@@ -33,5 +33,16 @@ namespace CandyBugWinformDemo.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=nhomsix.database.windows.net;Initial Catalog=QLBK;User ID=nhom6;Passw" +
+            "ord=123456789aA")]
+        public string QLBKConnectionString {
+            get {
+                return ((string)(this["QLBKConnectionString"]));
+            }
+        }
     }
 }
