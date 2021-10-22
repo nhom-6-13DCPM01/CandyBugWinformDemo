@@ -22,42 +22,24 @@ namespace CandyBugWinformDemo.NewFolder1
 
         }
 
-        private void dropdownIdcustomer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonNumericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+      
+       
 
         private void FormOrders_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void lbProductBill_Click(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-
-
-
-        }
+       
 
         private void button4_Click(object sender, EventArgs e)
         {

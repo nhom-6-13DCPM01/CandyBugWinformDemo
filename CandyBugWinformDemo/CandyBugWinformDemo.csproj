@@ -53,14 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\AccountDAO.cs" />
     <Compile Include="Control\DataProvider.cs" />
     <Compile Include="Object\Account.cs" />
-    <Compile Include="Widget1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Widget1.Designer.cs">
-      <DependentUpon>Widget1.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,9 +102,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormStatistical.resx">
       <DependentUpon>FormStatistical.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Widget1.resx">
-      <DependentUpon>Widget1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>

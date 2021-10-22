@@ -43,11 +43,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,7 +59,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(11, 29);
+            this.label1.Location = new System.Drawing.Point(45, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 0;
@@ -67,9 +67,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(3, 57);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(37, 57);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(335, 39);
+            this.kryptonTextBox1.Size = new System.Drawing.Size(215, 39);
             this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -80,6 +80,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.btbResetPassword);
             this.panel1.Controls.Add(this.kryptonDropButton1);
             this.panel1.Controls.Add(this.label3);
@@ -90,14 +91,14 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 455);
+            this.panel1.Size = new System.Drawing.Size(290, 455);
             this.panel1.TabIndex = 2;
             // 
             // btbResetPassword
             // 
             this.btbResetPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btbResetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbResetPassword.Location = new System.Drawing.Point(169, 280);
+            this.btbResetPassword.Location = new System.Drawing.Point(106, 280);
             this.btbResetPassword.Name = "btbResetPassword";
             this.btbResetPassword.Size = new System.Drawing.Size(140, 46);
             this.btbResetPassword.TabIndex = 3;
@@ -106,9 +107,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // kryptonDropButton1
             // 
-            this.kryptonDropButton1.Location = new System.Drawing.Point(3, 219);
+            this.kryptonDropButton1.Location = new System.Drawing.Point(37, 219);
             this.kryptonDropButton1.Name = "kryptonDropButton1";
-            this.kryptonDropButton1.Size = new System.Drawing.Size(335, 36);
+            this.kryptonDropButton1.Size = new System.Drawing.Size(215, 39);
             this.kryptonDropButton1.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.kryptonDropButton1.StateNormal.Back.Color2 = System.Drawing.Color.White;
             this.kryptonDropButton1.StateNormal.Border.Color1 = System.Drawing.Color.Black;
@@ -125,7 +126,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(11, 191);
+            this.label3.Location = new System.Drawing.Point(45, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 25);
             this.label3.TabIndex = 0;
@@ -133,9 +134,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // kryptonTextBox2
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(3, 135);
+            this.kryptonTextBox2.Location = new System.Drawing.Point(37, 135);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(335, 39);
+            this.kryptonTextBox2.Size = new System.Drawing.Size(215, 39);
             this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -149,7 +150,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(11, 107);
+            this.label2.Location = new System.Drawing.Point(45, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 25);
             this.label2.TabIndex = 0;
@@ -167,11 +168,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Column2,
             this.Column3});
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(347, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(296, 57);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(521, 398);
+            this.dataGridView1.Size = new System.Drawing.Size(524, 398);
             this.dataGridView1.TabIndex = 3;
             // 
             // Column1
@@ -203,17 +204,28 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.kryptonTextBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(341, 0);
+            this.panel2.Location = new System.Drawing.Point(290, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(527, 54);
+            this.panel2.Size = new System.Drawing.Size(530, 54);
             this.panel2.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(165, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.DarkTurquoise;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(422, 3);
+            this.button3.Location = new System.Drawing.Point(425, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(95, 46);
             this.button3.TabIndex = 3;
@@ -225,7 +237,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.OrangeRed;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(321, 3);
+            this.button2.Location = new System.Drawing.Point(324, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 46);
             this.button2.TabIndex = 3;
@@ -237,7 +249,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(220, 3);
+            this.button1.Location = new System.Drawing.Point(223, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 46);
             this.button1.TabIndex = 3;
@@ -247,7 +259,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // kryptonTextBox3
             // 
             this.kryptonTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonTextBox3.Location = new System.Drawing.Point(9, 10);
+            this.kryptonTextBox3.Location = new System.Drawing.Point(12, 10);
             this.kryptonTextBox3.Name = "kryptonTextBox3";
             this.kryptonTextBox3.Size = new System.Drawing.Size(147, 39);
             this.kryptonTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -258,22 +270,13 @@ namespace CandyBugWinformDemo.NewFolder1
             this.kryptonTextBox3.StateCommon.Border.Rounding = 18;
             this.kryptonTextBox3.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(162, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(868, 455);
+            this.ClientSize = new System.Drawing.Size(820, 455);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
