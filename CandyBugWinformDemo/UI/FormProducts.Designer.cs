@@ -29,7 +29,6 @@ namespace CandyBugWinformDemo.NewFolder1
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducts));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,22 +49,16 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.dataGridViewformProducts = new System.Windows.Forms.DataGridView();
-            this.qLBKDataSet = new CandyBugWinformDemo.QLBKDataSet();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productTableAdapter = new CandyBugWinformDemo.QLBKDataSetTableAdapters.ProductTableAdapter();
-            this.idProDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewformProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,7 +112,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.updownPrice.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.updownPrice.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.updownPrice.StateCommon.Border.Rounding = 18;
             this.updownPrice.TabIndex = 10;
             this.updownPrice.TabStop = false;
@@ -135,21 +127,17 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dropdownCategoty.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dropdownCategoty.OverrideFocus.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dropdownCategoty.Size = new System.Drawing.Size(161, 34);
             this.dropdownCategoty.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dropdownCategoty.StateDisabled.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dropdownCategoty.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.dropdownCategoty.StateNormal.Back.Color2 = System.Drawing.Color.White;
-            this.dropdownCategoty.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dropdownCategoty.StateNormal.Border.Color1 = System.Drawing.Color.Black;
             this.dropdownCategoty.StateNormal.Border.Color2 = System.Drawing.Color.Black;
             this.dropdownCategoty.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dropdownCategoty.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dropdownCategoty.StateNormal.Border.Rounding = 18;
             this.dropdownCategoty.TabIndex = 9;
             this.dropdownCategoty.Values.Text = "";
@@ -202,7 +190,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.txtItemProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtItemProduct.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtItemProduct.StateCommon.Border.Rounding = 18;
             this.txtItemProduct.TabIndex = 8;
             // 
@@ -231,7 +218,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.txtIDProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtIDProduct.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtIDProduct.StateCommon.Border.Rounding = 18;
             this.txtIDProduct.TabIndex = 8;
             // 
@@ -285,7 +271,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTextBox3.StateCommon.Border.Rounding = 18;
             this.kryptonTextBox3.TabIndex = 6;
             // 
@@ -330,76 +315,49 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // dataGridViewformProducts
             // 
-            this.dataGridViewformProducts.AllowUserToAddRows = false;
-            this.dataGridViewformProducts.AllowUserToDeleteRows = false;
-            this.dataGridViewformProducts.AutoGenerateColumns = false;
             this.dataGridViewformProducts.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewformProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewformProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.idCategoryDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.imageDataGridViewTextBoxColumn});
-            this.dataGridViewformProducts.DataSource = this.productBindingSource;
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dataGridViewformProducts.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridViewformProducts.Location = new System.Drawing.Point(274, 44);
             this.dataGridViewformProducts.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewformProducts.Name = "dataGridViewformProducts";
-            this.dataGridViewformProducts.ReadOnly = true;
             this.dataGridViewformProducts.RowHeadersWidth = 51;
             this.dataGridViewformProducts.RowTemplate.Height = 24;
             this.dataGridViewformProducts.Size = new System.Drawing.Size(419, 335);
             this.dataGridViewformProducts.TabIndex = 6;
             // 
-            // qLBKDataSet
+            // Column1
             // 
-            this.qLBKDataSet.DataSetName = "QLBKDataSet";
-            this.qLBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
-            // productBindingSource
+            // Column2
             // 
-            this.productBindingSource.DataMember = "Product";
-            this.productBindingSource.DataSource = this.qLBKDataSet;
+            this.Column2.HeaderText = "Item";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
-            // productTableAdapter
+            // Column3
             // 
-            this.productTableAdapter.ClearBeforeFill = true;
+            this.Column3.HeaderText = "Category";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
-            // idProDataGridViewTextBoxColumn
+            // Column4
             // 
-            this.idProDataGridViewTextBoxColumn.DataPropertyName = "idPro";
-            this.idProDataGridViewTextBoxColumn.HeaderText = "idPro";
-            this.idProDataGridViewTextBoxColumn.Name = "idProDataGridViewTextBoxColumn";
-            this.idProDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idCategoryDataGridViewTextBoxColumn
-            // 
-            this.idCategoryDataGridViewTextBoxColumn.DataPropertyName = "idCategory";
-            this.idCategoryDataGridViewTextBoxColumn.HeaderText = "idCategory";
-            this.idCategoryDataGridViewTextBoxColumn.Name = "idCategoryDataGridViewTextBoxColumn";
-            this.idCategoryDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imageDataGridViewTextBoxColumn
-            // 
-            this.imageDataGridViewTextBoxColumn.DataPropertyName = "image";
-            this.imageDataGridViewTextBoxColumn.HeaderText = "image";
-            this.imageDataGridViewTextBoxColumn.Name = "imageDataGridViewTextBoxColumn";
-            this.imageDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Column4.HeaderText = "Price";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // FormProducts
             // 
@@ -423,8 +381,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewformProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -446,17 +402,13 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Button btnDeleteProduct;
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.DataGridView dataGridViewformProducts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private QLBKDataSet qLBKDataSet;
-        private System.Windows.Forms.BindingSource productBindingSource;
-        private QLBKDataSetTableAdapters.ProductTableAdapter productTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imageDataGridViewTextBoxColumn;
     }
 }
