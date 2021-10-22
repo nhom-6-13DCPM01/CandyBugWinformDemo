@@ -59,6 +59,11 @@
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\Category.cs" />
     <Compile Include="Object\Product.cs" />
+    <Compile Include="QLBKDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBKDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +139,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLBKDataSet.xsc">
+      <DependentUpon>QLBKDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBKDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBKDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBKDataSet.xss">
+      <DependentUpon>QLBKDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
