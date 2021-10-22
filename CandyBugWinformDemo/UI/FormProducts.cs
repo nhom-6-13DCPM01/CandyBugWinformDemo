@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CandyBugWinformDemo.Control;
+using CandyBugWinformDemo.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,22 +14,43 @@ namespace CandyBugWinformDemo.NewFolder1
 {
     public partial class FormProducts : Form
     {
+        private ContextMenuStrip _contextMenuAutoFill;
         public FormProducts()
         {
             InitializeComponent();
         }
-
-        private void kryptonTextBox4_TextChanged(object sender, EventArgs e)
+        public void loadCategory()
         {
-
+            _contextMenuAutoFill = new ContextMenuStrip();
+            List<Category> list = CategoryDAO.Instence.getListCategory();
+            foreach(Category item in list)
+            {
+                _contextMenuAutoFill.Items.Add(item.Name);
+            }
+            
+            
+            foreach (ToolStripMenuItem mItem in _contextMenuAutoFill.Items)
+                mItem.Click +=
+                new System.EventHandler(this.AutoFillToolStripMenuItem_Click);
         }
 
-        private void btnShowProduct_Click(object sender, EventArgs e)
+        private void dropdownCategoty_DropDown(object sender, ComponentFactory.Krypton.Toolkit.ContextPositionMenuArgs e)
         {
-
+            dropdownCategoty.ContextMenuStrip = _contextMenuAutoFill;
+            dropdownCategoty.ContextMenuStrip.Show(dropdownCategoty, new System.Drawing.Point(0,dropdownCategoty.Height));
+        }
+        private void AutoFillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string m = ((ToolStripMenuItem)sender).Text;
+            dropdownCategoty.Text = m;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void FormProducts_Load(object sender, EventArgs e)
+        {
+            loadCategory();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
