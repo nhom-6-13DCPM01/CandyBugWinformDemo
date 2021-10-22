@@ -295,6 +295,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Column3,
             this.Column4});
             this.dataGridViewformProducts.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dataGridViewformProducts.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridViewformProducts.Location = new System.Drawing.Point(365, 54);
             this.dataGridViewformProducts.Name = "dataGridViewformProducts";
             this.dataGridViewformProducts.RowHeadersWidth = 51;

@@ -20,8 +20,8 @@ namespace CandyBugWinformDemo.Control
         private AccountDAO() { }
         public bool Login(string username, string password)
         {
-            string query = "SELECT * FROM dbo.Account WHERE Username = N'" +username+ "' AND PASSWORD =N'" +password+ "'";
-            DataTable result = DataProvider.Instence.ExecuteQuery(query);
+            string query = "USP_Login @username , @password";
+            DataTable result = DataProvider.Instence.ExecuteQuery(query, new object[] { username, password });
             return result.Rows.Count > 0;
         }
     }
