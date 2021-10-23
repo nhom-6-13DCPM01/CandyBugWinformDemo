@@ -15,6 +15,7 @@ namespace CandyBugWinformDemo.NewFolder1
     public partial class FormProducts : Form
     {
         private ContextMenuStrip _contextMenuAutoFill;
+        int index;
         public FormProducts()
         {
             InitializeComponent();
@@ -75,14 +76,34 @@ namespace CandyBugWinformDemo.NewFolder1
             }
         }
 
-        private void panel2_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void dataGridViewformProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtIDProduct.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtItemProduct.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
+            dropdownCategoty.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
+            updownPrice.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
 
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            string name = txtItemProduct.Text;
+            string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
+            float price = (float)Convert.ToDouble(updownPrice.Text);
+            int idPro = Convert.ToInt32(txtIDProduct.Text);
+            if (ProductDAO.Intence.updateProduct(name, idCate, price, idPro))
+            {
+                MessageBox.Show("Update Thành công");
+                loadGridData();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi", "Thông báo");
+            }
+        }
+
+        private void dataGridViewformProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
         }
     }
 }

@@ -52,16 +52,15 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.dataGridViewformProducts = new System.Windows.Forms.DataGridView();
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.qLBKDataSet1 = new CandyBugWinformDemo.QLBKDataSet1();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-           
-            this.productTableAdapter1 = new CandyBugWinformDemo.QLBKDataSet1TableAdapters.ProductTableAdapter();
             this.idProDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.qLBKDataSet1 = new CandyBugWinformDemo.QLBKDataSet1();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productTableAdapter1 = new CandyBugWinformDemo.QLBKDataSet1TableAdapters.ProductTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,7 +70,6 @@ namespace CandyBugWinformDemo.NewFolder1
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            
             this.SuspendLayout();
             // 
             // panel1
@@ -102,7 +100,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 379);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
             // pictureBox1
             // 
@@ -126,7 +123,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.updownPrice.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.updownPrice.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.updownPrice.StateCommon.Border.Rounding = 18;
             this.updownPrice.TabIndex = 10;
             this.updownPrice.TabStop = false;
@@ -140,13 +136,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dropdownCategoty.Size = new System.Drawing.Size(161, 32);
             this.dropdownCategoty.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.dropdownCategoty.StateNormal.Back.Color2 = System.Drawing.Color.White;
-            this.dropdownCategoty.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dropdownCategoty.StateNormal.Border.Color1 = System.Drawing.Color.Black;
             this.dropdownCategoty.StateNormal.Border.Color2 = System.Drawing.Color.Black;
             this.dropdownCategoty.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dropdownCategoty.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dropdownCategoty.StateNormal.Border.Rounding = 18;
             this.dropdownCategoty.TabIndex = 9;
             this.dropdownCategoty.Values.Text = "";
@@ -199,7 +193,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.txtItemProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtItemProduct.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtItemProduct.StateCommon.Border.Rounding = 18;
             this.txtItemProduct.TabIndex = 8;
             // 
@@ -228,7 +221,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.txtIDProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtIDProduct.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtIDProduct.StateCommon.Border.Rounding = 18;
             this.txtIDProduct.TabIndex = 8;
             // 
@@ -282,7 +274,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTextBox3.StateCommon.Border.Rounding = 18;
             this.kryptonTextBox3.TabIndex = 6;
             // 
@@ -298,6 +289,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnUpdateProduct.TabIndex = 3;
             this.btnUpdateProduct.Text = "Update";
             this.btnUpdateProduct.UseVisualStyleBackColor = false;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // btnDeleteProduct
             // 
@@ -363,34 +355,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dataGridViewformProducts.RowTemplate.Height = 24;
             this.dataGridViewformProducts.Size = new System.Drawing.Size(419, 335);
             this.dataGridViewformProducts.TabIndex = 6;
+            this.dataGridViewformProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellClick);
             this.dataGridViewformProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellContentClick);
-            // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataMember = "Product";
-            this.productBindingSource1.DataSource = this.qLBKDataSet1;
-            // 
-            // qLBKDataSet1
-            // 
-            this.qLBKDataSet1.DataSetName = "QLBKDataSet1";
-            this.qLBKDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-
-            // 
-            // qLBKDataSet
-            // 
-           
-            // 
-            // productTableAdapter
-            // 
-       
-            // 
-            // productTableAdapter1
-            // 
-            this.productTableAdapter1.ClearBeforeFill = true;
+            this.dataGridViewformProducts.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellContentClick);
+            this.dataGridViewformProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellContentClick);
             // 
             // idProDataGridViewTextBoxColumn
             // 
@@ -435,6 +403,24 @@ namespace CandyBugWinformDemo.NewFolder1
             this.imageDataGridViewTextBoxColumn.ReadOnly = true;
             this.imageDataGridViewTextBoxColumn.Width = 125;
             // 
+            // productBindingSource1
+            // 
+            this.productBindingSource1.DataMember = "Product";
+            this.productBindingSource1.DataSource = this.qLBKDataSet1;
+            // 
+            // qLBKDataSet1
+            // 
+            this.qLBKDataSet1.DataSetName = "QLBKDataSet1";
+            this.qLBKDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "Product";
+            // 
+            // productTableAdapter1
+            // 
+            this.productTableAdapter1.ClearBeforeFill = true;
+            // 
             // FormProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,7 +449,6 @@ namespace CandyBugWinformDemo.NewFolder1
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-
             this.ResumeLayout(false);
 
         }

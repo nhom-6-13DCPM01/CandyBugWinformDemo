@@ -45,13 +45,16 @@ namespace CandyBugWinformDemo.Control
             int resulf = DataProvider.Instance.ExecuteNonQuery(query);
             return resulf > 0;
         }
-        public void removeProduct()
+        public void removeProduct(int idPro)
         {
-
+           /* string query = string.Format();
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query);*/
         }
-        public void updateProduct()
+        public bool updateProduct(string name, string Category, float price, int idPro)
         {
-
+            string query = string.Format("UPDATE Product SET name = N'{0}', Category = N'{1}' , price = {2} WHERE idPro = {3}", name, Category, price , idPro );
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query);
+            return resulf > 0;
         }
         public void getProduct()
         {
