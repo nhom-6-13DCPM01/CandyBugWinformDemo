@@ -36,7 +36,7 @@ namespace CandyBugWinformDemo.Control
         {
             List<Category> list = new List<Category>();
             string query = "SELECT * FROM Category";
-            DataTable data = DataProvider.Instence.ExecuteQuery(query);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
                 Category cate = new Category(item);
@@ -47,7 +47,7 @@ namespace CandyBugWinformDemo.Control
         public bool addCategory( string name)
         {
             string query = string.Format("INSERT Category (name) VALUES (N'0')", name);
-            int resulf = DataProvider.Instence.ExecuteNonQuery(query);
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query);
             return resulf > 0;
         }
         public void removeCategory()
