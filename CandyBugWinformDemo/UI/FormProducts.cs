@@ -15,7 +15,7 @@ namespace CandyBugWinformDemo.NewFolder1
     public partial class FormProducts : Form
     {
         private ContextMenuStrip _contextMenuAutoFill;
-        int index;
+       
         public FormProducts()
         {
             InitializeComponent();
@@ -98,10 +98,7 @@ namespace CandyBugWinformDemo.NewFolder1
         //----------------------------------------------------------------//
         //CELL CLICK IS NOT VALUE
         //
-        private void dataGridViewformProducts_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            index = e.RowIndex;
-        }
+        
         //-------------------------------------------------------------//
         //
         //--------------------------BUTTON-----------------------------//
@@ -110,6 +107,8 @@ namespace CandyBugWinformDemo.NewFolder1
         //
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+            if (checkInput())
+            {
             string name = txtItemProduct.Text;
             string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
             float price = (float)Convert.ToDouble(updownPrice.Text);
@@ -123,14 +122,19 @@ namespace CandyBugWinformDemo.NewFolder1
             {
                 MessageBox.Show("Lỗi", "Thông báo");
             }
+            }
+           
         }
         //
         //DELETE BUTTON
         //
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
-            int idPro = Convert.ToInt32(txtIDProduct.Text);
-            if (ProductDAO.Intence.removeProduct(idPro))
+            
+            int idPro;
+            if (Int32.TryParse(txtIDProduct.Text,out idPro))
+            {
+                if (ProductDAO.Intence.removeProduct(idPro))
             {
                 MessageBox.Show("Xóa Thành công");
                 loadGridData();
@@ -138,14 +142,24 @@ namespace CandyBugWinformDemo.NewFolder1
             }
             else
             {
-                MessageBox.Show("Lỗi", "Thông báo");
+                MessageBox.Show("Thông báo", "Lỗi");
             }
+            }
+            else
+            {
+                MessageBox.Show("Pleace choose a product", "Lỗi");
+            }
+             
+           
         }
         //
         //UPDATE PRODUCT
         //
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
+            
+            if (checkInput())
+            {
             string name = txtItemProduct.Text;
             string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
             float price = (float)Convert.ToDouble(updownPrice.Text);
@@ -160,7 +174,65 @@ namespace CandyBugWinformDemo.NewFolder1
             {
                 MessageBox.Show("Lỗi", "Thông báo");
             }
+            }
+            
         }
         //----------------------------------------------------------
+        //---------------------CHECK INPUT VALUE--------------------//
+        public bool checkInput()
+        {
+            
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void txtItemProduct_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtItemProduct.Text))
+            {
+                e.Cancel = true;
+                txtIDProduct.Focus();
+                errorProvider.SetError(txtItemProduct, "Please enter name");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(txtItemProduct, null);
+            }    
+        }
+
+        private void updownPrice_Validating(object sender, CancelEventArgs e)
+        {
+            Double a;
+            if (Double.TryParse(updownPrice.Text,out a)== false)
+            {
+                e.Cancel = true;
+                updownPrice.Focus();
+                errorProvider.SetError(updownPrice, "Please enter true");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(updownPrice, null);
+            }
+        }
+
+        private void dropdownCategoty_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(dropdownCategoty.Text))
+            {
+                e.Cancel = true;
+                txtIDProduct.Focus();
+                errorProvider.SetError(dropdownCategoty, "Please choose a Category");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(dropdownCategoty, null);
+            }
+        }
     }
 }

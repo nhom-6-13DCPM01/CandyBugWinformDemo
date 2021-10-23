@@ -61,6 +61,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.qLBKDataSet1 = new CandyBugWinformDemo.QLBKDataSet1();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter1 = new CandyBugWinformDemo.QLBKDataSet1TableAdapters.ProductTableAdapter();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,6 +71,7 @@ namespace CandyBugWinformDemo.NewFolder1
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,7 +100,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 379);
+            this.panel2.Size = new System.Drawing.Size(270, 379);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
@@ -126,6 +128,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.updownPrice.StateCommon.Border.Rounding = 18;
             this.updownPrice.TabIndex = 10;
             this.updownPrice.TabStop = false;
+            this.updownPrice.Validating += new System.ComponentModel.CancelEventHandler(this.updownPrice_Validating);
             // 
             // dropdownCategoty
             // 
@@ -145,6 +148,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dropdownCategoty.TabIndex = 9;
             this.dropdownCategoty.Values.Text = "";
             this.dropdownCategoty.DropDown += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ContextPositionMenuArgs>(this.dropdownCategoty_DropDown);
+            this.dropdownCategoty.Validating += new System.ComponentModel.CancelEventHandler(this.dropdownCategoty_Validating);
             // 
             // label4
             // 
@@ -195,6 +199,7 @@ namespace CandyBugWinformDemo.NewFolder1
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtItemProduct.StateCommon.Border.Rounding = 18;
             this.txtItemProduct.TabIndex = 8;
+            this.txtItemProduct.Validating += new System.ComponentModel.CancelEventHandler(this.txtItemProduct_Validating);
             // 
             // label3
             // 
@@ -356,7 +361,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dataGridViewformProducts.RowTemplate.Height = 24;
             this.dataGridViewformProducts.Size = new System.Drawing.Size(419, 335);
             this.dataGridViewformProducts.TabIndex = 6;
-            this.dataGridViewformProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellClick);
             this.dataGridViewformProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellContentClick);
             this.dataGridViewformProducts.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellContentClick);
             this.dataGridViewformProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellContentClick);
@@ -422,6 +426,10 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.productTableAdapter1.ClearBeforeFill = true;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // FormProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,6 +458,7 @@ namespace CandyBugWinformDemo.NewFolder1
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -486,5 +495,6 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn imageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
