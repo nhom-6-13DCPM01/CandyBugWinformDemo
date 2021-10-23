@@ -11,7 +11,7 @@ namespace CandyBugWinformDemo.Object
     {
         private int idPro;
         private string name;
-        private int idCategory;
+        private string Category;
         private float price;
         private string image;
         public int IdPro { get => idPro; set => idPro = value; }
@@ -24,7 +24,7 @@ namespace CandyBugWinformDemo.Object
         {
             this.idPro = (int)row["idPro"];
             this.name = row["name"].ToString();
-            this.idCategory = (int)row["idCategory"];
+            this.Category = row["idCategory"].ToString();
             this.price = (float)Convert.ToDouble(row["price"].ToString());
             this.image = row["image"].ToString();
         }

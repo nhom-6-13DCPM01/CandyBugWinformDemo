@@ -31,13 +31,11 @@ namespace CandyBugWinformDemo.NewFolder1
             {
                 _contextMenuAutoFill.Items.Add(item.Name);
             }
-            
-            
+      
             foreach (ToolStripMenuItem mItem in _contextMenuAutoFill.Items)
                 mItem.Click +=
                 new System.EventHandler(this.AutoFillToolStripMenuItem_Click);
         }
-
         private void dropdownCategoty_DropDown(object sender, ComponentFactory.Krypton.Toolkit.ContextPositionMenuArgs e)
         {
             dropdownCategoty.ContextMenuStrip = _contextMenuAutoFill;
@@ -48,22 +46,43 @@ namespace CandyBugWinformDemo.NewFolder1
             string m = ((ToolStripMenuItem)sender).Text;
             dropdownCategoty.Text = m;
         }
+        public void loadGridData()
+        {
+            this.productTableAdapter1.Fill(this.qLBKDataSet1.Product);
+        }
 
         private void FormProducts_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLBKDataSet1.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter1.Fill(this.qLBKDataSet1.Product);
             loadCategory();
-            this.productTableAdapter.Fill(this.qLBKDataSet.Product);
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            loadGridData();
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            dataGridViewformProducts.Refresh();
-            this.productTableAdapter.Fill(this.qLBKDataSet.Product);
+            string name = txtItemProduct.Text;
+            string idCate =  CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
+            float price = (float)Convert.ToDouble(updownPrice.Text);
+            if (ProductDAO.Intence.addProduct(name,idCate,price))
+            {
+                MessageBox.Show("Thêm Thành công");
+                loadGridData();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi", "Thông báo");
+            }
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewformProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

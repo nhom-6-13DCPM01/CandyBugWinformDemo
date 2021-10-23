@@ -56,15 +56,15 @@
     <Compile Include="Control\AccountDAO.cs" />
     <Compile Include="Control\CategoryDAO.cs" />
     <Compile Include="Control\DataProvider.cs" />
-    <Compile Include="QLBKDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLBKDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Control\ProductDAO.cs" />
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\Category.cs" />
     <Compile Include="Object\Product.cs" />
+    <Compile Include="QLBKDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBKDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,16 +140,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLBKDataSet.xsc">
-      <DependentUpon>QLBKDataSet.xsd</DependentUpon>
+    <None Include="QLBKDataSet1.xsc">
+      <DependentUpon>QLBKDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="QLBKDataSet.xsd">
+    <None Include="QLBKDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLBKDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLBKDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QLBKDataSet.xss">
-      <DependentUpon>QLBKDataSet.xsd</DependentUpon>
+    <None Include="QLBKDataSet1.xss">
+      <DependentUpon>QLBKDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

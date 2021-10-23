@@ -39,9 +39,9 @@ namespace CandyBugWinformDemo.Control
         {
             return null;
         }
-        public bool addProduct(string name,int idCategory, float price)
+        public bool addProduct(string name,string Category, float price)
         {
-            string query = string.Format("INSERT Product (name, idCategory,price) VALUES (N'0',1,2)", name , idCategory , price );
+            string query = string.Format("INSERT Product ( name, Category, price) VALUES ( N'{0}', N'{1}' ,{2})", name , Category , price );
             int resulf = DataProvider.Instance.ExecuteNonQuery(query);
             return resulf > 0;
         }

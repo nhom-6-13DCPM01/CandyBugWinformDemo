@@ -58,9 +58,11 @@ namespace CandyBugWinformDemo.Control
         {
 
         }
-        public void getCategory()
+        public string getCategory(string name)
         {
-
+            string query = "SELECT * FROM Category WHERE name = '" + name +"'";
+            string nameCategory = DataProvider.Instance.ExecuteScarlar(query).ToString();
+            return nameCategory;
         }
     }
 }
