@@ -24,19 +24,37 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle.ForeColor = Color.Black;
             this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
         }
+        //
+        //FUNTION CLEAR
+        //
+        public void ClearTxt()
+        {
+            txtIDProduct.Clear();
+            txtItemProduct.Clear();
+            dropdownCategoty.Text = " ";
+            updownPrice.Text = " ";
+        }
+
+        //-------------------------------------------------------------//
+        //FUNTION DROP DOWN LOAD BUTTON
+        //
+        //FUNTION LOAD CATEGORY
+        //
         public void loadCategory()
         {
             _contextMenuAutoFill = new ContextMenuStrip();
             List<Category> list = CategoryDAO.Instence.getListCategory();
-            foreach(Category item in list)
+            foreach (Category item in list)
             {
                 _contextMenuAutoFill.Items.Add(item.Name);
             }
-      
+
             foreach (ToolStripMenuItem mItem in _contextMenuAutoFill.Items)
                 mItem.Click +=
                 new System.EventHandler(this.AutoFillToolStripMenuItem_Click);
         }
+        //
+        //
         private void dropdownCategoty_DropDown(object sender, ComponentFactory.Krypton.Toolkit.ContextPositionMenuArgs e)
         {
             dropdownCategoty.ContextMenuStrip = _contextMenuAutoFill;
@@ -47,11 +65,15 @@ namespace CandyBugWinformDemo.NewFolder1
             string m = ((ToolStripMenuItem)sender).Text;
             dropdownCategoty.Text = m;
         }
+        //
         public void loadGridData()
         {
             this.productTableAdapter1.Fill(this.qLBKDataSet1.Product);
         }
-
+        //
+        //----------------------------------------------------------//
+        //FORM LOAD
+        //
         private void FormProducts_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLBKDataSet1.Product' table. You can move, or remove it, as needed.
@@ -59,23 +81,11 @@ namespace CandyBugWinformDemo.NewFolder1
             loadCategory();
             loadGridData();
         }
-
-        private void btnAddProduct_Click(object sender, EventArgs e)
-        {
-            string name = txtItemProduct.Text;
-            string idCate =  CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
-            float price = (float)Convert.ToDouble(updownPrice.Text);
-            if (ProductDAO.Intence.addProduct(name,idCate,price))
-            {
-                MessageBox.Show("Thêm Thành công");
-                loadGridData();
-            }
-            else
-            {
-                MessageBox.Show("Lỗi", "Thông báo");
-            }
-        }
-
+       //----------------------------------------------------------------//
+       //
+        //--------------------------------------------------------------//
+        //CLICK ON DATAGRIDVIEW
+        //
         private void dataGridViewformProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtIDProduct.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -83,7 +93,57 @@ namespace CandyBugWinformDemo.NewFolder1
             dropdownCategoty.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
             updownPrice.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
-
+       //---------------------------------------------------------------//
+       //
+        //----------------------------------------------------------------//
+        //CELL CLICK IS NOT VALUE
+        //
+        private void dataGridViewformProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
+        }
+        //-------------------------------------------------------------//
+        //
+        //--------------------------BUTTON-----------------------------//
+        //
+        //CLICK ADD PRODUCT
+        //
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            string name = txtItemProduct.Text;
+            string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
+            float price = (float)Convert.ToDouble(updownPrice.Text);
+            if (ProductDAO.Intence.addProduct(name, idCate, price))
+            {
+                MessageBox.Show("Thêm Thành công");
+                loadGridData();
+                ClearTxt();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi", "Thông báo");
+            }
+        }
+        //
+        //DELETE BUTTON
+        //
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            int idPro = Convert.ToInt32(txtIDProduct.Text);
+            if (ProductDAO.Intence.removeProduct(idPro))
+            {
+                MessageBox.Show("Xóa Thành công");
+                loadGridData();
+                ClearTxt();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi", "Thông báo");
+            }
+        }
+        //
+        //UPDATE PRODUCT
+        //
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
             string name = txtItemProduct.Text;
@@ -94,16 +154,13 @@ namespace CandyBugWinformDemo.NewFolder1
             {
                 MessageBox.Show("Update Thành công");
                 loadGridData();
+                ClearTxt();
             }
             else
             {
                 MessageBox.Show("Lỗi", "Thông báo");
             }
         }
-
-        private void dataGridViewformProducts_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            index = e.RowIndex;
-        }
+        //----------------------------------------------------------
     }
 }

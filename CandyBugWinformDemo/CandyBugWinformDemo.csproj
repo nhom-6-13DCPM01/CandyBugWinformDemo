@@ -56,9 +56,11 @@
     <Compile Include="Control\AccountDAO.cs" />
     <Compile Include="Control\CategoryDAO.cs" />
     <Compile Include="Control\DataProvider.cs" />
+    <Compile Include="Control\OrdersDAO.cs" />
     <Compile Include="Control\ProductDAO.cs" />
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\Category.cs" />
+    <Compile Include="Object\Orders.cs" />
     <Compile Include="Object\Product.cs" />
     <Compile Include="QLBKDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -45,10 +45,12 @@ namespace CandyBugWinformDemo.Control
             int resulf = DataProvider.Instance.ExecuteNonQuery(query);
             return resulf > 0;
         }
-        public void removeProduct(int idPro)
+        public bool removeProduct(int idPro)
         {
-           /* string query = string.Format();
-            int resulf = DataProvider.Instance.ExecuteNonQuery(query);*/
+            OrdersDAO.Intance.deleteOrderbyidProduct(idPro);
+            string query = string.Format("DELETE Product Where idPro = {0}",idPro);
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query);
+            return resulf > 0;
         }
         public bool updateProduct(string name, string Category, float price, int idPro)
         {
