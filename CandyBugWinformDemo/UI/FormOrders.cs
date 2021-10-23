@@ -15,6 +15,10 @@ namespace CandyBugWinformDemo.NewFolder1
         public FormOrders()
         {
             InitializeComponent();
+            this.dataGridViewCurrentOrder.DefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridViewCurrentOrder.DefaultCellStyle.SelectionForeColor = Color.Red;
+            this.dataGridViewCurrentOrder.AlternatingRowsDefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridViewCurrentOrder.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,44 +26,31 @@ namespace CandyBugWinformDemo.NewFolder1
 
         }
 
-        private void dropdownIdcustomer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonNumericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+      
+       
 
         private void FormOrders_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void lbProductBill_Click(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+       
+
+        private void button4_Click(object sender, EventArgs e)
         {
-
-
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void dataGridViewCurrentOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

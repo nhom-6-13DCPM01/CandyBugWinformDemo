@@ -18,6 +18,10 @@ namespace CandyBugWinformDemo.NewFolder1
         public FormProducts()
         {
             InitializeComponent();
+            this.dataGridViewformProducts.DefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridViewformProducts.DefaultCellStyle.SelectionForeColor = Color.Red;
+            this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
         }
         public void loadCategory()
         {
@@ -52,6 +56,13 @@ namespace CandyBugWinformDemo.NewFolder1
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void FormProducts_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'qLBKDataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.qLBKDataSet.Product);
 
         }
     }

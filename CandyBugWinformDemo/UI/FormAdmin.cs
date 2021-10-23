@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace CandyBugWinformDemo.NewFolder1
 {
     public partial class FormAdmin : Form
     {
+        //constructor
         public FormAdmin()
         {
             InitializeComponent();
+            this.dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Red;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
         }
     }
 }
