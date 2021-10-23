@@ -15,6 +15,10 @@ namespace CandyBugWinformDemo.NewFolder1
         public FormOrders()
         {
             InitializeComponent();
+            this.dataGridViewCurrentOrder.DefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridViewCurrentOrder.DefaultCellStyle.SelectionForeColor = Color.Red;
+            this.dataGridViewCurrentOrder.AlternatingRowsDefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridViewCurrentOrder.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
         private void label1_Click(object sender, EventArgs e)

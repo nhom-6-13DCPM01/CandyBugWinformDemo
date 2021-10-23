@@ -15,6 +15,10 @@ namespace CandyBugWinformDemo.NewFolder1
         public FormProducts()
         {
             InitializeComponent();
+            this.dataGridViewformProducts.DefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridViewformProducts.DefaultCellStyle.SelectionForeColor = Color.Red;
+            this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
         private void kryptonTextBox4_TextChanged(object sender, EventArgs e)
