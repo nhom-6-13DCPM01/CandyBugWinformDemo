@@ -28,14 +28,12 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             InitializeComponent();
             LoginAccount = acc;
+            Load();
         }
 
         void Load()
         {
-
-            dataGridView1.DataSource = accountList;
-
-            
+            dataGridView1.DataSource = accountList;            
             LoadAccount();
             AddAccountBinding();
         }
@@ -50,7 +48,7 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             kryptonTextBox1.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "UserName", true, DataSourceUpdateMode.Never));
             kryptonTextBox2.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
-            kryptonDropButton1.DataBindings.Add(new Binding("Value", dataGridView1.DataSource, "Type", true, DataSourceUpdateMode.Never));
+            kryptonNumericUpDown1.DataBindings.Add(new Binding("Value", dataGridView1.DataSource, "Type", true, DataSourceUpdateMode.Never));
         }
 
 
@@ -117,9 +115,39 @@ namespace CandyBugWinformDemo.NewFolder1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void btnAddAccount_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+            string displayName = kryptonTextBox2.Text;
+            int type = (int)kryptonNumericUpDown1.Value;
+
+            AddAccount(userName, displayName, type);
+        }
+
+        private void btnEditAccount_Click(object sender, EventArgs e)
         {
 
+            string userName = kryptonTextBox1.Text;
+            string displayName = kryptonTextBox2.Text;
+            int type = (int)kryptonNumericUpDown1.Value;
+
+            EditAccount(userName, displayName, type);
+        }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+
+            string userName = kryptonTextBox1.Text;
+
+            DeleteAccount(userName);
+
+        }
+
+        private void btbResetPassword_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+            ResetPass(userName);
         }
     }
 }

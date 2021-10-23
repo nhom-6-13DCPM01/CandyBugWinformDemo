@@ -34,17 +34,17 @@ namespace CandyBugWinformDemo.NewFolder1
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btbResetPassword = new System.Windows.Forms.Button();
-            this.kryptonDropButton1 = new ComponentFactory.Krypton.Toolkit.KryptonDropButton();
             this.label3 = new System.Windows.Forms.Label();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditAccount = new System.Windows.Forms.Button();
+            this.btnDeleteAccount = new System.Windows.Forms.Button();
+            this.btnAddAccount = new System.Windows.Forms.Button();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonNumericUpDown1 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -66,7 +66,6 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.kryptonTextBox1.Location = new System.Drawing.Point(37, 57);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.ReadOnly = true;
             this.kryptonTextBox1.Size = new System.Drawing.Size(215, 39);
             this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.Black;
@@ -79,8 +78,8 @@ namespace CandyBugWinformDemo.NewFolder1
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.kryptonNumericUpDown1);
             this.panel1.Controls.Add(this.btbResetPassword);
-            this.panel1.Controls.Add(this.kryptonDropButton1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.kryptonTextBox2);
             this.panel1.Controls.Add(this.label2);
@@ -102,22 +101,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btbResetPassword.TabIndex = 3;
             this.btbResetPassword.Text = "Reset Password";
             this.btbResetPassword.UseVisualStyleBackColor = false;
-            // 
-            // kryptonDropButton1
-            // 
-            this.kryptonDropButton1.Location = new System.Drawing.Point(37, 219);
-            this.kryptonDropButton1.Name = "kryptonDropButton1";
-            this.kryptonDropButton1.Size = new System.Drawing.Size(215, 39);
-            this.kryptonDropButton1.StateNormal.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonDropButton1.StateNormal.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonDropButton1.StateNormal.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonDropButton1.StateNormal.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonDropButton1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonDropButton1.StateNormal.Border.Rounding = 18;
-            this.kryptonDropButton1.TabIndex = 2;
-            this.kryptonDropButton1.Values.Text = "";
+            this.btbResetPassword.Click += new System.EventHandler(this.btbResetPassword_Click);
             // 
             // label3
             // 
@@ -162,19 +146,19 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(290, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(290, 52);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(530, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(530, 403);
             this.dataGridView1.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnEditAccount);
+            this.panel2.Controls.Add(this.btnDeleteAccount);
+            this.panel2.Controls.Add(this.btnAddAccount);
             this.panel2.Controls.Add(this.kryptonTextBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(290, 0);
@@ -193,42 +177,44 @@ namespace CandyBugWinformDemo.NewFolder1
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // button3
+            // btnEditAccount
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(425, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 46);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEditAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditAccount.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEditAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditAccount.Location = new System.Drawing.Point(425, 3);
+            this.btnEditAccount.Name = "btnEditAccount";
+            this.btnEditAccount.Size = new System.Drawing.Size(95, 46);
+            this.btnEditAccount.TabIndex = 3;
+            this.btnEditAccount.Text = "Update";
+            this.btnEditAccount.UseVisualStyleBackColor = false;
+            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
             // 
-            // button2
+            // btnDeleteAccount
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.OrangeRed;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(324, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 46);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDeleteAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteAccount.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAccount.Location = new System.Drawing.Point(324, 3);
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Size = new System.Drawing.Size(95, 46);
+            this.btnDeleteAccount.TabIndex = 3;
+            this.btnDeleteAccount.Text = "Delete";
+            this.btnDeleteAccount.UseVisualStyleBackColor = false;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
-            // button1
+            // btnAddAccount
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(223, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 46);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAddAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAccount.Location = new System.Drawing.Point(223, 3);
+            this.btnAddAccount.Name = "btnAddAccount";
+            this.btnAddAccount.Size = new System.Drawing.Size(95, 46);
+            this.btnAddAccount.TabIndex = 3;
+            this.btnAddAccount.Text = "Add";
+            this.btnAddAccount.UseVisualStyleBackColor = false;
+            this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
             // kryptonTextBox3
             // 
@@ -243,6 +229,24 @@ namespace CandyBugWinformDemo.NewFolder1
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox3.StateCommon.Border.Rounding = 18;
             this.kryptonTextBox3.TabIndex = 1;
+            // 
+            // kryptonNumericUpDown1
+            // 
+            this.kryptonNumericUpDown1.Location = new System.Drawing.Point(37, 219);
+            this.kryptonNumericUpDown1.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.kryptonNumericUpDown1.Name = "kryptonNumericUpDown1";
+            this.kryptonNumericUpDown1.Size = new System.Drawing.Size(215, 38);
+            this.kryptonNumericUpDown1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonNumericUpDown1.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonNumericUpDown1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonNumericUpDown1.StateCommon.Border.Rounding = 18;
+            this.kryptonNumericUpDown1.TabIndex = 4;
             // 
             // FormAdmin
             // 
@@ -273,16 +277,16 @@ namespace CandyBugWinformDemo.NewFolder1
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btbResetPassword;
-        private ComponentFactory.Krypton.Toolkit.KryptonDropButton kryptonDropButton1;
         private System.Windows.Forms.Label label3;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEditAccount;
+        private System.Windows.Forms.Button btnDeleteAccount;
+        private System.Windows.Forms.Button btnAddAccount;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
+        private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown kryptonNumericUpDown1;
     }
 }

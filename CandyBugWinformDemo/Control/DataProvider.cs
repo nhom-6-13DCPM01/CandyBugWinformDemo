@@ -12,29 +12,30 @@ namespace CandyBugWinformDemo.Control
     {
 
         private static readonly object lockObject = new object();
-        private static volatile DataProvider instence;
+        private static volatile DataProvider instance;
 
         // Câu lệnh kết nối
-        private string con = "Data Source=nhomsix.database.windows.net;Initial Catalog=QLBK;User ID=nhom6;Password=123456789aA";
+        private string con = @"Data Source=DESKTOP-G00H53A\SQLEXPRESS;Initial Catalog = QuanLyHocSinh; Integrated Security = True";
 
         // get set Instence
         public static DataProvider Instance 
         {
-            get 
+
+            get
             {
-                if (instence == null)
+                if (instance == null)
                 {
                     lock (lockObject)
                     {
-                        if(instence == null)
+                        if (instance == null)
                         {
-                            instence = new DataProvider();
+                            instance = new DataProvider();
                         }
                     }
                 }
-                return  DataProvider.instence; 
+                return  DataProvider.instance; 
             }
-            private set => instence = value; 
+            private set => instance = value; 
         }
 
         // Khóa hàm tạo
