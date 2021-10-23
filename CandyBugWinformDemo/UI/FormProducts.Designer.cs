@@ -29,13 +29,11 @@ namespace CandyBugWinformDemo.NewFolder1
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducts));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.updownPrice = new ComponentFactory.Krypton.Toolkit.KryptonDomainUpDown();
-            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLBKDataSet = new CandyBugWinformDemo.QLBKDataSet();
+            this.dropdownCategoty = new ComponentFactory.Krypton.Toolkit.KryptonDropButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtItemProduct = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -74,10 +72,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.kryptonTextBox1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.updownPrice);
+            this.panel2.Controls.Add(this.dropdownCategoty);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label2);
@@ -105,7 +102,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.updownPrice.TabIndex = 10;
             this.updownPrice.TabStop = false;
             // 
-            // categoryBindingSource
+            // dropdownCategoty
             // 
             this.dropdownCategoty.Location = new System.Drawing.Point(125, 276);
             this.dropdownCategoty.Name = "dropdownCategoty";
@@ -242,57 +239,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnAddProduct.Text = "Add";
             this.btnAddProduct.UseVisualStyleBackColor = false;
             // 
-            // kryptonContextMenuItem1
-            // 
-            this.kryptonContextMenuItem1.Text = "Menu Item";
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-            this.productBindingSource.DataSource = this.qLBKDataSet;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.idCategoryDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.imageDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.productBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(269, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(424, 335);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // idProDataGridViewTextBoxColumn
-            // 
-            this.idProDataGridViewTextBoxColumn.DataPropertyName = "idPro";
-            this.idProDataGridViewTextBoxColumn.HeaderText = "idPro";
-            this.idProDataGridViewTextBoxColumn.Name = "idProDataGridViewTextBoxColumn";
-            this.idProDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // idCategoryDataGridViewTextBoxColumn
-            // 
-            this.idCategoryDataGridViewTextBoxColumn.DataPropertyName = "idCategory";
-            this.idCategoryDataGridViewTextBoxColumn.HeaderText = "idCategory";
-            this.idCategoryDataGridViewTextBoxColumn.Name = "idCategoryDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
+            // dataGridViewformProducts
             // 
             this.dataGridViewformProducts.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewformProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -309,42 +256,33 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dataGridViewformProducts.Size = new System.Drawing.Size(559, 413);
             this.dataGridViewformProducts.TabIndex = 6;
             // 
-            // imageDataGridViewTextBoxColumn
+            // Column1
             // 
-            this.imageDataGridViewTextBoxColumn.DataPropertyName = "image";
-            this.imageDataGridViewTextBoxColumn.HeaderText = "image";
-            this.imageDataGridViewTextBoxColumn.Name = "imageDataGridViewTextBoxColumn";
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
-            // categoryTableAdapter
+            // Column2
             // 
-            this.categoryTableAdapter.ClearBeforeFill = true;
+            this.Column2.HeaderText = "Item";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
-            // kryptonContextMenuItem2
+            // Column3
             // 
-            this.kryptonContextMenuItem2.Text = "Menu Item";
+            this.Column3.HeaderText = "Category";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
-            // kryptonTextBox1
+            // Column4
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(94, 226);
-            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(160, 35);
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 18;
-            this.kryptonTextBox1.TabIndex = 11;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(102, 233);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
-            this.comboBox1.TabIndex = 12;
+            this.Column4.HeaderText = "Price";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // pictureBox1
             // 
@@ -419,6 +357,7 @@ namespace CandyBugWinformDemo.NewFolder1
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDropButton dropdownCategoty;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtIDProduct;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
@@ -430,28 +369,14 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Button btnUpdateProduct;
         private System.Windows.Forms.Button btnDeleteProduct;
         private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.DataGridView dataGridViewformProducts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems1;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems2;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems3;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
-        private QLBKDataSet qLBKDataSet;
-        private System.Windows.Forms.BindingSource productBindingSource;
-        private QLBKDataSetTableAdapters.ProductTableAdapter productTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource categoryBindingSource;
-        private QLBKDataSetTableAdapters.CategoryTableAdapter categoryTableAdapter;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems4;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
     }
 }
