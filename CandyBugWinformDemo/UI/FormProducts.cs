@@ -60,5 +60,10 @@ namespace CandyBugWinformDemo.NewFolder1
 
         }
 
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            dataGridViewformProducts.Refresh();
+            this.productTableAdapter.Fill(this.qLBKDataSet.Product);
+        }
     }
 }
