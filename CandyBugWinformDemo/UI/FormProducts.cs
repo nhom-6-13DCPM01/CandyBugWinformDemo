@@ -234,5 +234,20 @@ namespace CandyBugWinformDemo.NewFolder1
                 errorProvider.SetError(dropdownCategoty, null);
             }
         }
+
+        public void load_FormNhapCategory()
+        {
+            UI.FormNhapKhiChonOthersCuaCategory formNhap = new UI.FormNhapKhiChonOthersCuaCategory();
+            formNhap.Show();
+        }
+
+        //Chỉ cần đổi text button thành others sẽ kích hoạt form nhập category
+        private void dropdownCategoty_TextChanged(object sender, EventArgs e)
+        {
+            if (dropdownCategoty.Values.Text.Equals("Others"))
+            {
+                load_FormNhapCategory();
+            }
+        }
     }
 }
