@@ -45,6 +45,12 @@ namespace CandyBugWinformDemo.Control
             int resulf = DataProvider.Instance.ExecuteNonQuery(query);
             return resulf > 0;
         }
+        public bool addProductWithImage(string name, string Category, float price, string nameImage)
+        {
+            string query = string.Format("INSERT Product ( name, Category, price , image ) VALUES ( N'{0}', N'{1}' ,{2} , N'{3}')", name, Category, price, nameImage);
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query);
+            return resulf > 0;
+        }
         public bool removeProduct(int idPro)
         {
             OrdersDAO.Intance.deleteOrderbyidProduct(idPro);
@@ -55,6 +61,12 @@ namespace CandyBugWinformDemo.Control
         public bool updateProduct(string name, string Category, float price, int idPro)
         {
             string query = string.Format("UPDATE Product SET name = N'{0}', Category = N'{1}' , price = {2} WHERE idPro = {3}", name, Category, price , idPro );
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query);
+            return resulf > 0;
+        }
+        public bool updateProductWithImage(string name, string Category, float price, int idPro, string nameImage)
+        {
+            string query = string.Format("UPDATE Product SET name = N'{0}', Category = N'{1}' , price = {2} , image = N'{4}' WHERE idPro = {3}", name, Category, price, idPro, nameImage);
             int resulf = DataProvider.Instance.ExecuteNonQuery(query);
             return resulf > 0;
         }
