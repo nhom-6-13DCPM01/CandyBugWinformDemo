@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,7 @@ namespace CandyBugWinformDemo.NewFolder1
             txtItemProduct.Clear();
             dropdownCategoty.Text = " ";
             updownPrice.Text = " ";
+            pictureBox1.Image = null;
         }
 
         //-------------------------------------------------------------//
@@ -68,7 +70,7 @@ namespace CandyBugWinformDemo.NewFolder1
         //
         public void loadGridData()
         {
-            this.productTableAdapter1.Fill(this.qLBKDataSet1.Product);
+            this.productTableAdapter.Fill(this.qLBKDataSet.Product);
         }
         //
         //----------------------------------------------------------//
@@ -76,8 +78,12 @@ namespace CandyBugWinformDemo.NewFolder1
         //
         private void FormProducts_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLBKDataSet.Orders' table. You can move, or remove it, as needed.
+            this.ordersTableAdapter.Fill(this.qLBKDataSet.Orders);
+            // TODO: This line of code loads data into the 'qLBKDataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.qLBKDataSet.Product);
             // TODO: This line of code loads data into the 'qLBKDataSet1.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter1.Fill(this.qLBKDataSet1.Product);
+           
             loadCategory();
             loadGridData();
         }
@@ -92,6 +98,16 @@ namespace CandyBugWinformDemo.NewFolder1
             txtItemProduct.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
             dropdownCategoty.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
             updownPrice.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
+            if (string.IsNullOrEmpty(dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value.ToString() ))
+            {
+                pictureBox1.Image = null;
+            }
+            else
+            {
+                byte[] b = (byte[])dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value;
+                pictureBox1.Image = ByteArrayToImage(b);
+            }
+            
         }
        //---------------------------------------------------------------//
        //
@@ -112,7 +128,8 @@ namespace CandyBugWinformDemo.NewFolder1
             string name = txtItemProduct.Text;
             string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
             float price = (float)Convert.ToDouble(updownPrice.Text);
-            if (ProductDAO.Intence.addProduct(name, idCate, price))
+            byte[] b = ImageTobyArray(pictureBox1.Image);
+            if (ProductDAO.Intence.addProduct(name, idCate, price,b))
             {
                 MessageBox.Show("Thêm Thành công");
                 loadGridData();
@@ -164,7 +181,8 @@ namespace CandyBugWinformDemo.NewFolder1
             string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
             float price = (float)Convert.ToDouble(updownPrice.Text);
             int idPro = Convert.ToInt32(txtIDProduct.Text);
-            if (ProductDAO.Intence.updateProduct(name, idCate, price, idPro))
+            byte[] b = ImageTobyArray(pictureBox1.Image);
+            if (ProductDAO.Intence.updateProduct(name, idCate, price, idPro,b))
             {
                 MessageBox.Show("Update Thành công");
                 loadGridData();
@@ -233,6 +251,29 @@ namespace CandyBugWinformDemo.NewFolder1
                 e.Cancel = false;
                 errorProvider.SetError(dropdownCategoty, null);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files() | *.jpg; *.jpeg; *.bmp; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(open.FileName);
+            }
+        }
+
+        public byte[] ImageTobyArray(Image image)
+        {
+            MemoryStream m = new MemoryStream();
+            image.Save(m, System.Drawing.Imaging.ImageFormat.Png);
+            return m.ToArray();
+        }
+
+        public Image ByteArrayToImage(byte[] b)
+        {
+            MemoryStream m = new MemoryStream(b);
+            return Image.FromStream(m);
         }
     }
 }

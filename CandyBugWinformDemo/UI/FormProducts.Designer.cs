@@ -55,23 +55,35 @@ namespace CandyBugWinformDemo.NewFolder1
             this.idProDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.productBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.qLBKDataSet = new CandyBugWinformDemo.QLBKDataSet();
+            this.productBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.qLBKDataSet1 = new CandyBugWinformDemo.QLBKDataSet1();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter1 = new CandyBugWinformDemo.QLBKDataSet1TableAdapters.ProductTableAdapter();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.productTableAdapter = new CandyBugWinformDemo.QLBKDataSetTableAdapters.ProductTableAdapter();
+            this.fKOrdersstatus72C60C4ABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordersTableAdapter = new CandyBugWinformDemo.QLBKDataSetTableAdapters.OrdersTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewformProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKOrdersstatus72C60C4ABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,8 +122,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // updownPrice
             // 
@@ -338,9 +352,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.idProDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn,
-            this.Category,
-            this.imageDataGridViewTextBoxColumn});
-            this.dataGridViewformProducts.DataSource = this.productBindingSource1;
+            this.categoryDataGridViewTextBoxColumn,
+            this.imageDataGridViewImageColumn});
+            this.dataGridViewformProducts.DataSource = this.productBindingSource4;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -369,44 +383,51 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.idProDataGridViewTextBoxColumn.DataPropertyName = "idPro";
             this.idProDataGridViewTextBoxColumn.HeaderText = "idPro";
-            this.idProDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idProDataGridViewTextBoxColumn.Name = "idProDataGridViewTextBoxColumn";
             this.idProDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idProDataGridViewTextBoxColumn.Width = 125;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
             // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn.Width = 125;
             // 
-            // Category
+            // categoryDataGridViewTextBoxColumn
             // 
-            this.Category.DataPropertyName = "Category";
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // imageDataGridViewTextBoxColumn
+            // imageDataGridViewImageColumn
             // 
-            this.imageDataGridViewTextBoxColumn.DataPropertyName = "image";
-            this.imageDataGridViewTextBoxColumn.HeaderText = "image";
-            this.imageDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.imageDataGridViewTextBoxColumn.Name = "imageDataGridViewTextBoxColumn";
-            this.imageDataGridViewTextBoxColumn.ReadOnly = true;
-            this.imageDataGridViewTextBoxColumn.Width = 125;
+            this.imageDataGridViewImageColumn.DataPropertyName = "image";
+            this.imageDataGridViewImageColumn.HeaderText = "image";
+            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
+            this.imageDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // productBindingSource4
+            // 
+            this.productBindingSource4.DataMember = "Product";
+            this.productBindingSource4.DataSource = this.qLBKDataSet;
+            // 
+            // qLBKDataSet
+            // 
+            this.qLBKDataSet.DataSetName = "QLBKDataSet";
+            this.qLBKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productBindingSource3
+            // 
+            this.productBindingSource3.DataMember = "Product";
+            this.productBindingSource3.DataSource = this.qLBKDataSet;
             // 
             // productBindingSource1
             // 
@@ -429,6 +450,24 @@ namespace CandyBugWinformDemo.NewFolder1
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
+            // 
+            // productBindingSource2
+            // 
+            this.productBindingSource2.DataMember = "Product";
+            this.productBindingSource2.DataSource = this.qLBKDataSet1;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKOrdersstatus72C60C4ABindingSource
+            // 
+            this.fKOrdersstatus72C60C4ABindingSource.DataMember = "FK__Orders__status__72C60C4A";
+            this.fKOrdersstatus72C60C4ABindingSource.DataSource = this.productBindingSource3;
+            // 
+            // ordersTableAdapter
+            // 
+            this.ordersTableAdapter.ClearBeforeFill = true;
             // 
             // FormProducts
             // 
@@ -455,10 +494,15 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewformProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLBKDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKOrdersstatus72C60C4ABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -490,11 +534,18 @@ namespace CandyBugWinformDemo.NewFolder1
         private QLBKDataSet1 qLBKDataSet1;
         private System.Windows.Forms.BindingSource productBindingSource1;
         private QLBKDataSet1TableAdapters.ProductTableAdapter productTableAdapter1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.BindingSource productBindingSource2;
+        private QLBKDataSet qLBKDataSet;
+        private System.Windows.Forms.BindingSource productBindingSource3;
+        private QLBKDataSetTableAdapters.ProductTableAdapter productTableAdapter;
+        private System.Windows.Forms.BindingSource fKOrdersstatus72C60C4ABindingSource;
+        private QLBKDataSetTableAdapters.OrdersTableAdapter ordersTableAdapter;
+        private System.Windows.Forms.BindingSource productBindingSource4;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
     }
 }

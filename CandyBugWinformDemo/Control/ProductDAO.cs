@@ -1,6 +1,7 @@
 ﻿using CandyBugWinformDemo.Object;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,10 +40,11 @@ namespace CandyBugWinformDemo.Control
         {
             return null;
         }
-        public bool addProduct(string name,string Category, float price)
+        public bool addProduct(string name,string Category, float price, byte[] image)
         {
-            string query = string.Format("INSERT Product ( name, Category, price) VALUES ( N'{0}', N'{1}' ,{2})", name , Category , price );
-            int resulf = DataProvider.Instance.ExecuteNonQuery(query);
+            string query = "INSERT INTO Product ( name, Category, price , image ) VALUES ( @name , @Category , @price , @image )";
+            
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query, new object[] { name , Category , price , image });
             return resulf > 0;
         }
         public bool removeProduct(int idPro)
@@ -52,10 +54,10 @@ namespace CandyBugWinformDemo.Control
             int resulf = DataProvider.Instance.ExecuteNonQuery(query);
             return resulf > 0;
         }
-        public bool updateProduct(string name, string Category, float price, int idPro)
+        public bool updateProduct(string name, string Category, float price, int idPro , byte[] image)
         {
-            string query = string.Format("UPDATE Product SET name = N'{0}', Category = N'{1}' , price = {2} WHERE idPro = {3}", name, Category, price , idPro );
-            int resulf = DataProvider.Instance.ExecuteNonQuery(query);
+            string query = "UPDATE Product SET name = @name , Category = @Category , price = @price , image = @image WHERE idPro = @idPro";
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query, new object[] { name, Category , price , image , idPro });
             return resulf > 0;
         }
         public void getProduct()
