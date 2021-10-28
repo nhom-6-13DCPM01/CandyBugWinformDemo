@@ -164,6 +164,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dropdownCategoty.TabIndex = 9;
             this.dropdownCategoty.Values.Text = "";
             this.dropdownCategoty.DropDown += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ContextPositionMenuArgs>(this.dropdownCategoty_DropDown);
+            this.dropdownCategoty.TextChanged += new System.EventHandler(this.dropdownCategoty_TextChanged);
             this.dropdownCategoty.Validating += new System.ComponentModel.CancelEventHandler(this.dropdownCategoty_Validating);
             // 
             // label4
