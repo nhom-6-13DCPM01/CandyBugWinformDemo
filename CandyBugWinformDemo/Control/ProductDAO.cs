@@ -1,6 +1,7 @@
 ﻿using CandyBugWinformDemo.Object;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,15 @@ namespace CandyBugWinformDemo.Control
         private ProductDAO() { }
         public List<Product> getListProduct()
         {
-            return null;
+            string query = "SELECT * FROM Product";
+            DataTable resulf = DataProvider.Instance.ExecuteQuery(query);
+            List<Product> list = new List<Product>();
+            foreach (DataRow item in resulf.Rows)
+            {
+                Product product = new Product(item);
+                list.Add(product);
+            }
+            return list;
         }
         public List<Product> getListProductByCategory()
         {
@@ -45,6 +54,12 @@ namespace CandyBugWinformDemo.Control
             string query = "INSERT INTO Product ( name, Category, price , image ) VALUES ( @name , @Category , @price , @image )";
             
             int resulf = DataProvider.Instance.ExecuteNonQuery(query, new object[] { name , Category , price , image });
+            return resulf > 0;
+        }
+        public bool addProductNonImage(string name, string Category, float price)
+        {
+            string query = "INSERT INTO Product ( name, Category, price ) VALUES ( @name , @Category , @price )";
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query, new object[] { name, Category, price });
             return resulf > 0;
         }
         public bool removeProduct(int idPro)
@@ -60,9 +75,35 @@ namespace CandyBugWinformDemo.Control
             int resulf = DataProvider.Instance.ExecuteNonQuery(query, new object[] { name, Category , price , image , idPro });
             return resulf > 0;
         }
-        public void getProduct()
+        public bool updateProductNonImage(string name, string Category, float price, int idPro)
         {
-
+            string query = "UPDATE Product SET name = @name , Category = @Category , price = @price  WHERE idPro = @idPro";
+            int resulf = DataProvider.Instance.ExecuteNonQuery(query, new object[] { name, Category, price, idPro });
+            return resulf > 0;
+        }
+        public  List<Product> findProduct(int idPro)
+        {
+            string query = "SELECT * FROM Product WHERE idPro = @idPro";
+            DataTable resulf = DataProvider.Instance.ExecuteQuery(query,new object[] { idPro });
+            List<Product> list = new List<Product>();
+            foreach (DataRow item in resulf.Rows)
+            {
+                Product product = new Product(item);
+                list.Add(product);
+            }
+            return list;
+        }
+        public List<Product> findProductByName(string name)
+        {
+            string query = string.Format("SELECT * FROM Product WHERE name LIKE '%{0}%'", name);
+            DataTable resulf = DataProvider.Instance.ExecuteQuery(query);
+            List<Product> list = new List<Product>();
+            foreach (DataRow item in resulf.Rows)
+            {
+                Product product = new Product(item);
+                list.Add(product);
+            }
+            return list;
         }
     }
 }

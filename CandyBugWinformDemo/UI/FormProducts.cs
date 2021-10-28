@@ -16,7 +16,7 @@ namespace CandyBugWinformDemo.NewFolder1
     public partial class FormProducts : Form
     {
         private ContextMenuStrip _contextMenuAutoFill;
-       
+
         public FormProducts()
         {
             InitializeComponent();
@@ -60,7 +60,7 @@ namespace CandyBugWinformDemo.NewFolder1
         private void dropdownCategoty_DropDown(object sender, ComponentFactory.Krypton.Toolkit.ContextPositionMenuArgs e)
         {
             dropdownCategoty.ContextMenuStrip = _contextMenuAutoFill;
-            dropdownCategoty.ContextMenuStrip.Show(dropdownCategoty, new System.Drawing.Point(0,dropdownCategoty.Height));
+            dropdownCategoty.ContextMenuStrip.Show(dropdownCategoty, new System.Drawing.Point(0, dropdownCategoty.Height));
         }
         private void AutoFillToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -70,7 +70,7 @@ namespace CandyBugWinformDemo.NewFolder1
         //
         public void loadGridData()
         {
-            this.productTableAdapter.Fill(this.qLBKDataSet.Product);
+            dataGridViewformProducts.DataSource = ProductDAO.Intence.getListProduct();
         }
         //
         //----------------------------------------------------------//
@@ -78,43 +78,47 @@ namespace CandyBugWinformDemo.NewFolder1
         //
         private void FormProducts_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLBKDataSet.Orders' table. You can move, or remove it, as needed.
-            this.ordersTableAdapter.Fill(this.qLBKDataSet.Orders);
-            // TODO: This line of code loads data into the 'qLBKDataSet.Product' table. You can move, or remove it, as needed.
             this.productTableAdapter.Fill(this.qLBKDataSet.Product);
             // TODO: This line of code loads data into the 'qLBKDataSet1.Product' table. You can move, or remove it, as needed.
-           
             loadCategory();
             loadGridData();
         }
-       //----------------------------------------------------------------//
-       //
+        //----------------------------------------------------------------//
+        //
         //--------------------------------------------------------------//
         //CLICK ON DATAGRIDVIEW
         //
         private void dataGridViewformProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtIDProduct.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtItemProduct.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
-            dropdownCategoty.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
-            updownPrice.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
-            if (string.IsNullOrEmpty(dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value.ToString() ))
+            try
             {
-                pictureBox1.Image = null;
+                txtIDProduct.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtItemProduct.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
+                dropdownCategoty.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
+                updownPrice.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    if (string.IsNullOrEmpty(Convert.ToString(dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value)))
+                    {
+                        pictureBox1.Image = null;
+                    }
+                    else
+                    {
+                        byte[] b = (byte[])dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value;
+                        pictureBox1.Image = ByteArrayToImage(b);
+                    }
             }
-            else
+            catch (Exception)
             {
-                byte[] b = (byte[])dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value;
-                pictureBox1.Image = ByteArrayToImage(b);
+
             }
-            
+
+
         }
-       //---------------------------------------------------------------//
-       //
+        //---------------------------------------------------------------//
+        //
         //----------------------------------------------------------------//
         //CELL CLICK IS NOT VALUE
         //
-        
+
         //-------------------------------------------------------------//
         //
         //--------------------------BUTTON-----------------------------//
@@ -125,81 +129,114 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             if (checkInput())
             {
-            string name = txtItemProduct.Text;
-            string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
-            float price = (float)Convert.ToDouble(updownPrice.Text);
-            byte[] b = ImageTobyArray(pictureBox1.Image);
-            if (ProductDAO.Intence.addProduct(name, idCate, price,b))
-            {
-                MessageBox.Show("Thêm Thành công");
-                loadGridData();
-                ClearTxt();
+                string name = txtItemProduct.Text;
+                string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
+                float price = (float)Convert.ToDouble(updownPrice.Text);
+                if (testImage(pictureBox1.Image))
+                {
+                    byte[] b = ImageTobyArray(pictureBox1.Image);
+                    if (ProductDAO.Intence.addProduct(name, idCate, price, b))
+                    {
+                        MessageBox.Show("Thêm Thành công");
+                        loadGridData();
+                        ClearTxt();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi", "Thông báo");
+                    }
+                }
+                else
+                {
+                    if (ProductDAO.Intence.addProductNonImage(name, idCate, price))
+                    {
+                        MessageBox.Show("Thêm Thành công");
+                        loadGridData();
+                        ClearTxt();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi", "Thông báo");
+                    }
+                }
+
             }
-            else
-            {
-                MessageBox.Show("Lỗi", "Thông báo");
-            }
-            }
-           
+
         }
         //
         //DELETE BUTTON
         //
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
-            
+
             int idPro;
-            if (Int32.TryParse(txtIDProduct.Text,out idPro))
+            if (Int32.TryParse(txtIDProduct.Text, out idPro))
             {
                 if (ProductDAO.Intence.removeProduct(idPro))
-            {
-                MessageBox.Show("Xóa Thành công");
-                loadGridData();
-                ClearTxt();
-            }
-            else
-            {
-                MessageBox.Show("Thông báo", "Lỗi");
-            }
+                {
+                    MessageBox.Show("Xóa Thành công");
+                    loadGridData();
+                    ClearTxt();
+                }
+                else
+                {
+                    MessageBox.Show("Thông báo", "Lỗi");
+                }
             }
             else
             {
                 MessageBox.Show("Pleace choose a product", "Lỗi");
             }
-             
-           
+
+
         }
         //
         //UPDATE PRODUCT
         //
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
-            
+
             if (checkInput())
             {
-            string name = txtItemProduct.Text;
-            string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
-            float price = (float)Convert.ToDouble(updownPrice.Text);
-            int idPro = Convert.ToInt32(txtIDProduct.Text);
-            byte[] b = ImageTobyArray(pictureBox1.Image);
-            if (ProductDAO.Intence.updateProduct(name, idCate, price, idPro,b))
-            {
-                MessageBox.Show("Update Thành công");
-                loadGridData();
-                ClearTxt();
+                string name = txtItemProduct.Text;
+                string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
+                float price = (float)Convert.ToDouble(updownPrice.Text);
+                int idPro = Convert.ToInt32(txtIDProduct.Text);
+                if (testImage(pictureBox1.Image))
+                {
+                    byte[] b = ImageTobyArray(pictureBox1.Image);
+                    if (ProductDAO.Intence.updateProduct(name, idCate, price, idPro, b))
+                    {
+                        MessageBox.Show("Update Thành công");
+                        loadGridData();
+                        ClearTxt();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi", "Thông báo");
+                    }
+                }
+                else
+                {
+
+                    if (ProductDAO.Intence.updateProductNonImage(name, idCate, price, idPro))
+                    {
+                        MessageBox.Show("Update Thành công");
+                        loadGridData();
+                        ClearTxt();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi", "Thông báo");
+                    }
+                }
+
             }
-            else
-            {
-                MessageBox.Show("Lỗi", "Thông báo");
-            }
-            }
-            
         }
         //----------------------------------------------------------
         //---------------------CHECK INPUT VALUE--------------------//
         public bool checkInput()
         {
-            
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 return true;
@@ -219,13 +256,13 @@ namespace CandyBugWinformDemo.NewFolder1
             {
                 e.Cancel = false;
                 errorProvider.SetError(txtItemProduct, null);
-            }    
+            }
         }
 
         private void updownPrice_Validating(object sender, CancelEventArgs e)
         {
             Double a;
-            if (Double.TryParse(updownPrice.Text,out a)== false)
+            if (Double.TryParse(updownPrice.Text, out a) == false)
             {
                 e.Cancel = true;
                 updownPrice.Focus();
@@ -274,6 +311,35 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             MemoryStream m = new MemoryStream(b);
             return Image.FromStream(m);
+        }
+
+        public bool testImage(Image image)
+        {
+            if (image != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            int idPro;
+            if(Int32.TryParse(txtFindProduct.Text,out idPro))
+            {
+                List<Product> list = ProductDAO.Intence.findProduct(idPro);
+                dataGridViewformProducts.DataSource = list;
+            }
+            else
+            {
+                List<Product> list = ProductDAO.Intence.findProductByName(txtFindProduct.Text);
+                dataGridViewformProducts.DataSource = list;
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            dataGridViewformProducts.DataSource = ProductDAO.Intence.getListProduct();
         }
     }
 }
