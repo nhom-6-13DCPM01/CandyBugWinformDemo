@@ -84,11 +84,11 @@
     <Compile Include="UI\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FormNhapKhiChonOthersCuaCategory.cs">
+    <Compile Include="UI\FormCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FormNhapKhiChonOthersCuaCategory.Designer.cs">
-      <DependentUpon>FormNhapKhiChonOthersCuaCategory.cs</DependentUpon>
+    <Compile Include="UI\FormCategory.Designer.cs">
+      <DependentUpon>FormCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FormStatistical.cs">
       <SubType>Form</SubType>
@@ -119,8 +119,8 @@
     <EmbeddedResource Include="UI\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FormNhapKhiChonOthersCuaCategory.resx">
-      <DependentUpon>FormNhapKhiChonOthersCuaCategory.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FormCategory.resx">
+      <DependentUpon>FormCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormProducts.resx">
       <DependentUpon>FormProducts.cs</DependentUpon>

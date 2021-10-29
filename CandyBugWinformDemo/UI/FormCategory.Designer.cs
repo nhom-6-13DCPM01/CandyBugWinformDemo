@@ -1,7 +1,7 @@
 ﻿
 namespace CandyBugWinformDemo.UI
 {
-    partial class FormNhapKhiChonOthersCuaCategory
+    partial class FormCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -58,6 +58,7 @@ namespace CandyBugWinformDemo.UI
             this.txtCategory.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtCategory.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtCategory.StateCommon.Border.Rounding = 18;
             this.txtCategory.TabIndex = 10;
             this.txtCategory.TextChanged += new System.EventHandler(this.txtCategory_TextChanged);
@@ -91,7 +92,7 @@ namespace CandyBugWinformDemo.UI
             this.btnSaveCategory.UseVisualStyleBackColor = false;
             this.btnSaveCategory.Click += new System.EventHandler(this.btnSaveCategory_Click);
             // 
-            // FormNhapKhiChonOthersCuaCategory
+            // FormCategory
             // 
             this.AcceptButton = this.btnSaveCategory;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,8 +104,9 @@ namespace CandyBugWinformDemo.UI
             this.Controls.Add(this.btnSaveCategory);
             this.Controls.Add(this.labelCategory);
             this.Controls.Add(this.txtCategory);
-            this.Name = "FormNhapKhiChonOthersCuaCategory";
-            this.Text = "FormNhapKhiChonOthersCuaCategory";
+            this.Name = "FormCategory";
+            this.Text = "FormCategory";
+            this.Load += new System.EventHandler(this.FormNhapKhiChonOthersCuaCategory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

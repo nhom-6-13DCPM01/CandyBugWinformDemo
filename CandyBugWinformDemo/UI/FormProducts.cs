@@ -46,14 +46,26 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             _contextMenuAutoFill = new ContextMenuStrip();
             List<Category> list = CategoryDAO.Instence.getListCategory();
-            foreach (Category item in list)
-            {
-                _contextMenuAutoFill.Items.Add(item.Name);
-            }
+                foreach (Category item in list)
+                {
+                    _contextMenuAutoFill.Items.Add(item.Name);
+                }
+            
+                foreach (ToolStripMenuItem mItem in _contextMenuAutoFill.Items)
+                {
+                    mItem.Click +=
+                    new System.EventHandler(this.AutoFillToolStripMenuItem_Click);
+                        if (mItem.Text.Equals("Others")) 
+                        {
 
-            foreach (ToolStripMenuItem mItem in _contextMenuAutoFill.Items)
-                mItem.Click +=
-                new System.EventHandler(this.AutoFillToolStripMenuItem_Click);
+                        }
+                        else
+                        {
+                            mItem.DropDownItems.Add("remove");
+                           
+                        }
+                
+                }
         }
         //
         //
@@ -65,7 +77,13 @@ namespace CandyBugWinformDemo.NewFolder1
         private void AutoFillToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string m = ((ToolStripMenuItem)sender).Text;
+            dropdownCategoty.ContextMenuStrip.Hide();
             dropdownCategoty.Text = m;
+        }
+
+        private void RemoveItem_Click(object sender, EventArgs e)
+        {
+            
         }
         //
         public void loadGridData()
@@ -110,8 +128,6 @@ namespace CandyBugWinformDemo.NewFolder1
             {
 
             }
-
-
         }
         //---------------------------------------------------------------//
         //
@@ -340,11 +356,12 @@ namespace CandyBugWinformDemo.NewFolder1
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             dataGridViewformProducts.DataSource = ProductDAO.Intence.getListProduct();
+            loadCategory();
         }
 
         public void load_FormNhapCategory()
         {
-            UI.FormNhapKhiChonOthersCuaCategory formNhap = new UI.FormNhapKhiChonOthersCuaCategory();
+            UI.FormCategory formNhap = new UI.FormCategory();
             formNhap.Show();
         }
 

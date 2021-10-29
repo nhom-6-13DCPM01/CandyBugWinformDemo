@@ -46,7 +46,7 @@ namespace CandyBugWinformDemo.Control
         }
         public bool addCategory( string name)
         {
-            string query = string.Format("INSERT Category (name) VALUES (N'0')", name);
+            string query = string.Format("INSERT Category (name) VALUES (N'{0}')", name);
             int resulf = DataProvider.Instance.ExecuteNonQuery(query);
             return resulf > 0;
         }

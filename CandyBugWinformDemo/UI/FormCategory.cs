@@ -11,9 +11,9 @@ using CandyBugWinformDemo.Control;
 
 namespace CandyBugWinformDemo.UI
 {
-    public partial class FormNhapKhiChonOthersCuaCategory : Form
+    public partial class FormCategory : Form
     {
-        public FormNhapKhiChonOthersCuaCategory()
+        public FormCategory()
         {
             InitializeComponent();
         }
@@ -23,19 +23,21 @@ namespace CandyBugWinformDemo.UI
             DialogResult result = MessageBox.Show("Bạn có muốn lưu", "Thông báo");
             if(result == DialogResult.OK)
             {
-                CategoryDAO.Instence.addCategory(txtCategory.Text);
-                MessageBox.Show("Bạn đã lưu thành công", "Thông báo");
-                FormNhapKhiChonOthersCuaCategory.ActiveForm.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bạn đã lưu thất bại", "Thông báo");
+                if (CategoryDAO.Instence.addCategory(txtCategory.Text))
+                {
+                    MessageBox.Show("Bạn đã lưu thành công", "Thông báo");
+                    FormCategory.ActiveForm.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn đã lưu thất bại", "Thông báo");
+                }
             }
         }
 
         private void btnCancelCategory_Click(object sender, EventArgs e)
         {
-            FormNhapKhiChonOthersCuaCategory.ActiveForm.Close();
+            FormCategory.ActiveForm.Close();
         }
 
         private void txtCategory_TextChanged(object sender, EventArgs e)
@@ -45,6 +47,11 @@ namespace CandyBugWinformDemo.UI
                 btnCancelCategory.Enabled = true;
                 btnSaveCategory.Enabled = true;
             }
+        }
+
+        private void FormNhapKhiChonOthersCuaCategory_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

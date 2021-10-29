@@ -31,14 +31,15 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducts));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.updownPrice = new ComponentFactory.Krypton.Toolkit.KryptonDomainUpDown();
             this.dropdownCategoty = new ComponentFactory.Krypton.Toolkit.KryptonDropButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtItemProduct = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -69,7 +70,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.productTableAdapter = new CandyBugWinformDemo.QLBKDataSetTableAdapters.ProductTableAdapter();
             this.fKOrdersstatus72C60C4ABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordersTableAdapter = new CandyBugWinformDemo.QLBKDataSetTableAdapters.OrdersTableAdapter();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -141,6 +141,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.updownPrice.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.updownPrice.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.updownPrice.StateCommon.Border.Rounding = 18;
             this.updownPrice.TabIndex = 10;
             this.updownPrice.TabStop = false;
@@ -155,11 +156,13 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dropdownCategoty.Size = new System.Drawing.Size(161, 32);
             this.dropdownCategoty.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.dropdownCategoty.StateNormal.Back.Color2 = System.Drawing.Color.White;
+            this.dropdownCategoty.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dropdownCategoty.StateNormal.Border.Color1 = System.Drawing.Color.Black;
             this.dropdownCategoty.StateNormal.Border.Color2 = System.Drawing.Color.Black;
             this.dropdownCategoty.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dropdownCategoty.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.dropdownCategoty.StateNormal.Border.Rounding = 18;
             this.dropdownCategoty.TabIndex = 9;
             this.dropdownCategoty.Values.Text = "";
@@ -178,6 +181,20 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Price";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(183, 331);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(71, 37);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label5
             // 
@@ -214,6 +231,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.txtItemProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtItemProduct.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtItemProduct.StateCommon.Border.Rounding = 18;
             this.txtItemProduct.TabIndex = 8;
             this.txtItemProduct.Validating += new System.ComponentModel.CancelEventHandler(this.txtItemProduct_Validating);
@@ -243,6 +261,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.txtIDProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtIDProduct.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtIDProduct.StateCommon.Border.Rounding = 18;
             this.txtIDProduct.TabIndex = 8;
             // 
@@ -297,6 +316,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.txtFindProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtFindProduct.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txtFindProduct.StateCommon.Border.Rounding = 18;
             this.txtFindProduct.TabIndex = 6;
             // 
@@ -346,9 +366,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.dataGridViewformProducts.AllowUserToAddRows = false;
             this.dataGridViewformProducts.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewformProducts.AutoGenerateColumns = false;
             this.dataGridViewformProducts.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridViewformProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -359,14 +379,14 @@ namespace CandyBugWinformDemo.NewFolder1
             this.categoryDataGridViewTextBoxColumn,
             this.imageDataGridViewImageColumn});
             this.dataGridViewformProducts.DataSource = this.productBindingSource4;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewformProducts.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewformProducts.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewformProducts.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridViewformProducts.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridViewformProducts.Location = new System.Drawing.Point(274, 44);
@@ -472,20 +492,6 @@ namespace CandyBugWinformDemo.NewFolder1
             // ordersTableAdapter
             // 
             this.ordersTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(183, 331);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(71, 37);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FormProducts
             // 
