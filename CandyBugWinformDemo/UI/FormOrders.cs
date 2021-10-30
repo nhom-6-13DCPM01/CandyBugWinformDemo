@@ -51,15 +51,19 @@ namespace CandyBugWinformDemo.NewFolder1
                 {
                     Button btn = new Button() { Width = 190, Height = 190 };
                     Label lbName = new Label();
-                    
                     lbName.Text = itemPro.Name;
-                    lbName.Location = new Point(5,10);
+                    lbName.Location = new Point(2,2);
                     lbName.BackColor = Color.FromArgb(255, 224, 192);
-                    
+                    lbName.Font = new Font("Microsoft Sans Serif",19,FontStyle.Bold);
+                    lbName.ForeColor = Color.Black;
+                    lbName.AutoSize = true;
                     Label lbPrice= new Label();
-                    lbPrice.Text = itemPro.Price.ToString();
-                    lbPrice.Location = new Point(5, 160);
-                    lbPrice.BackColor = Color.Yellow;
+                    lbPrice.Text = itemPro.Price.ToString() + " ₫";
+                    lbPrice.Location = new Point(3, 165);
+                    lbPrice.ForeColor = Color.FromArgb(192, 64,0);
+                    lbPrice.Font = new Font("Microsoft Sans Serif",13.8F,FontStyle.Bold);
+                    lbPrice.BackColor = Color.LightGray;
+                    lbPrice.AutoSize = true;
                     btn.Controls.Add(lbName);
                     btn.Controls.Add(lbPrice);
                     btn.Font = new Font(Font.FontFamily,16);
