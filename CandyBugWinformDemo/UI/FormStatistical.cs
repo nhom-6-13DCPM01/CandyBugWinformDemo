@@ -33,6 +33,9 @@ namespace CandyBugWinformDemo.NewFolder1
 
         }
 
-       
+        private void btPageNumber_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
