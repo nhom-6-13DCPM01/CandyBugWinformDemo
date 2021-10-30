@@ -45,9 +45,17 @@ namespace CandyBugWinformDemo.Control
             }
             return list;
         }
-        public List<Product> getListProductByCategory()
+        public List<Product> getListProductByCategory(string cate)
         {
-            return null;
+            string query = "SELECT * FROM Product WHERE Category = @cate ";
+            DataTable resulf = DataProvider.Instance.ExecuteQuery(query,new object[] { cate });
+            List<Product> list = new List<Product>();
+            foreach (DataRow item in resulf.Rows)
+            {
+                Product product = new Product(item);
+                list.Add(product);
+            }
+            return list;
         }
         public bool addProduct(string name,string Category, float price, byte[] image)
         {
