@@ -29,6 +29,9 @@ namespace CandyBugWinformDemo.NewFolder1
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +46,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnPreviours = new System.Windows.Forms.Button();
             this.btnFirst = new System.Windows.Forms.Button();
             this.panelHienThiThongTIn = new System.Windows.Forms.Panel();
+            this.lblPhanThongTin = new System.Windows.Forms.Label();
             this.labelTimKiem = new System.Windows.Forms.Label();
             this.labelTongSoOrder = new System.Windows.Forms.Label();
             this.labelTongTien = new System.Windows.Forms.Label();
@@ -235,17 +239,29 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // panelHienThiThongTIn
             // 
+            this.panelHienThiThongTIn.Controls.Add(this.lblPhanThongTin);
             this.panelHienThiThongTIn.Controls.Add(this.labelTimKiem);
             this.panelHienThiThongTIn.Controls.Add(this.labelTongSoOrder);
             this.panelHienThiThongTIn.Controls.Add(this.labelTongTien);
             this.panelHienThiThongTIn.Controls.Add(this.textBoxTongOrder);
             this.panelHienThiThongTIn.Controls.Add(this.textBoxTongTien);
             this.panelHienThiThongTIn.Controls.Add(this.textBoxTimKiem);
-            this.panelHienThiThongTIn.Location = new System.Drawing.Point(0, 73);
+            this.panelHienThiThongTIn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHienThiThongTIn.Location = new System.Drawing.Point(0, 68);
             this.panelHienThiThongTIn.Name = "panelHienThiThongTIn";
             this.panelHienThiThongTIn.Size = new System.Drawing.Size(637, 138);
             this.panelHienThiThongTIn.TabIndex = 6;
             this.panelHienThiThongTIn.Click += new System.EventHandler(this.panelHienThiThongTIn_Click);
+            // 
+            // lblPhanThongTin
+            // 
+            this.lblPhanThongTin.AutoSize = true;
+            this.lblPhanThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhanThongTin.Location = new System.Drawing.Point(16, 2);
+            this.lblPhanThongTin.Name = "lblPhanThongTin";
+            this.lblPhanThongTin.Size = new System.Drawing.Size(100, 17);
+            this.lblPhanThongTin.TabIndex = 7;
+            this.lblPhanThongTin.Text = "Phần thông tin";
             // 
             // labelTimKiem
             // 
@@ -259,7 +275,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // labelTongSoOrder
             // 
             this.labelTongSoOrder.AutoSize = true;
-            this.labelTongSoOrder.Location = new System.Drawing.Point(371, 25);
+            this.labelTongSoOrder.Location = new System.Drawing.Point(371, 45);
             this.labelTongSoOrder.Name = "labelTongSoOrder";
             this.labelTongSoOrder.Size = new System.Drawing.Size(76, 13);
             this.labelTongSoOrder.TabIndex = 4;
@@ -268,7 +284,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // labelTongTien
             // 
             this.labelTongTien.AutoSize = true;
-            this.labelTongTien.Location = new System.Drawing.Point(16, 25);
+            this.labelTongTien.Location = new System.Drawing.Point(16, 45);
             this.labelTongTien.Name = "labelTongTien";
             this.labelTongTien.Size = new System.Drawing.Size(102, 13);
             this.labelTongTien.TabIndex = 3;
@@ -276,16 +292,18 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // textBoxTongOrder
             // 
-            this.textBoxTongOrder.Location = new System.Drawing.Point(450, 22);
+            this.textBoxTongOrder.Enabled = false;
+            this.textBoxTongOrder.Location = new System.Drawing.Point(450, 42);
             this.textBoxTongOrder.Name = "textBoxTongOrder";
             this.textBoxTongOrder.Size = new System.Drawing.Size(100, 20);
             this.textBoxTongOrder.TabIndex = 2;
             // 
             // textBoxTongTien
             // 
-            this.textBoxTongTien.Location = new System.Drawing.Point(124, 22);
+            this.textBoxTongTien.Enabled = false;
+            this.textBoxTongTien.Location = new System.Drawing.Point(124, 42);
             this.textBoxTongTien.Name = "textBoxTongTien";
-            this.textBoxTongTien.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTongTien.Size = new System.Drawing.Size(153, 20);
             this.textBoxTongTien.TabIndex = 1;
             // 
             // textBoxTimKiem
@@ -297,16 +315,42 @@ namespace CandyBugWinformDemo.NewFolder1
             this.textBoxTimKiem.Size = new System.Drawing.Size(357, 20);
             this.textBoxTimKiem.TabIndex = 0;
             this.textBoxTimKiem.Text = "Tìm kiếm theo id của item, name của item";
-            this.textBoxTimKiem.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBoxTimKiem.Click += new System.EventHandler(this.textBoxTimKiem_Click);
             this.textBoxTimKiem.TextChanged += new System.EventHandler(this.textBoxTimKiem_TextChanged);
             this.textBoxTimKiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTimKiem_KeyPress);
             // 
             // dataGridViewStatistical
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStatistical.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewStatistical.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStatistical.Location = new System.Drawing.Point(0, 217);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStatistical.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewStatistical.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewStatistical.Location = new System.Drawing.Point(0, 206);
             this.dataGridViewStatistical.Name = "dataGridViewStatistical";
-            this.dataGridViewStatistical.Size = new System.Drawing.Size(637, 248);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStatistical.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewStatistical.Size = new System.Drawing.Size(637, 264);
             this.dataGridViewStatistical.TabIndex = 7;
             // 
             // FormStatistical
@@ -358,5 +402,6 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.TextBox textBoxTimKiem;
         private System.Windows.Forms.Label labelTimKiem;
         private System.Windows.Forms.DataGridView dataGridViewStatistical;
+        private System.Windows.Forms.Label lblPhanThongTin;
     }
 }
