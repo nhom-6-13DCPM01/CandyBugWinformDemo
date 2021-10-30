@@ -50,7 +50,16 @@ namespace CandyBugWinformDemo.NewFolder1
                 foreach (Product itemPro in listPro)
                 {
                     Button btn = new Button() { Width = 190, Height = 190 };
-                    btn.Text = itemPro.Name;
+                    Label lbName = new Label();
+                    lbName.Text = itemPro.Name;
+                    lbName.Location = new Point(5,10);
+                    lbName.BackColor = Color.Yellow;
+                    Label lbPrice= new Label();
+                    lbPrice.Text = itemPro.Price.ToString();
+                    lbPrice.Location = new Point(5, 160);
+                    lbPrice.BackColor = Color.Yellow;
+                    btn.Controls.Add(lbName);
+                    btn.Controls.Add(lbPrice);
                     btn.Font = new Font(Font.FontFamily,16);
                     if (string.IsNullOrEmpty(Convert.ToString(itemPro.Image)) == false)
                     {
