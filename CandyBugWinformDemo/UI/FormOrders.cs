@@ -51,9 +51,11 @@ namespace CandyBugWinformDemo.NewFolder1
                 {
                     Button btn = new Button() { Width = 190, Height = 190 };
                     Label lbName = new Label();
+                    
                     lbName.Text = itemPro.Name;
                     lbName.Location = new Point(5,10);
-                    lbName.BackColor = Color.Yellow;
+                    lbName.BackColor = Color.FromArgb(255, 224, 192);
+                    
                     Label lbPrice= new Label();
                     lbPrice.Text = itemPro.Price.ToString();
                     lbPrice.Location = new Point(5, 160);
