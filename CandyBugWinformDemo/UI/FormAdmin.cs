@@ -115,8 +115,14 @@ namespace CandyBugWinformDemo.NewFolder1
             }
         }
 
-        
-        private void btnAddAccount_Click(object sender, EventArgs e)
+                              
+        private void btbResetPassword_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+            ResetPass(userName);
+        }
+        //add acc
+        private void button1_Click(object sender, EventArgs e)
         {
             string userName = kryptonTextBox1.Text;
             string displayName = kryptonTextBox2.Text;
@@ -124,30 +130,21 @@ namespace CandyBugWinformDemo.NewFolder1
 
             AddAccount(userName, displayName, type);
         }
-
-        private void btnEditAccount_Click(object sender, EventArgs e)
+        //delete
+        private void button2_Click(object sender, EventArgs e)
         {
+            string userName = kryptonTextBox1.Text;
 
+            DeleteAccount(userName);
+        }
+        //update
+        private void button3_Click(object sender, EventArgs e)
+        {
             string userName = kryptonTextBox1.Text;
             string displayName = kryptonTextBox2.Text;
             int type = (int)kryptonNumericUpDown1.Value;
 
             EditAccount(userName, displayName, type);
-        }
-
-        private void btnDeleteAccount_Click(object sender, EventArgs e)
-        {
-
-            string userName = kryptonTextBox1.Text;
-
-            DeleteAccount(userName);
-
-        }
-
-        private void btbResetPassword_Click(object sender, EventArgs e)
-        {
-            string userName = kryptonTextBox1.Text;
-            ResetPass(userName);
         }
     }
 }
