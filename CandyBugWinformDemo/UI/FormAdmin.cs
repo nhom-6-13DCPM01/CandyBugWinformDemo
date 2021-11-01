@@ -126,5 +126,46 @@ namespace CandyBugWinformDemo.NewFolder1
                 MessageBox.Show("Đặt lại mật khẩu thất bại");
             }
         }
+        //xoa
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+
+            DeleteAccount(userName);
+        }
+
+        //them 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+            string displayName = kryptonTextBox2.Text;
+            string passWord = kryptonTextBox4.Text;
+            int type = (int)kryptonNumericUpDown1.Value;
+
+            AddAccount(userName, displayName, passWord, type);
+            kryptonTextBox4.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+            string displayName = kryptonTextBox2.Text;
+            string password = kryptonTextBox4.Text;
+            int type = (int)kryptonNumericUpDown1.Value;
+
+            EditAccount(userName, displayName, password, type);
+            kryptonTextBox4.Clear();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            accountList.DataSource = SearchAccountByName(kryptonTextBox3.Text);
+        }
+
+        private void btbResetPassword_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+            ResetPass(userName);
+        }
     }
 }
