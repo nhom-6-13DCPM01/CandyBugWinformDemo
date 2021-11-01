@@ -113,6 +113,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnExcel.TabIndex = 3;
             this.btnExcel.Text = "Excel";
             this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnReset
             // 
@@ -292,7 +293,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // textBoxTongOrder
             // 
+            this.textBoxTongOrder.BackColor = System.Drawing.SystemColors.Info;
             this.textBoxTongOrder.Enabled = false;
+            this.textBoxTongOrder.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxTongOrder.Location = new System.Drawing.Point(450, 42);
             this.textBoxTongOrder.Name = "textBoxTongOrder";
             this.textBoxTongOrder.Size = new System.Drawing.Size(100, 20);
@@ -300,7 +303,9 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // textBoxTongTien
             // 
+            this.textBoxTongTien.BackColor = System.Drawing.SystemColors.Info;
             this.textBoxTongTien.Enabled = false;
+            this.textBoxTongTien.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxTongTien.Location = new System.Drawing.Point(124, 42);
             this.textBoxTongTien.Name = "textBoxTongTien";
             this.textBoxTongTien.Size = new System.Drawing.Size(153, 20);
