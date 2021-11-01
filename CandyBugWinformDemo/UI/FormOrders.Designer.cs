@@ -45,11 +45,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnPrintBill = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnSa = new System.Windows.Forms.Button();
-            this.lbTotal = new System.Windows.Forms.Label();
             this.lbDiscount = new System.Windows.Forms.Label();
             this.btnD = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
-            this.lbTotal1 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -61,6 +59,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ifOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lbtotal = new System.Windows.Forms.Label();
+            this.lbtotal1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCurrentOrder)).BeginInit();
@@ -201,11 +201,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel12.Controls.Add(this.btnClearAll);
             this.panel12.Controls.Add(this.panel13);
             this.panel12.Controls.Add(this.btnSa);
-            this.panel12.Controls.Add(this.lbTotal);
             this.panel12.Controls.Add(this.lbDiscount);
             this.panel12.Controls.Add(this.btnD);
+            this.panel12.Controls.Add(this.lbtotal1);
+            this.panel12.Controls.Add(this.lbtotal);
             this.panel12.Controls.Add(this.label24);
-            this.panel12.Controls.Add(this.lbTotal1);
             this.panel12.Location = new System.Drawing.Point(3, 338);
             this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
@@ -249,17 +249,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnSa.UseVisualStyleBackColor = false;
             this.btnSa.Click += new System.EventHandler(this.btnSa_Click);
             // 
-            // lbTotal
-            // 
-            this.lbTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbTotal.AutoSize = true;
-            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.Location = new System.Drawing.Point(371, 66);
-            this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(58, 32);
-            this.lbTotal.TabIndex = 0;
-            this.lbTotal.Text = "0.0";
-            // 
             // lbDiscount
             // 
             this.lbDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -297,17 +286,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label24.Size = new System.Drawing.Size(96, 25);
             this.label24.TabIndex = 0;
             this.label24.Text = "Discount";
-            // 
-            // lbTotal1
-            // 
-            this.lbTotal1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbTotal1.AutoSize = true;
-            this.lbTotal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal1.Location = new System.Drawing.Point(33, 66);
-            this.lbTotal1.Name = "lbTotal1";
-            this.lbTotal1.Size = new System.Drawing.Size(84, 32);
-            this.lbTotal1.TabIndex = 0;
-            this.lbTotal1.Text = "Total";
             // 
             // label21
             // 
@@ -420,6 +398,30 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.ifOrderBindingSource.DataSource = typeof(CandyBugWinformDemo.Object.ifOrder);
             // 
+            // lbtotal
+            // 
+            this.lbtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbtotal.AutoSize = true;
+            this.lbtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtotal.ForeColor = System.Drawing.Color.Black;
+            this.lbtotal.Location = new System.Drawing.Point(33, 65);
+            this.lbtotal.Name = "lbtotal";
+            this.lbtotal.Size = new System.Drawing.Size(84, 32);
+            this.lbtotal.TabIndex = 0;
+            this.lbtotal.Text = "Total";
+            // 
+            // lbtotal1
+            // 
+            this.lbtotal1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbtotal1.AutoSize = true;
+            this.lbtotal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtotal1.ForeColor = System.Drawing.Color.Black;
+            this.lbtotal1.Location = new System.Drawing.Point(371, 65);
+            this.lbtotal1.Name = "lbtotal1";
+            this.lbtotal1.Size = new System.Drawing.Size(58, 32);
+            this.lbtotal1.TabIndex = 0;
+            this.lbtotal1.Text = "0.0";
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -457,8 +459,6 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label lbTotal;
-        private System.Windows.Forms.Label lbTotal1;
         private System.Windows.Forms.DataGridView dataGridViewCurrentOrder;
         private System.Windows.Forms.Label lbDiscount;
         private System.Windows.Forms.Label label24;
@@ -477,5 +477,7 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.BindingSource ifOrderBindingSource;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label lbtotal1;
+        private System.Windows.Forms.Label lbtotal;
     }
 }

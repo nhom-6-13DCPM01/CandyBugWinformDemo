@@ -105,7 +105,7 @@ namespace CandyBugWinformDemo.NewFolder1
 
         public void sumToTal()
         {
-                lbTotal.Text = listIFOder.Sum(c => c.Total).ToString();
+            lbtotal1.Text = listIFOder.Sum(c => c.Total).ToString();
         }
         public Image ByteArrayToImage(byte[] b)
         {
