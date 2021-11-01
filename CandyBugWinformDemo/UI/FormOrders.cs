@@ -153,5 +153,11 @@ namespace CandyBugWinformDemo.NewFolder1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            orderCurent.Quantity = Convert.ToInt32 (numericUpDown1.Value);
+            showData();
+        }
     }
 }
