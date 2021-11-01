@@ -209,7 +209,7 @@ namespace CandyBugWinformDemo.NewFolder1
         //Nhấn nút này sẽ truyền dữ liệu sang excel
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            exportToExcel(dataGridViewStatistical, @"D:\Users\Public\OneDrive\Tài liệu\Exel\","CandyBugThongKe");
+            exportToExcel(dataGridViewStatistical, @"C:\Tài liệu\", "CandyBugThongKe");
         }
 
         //Khu date tim picker
