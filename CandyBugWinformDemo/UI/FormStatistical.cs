@@ -222,7 +222,6 @@ namespace CandyBugWinformDemo.NewFolder1
             textBoxTongOrder.Text = Convert.ToString(dataGridViewStatistical.Rows.Count - 1);
             load_data_tong_tien_so_lan_orders();
         }
-
         //thay đổi dữ liệu trên chọn ngày to thì sẽ hiển thị kết quả lên bảng danh sách
         private void dateTimePickerTo_ValueChanged(object sender, EventArgs e)
         {
