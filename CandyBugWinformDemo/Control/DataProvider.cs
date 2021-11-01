@@ -15,7 +15,7 @@ namespace CandyBugWinformDemo.Control
         private static volatile DataProvider instance;
 
         // Câu lệnh kết nối
-        private string con = @"Data Source=DESKTOP-G00H53A\SQLEXPRESS;Initial Catalog = QuanLyHocSinh; Integrated Security = True";
+        private string con = @"Data Source=nhomsix.database.windows.net;Initial Catalog=QLBK;User ID=nhom6;Password=123456789aA";
 
         // get set Instence
         public static DataProvider Instance 
