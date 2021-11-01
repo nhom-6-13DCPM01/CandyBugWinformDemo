@@ -153,15 +153,84 @@ namespace CandyBugWinformDemo.NewFolder1
             int idPro;
             if (Int32.TryParse(txtFind.Text, out idPro))
             {
-                List<Product> list = ProductDAO.Intence.findProduct(idPro);
-                
+                TabPage tab = new TabPage("Find");
+                tab.Name = "Find";
+                FlowLayoutPanel flow = new FlowLayoutPanel() { Width = 630, Height = 550 };
+                flow.AutoScroll = true;
+                List<Product> listPro = ProductDAO.Intence.findProduct(idPro);
+                foreach (Product itemPro in listPro)
+                {
+                    Button btn = new Button() { Width = 190, Height = 190 };
+                    Label lbName = new Label();
+                    lbName.Text = itemPro.Name;
+                    lbName.Location = new Point(2, 2);
+                    lbName.BackColor = Color.FromArgb(255, 224, 192);
+                    lbName.Font = new Font("Microsoft Sans Serif", 19, FontStyle.Bold);
+                    lbName.ForeColor = Color.Black;
+                    lbName.AutoSize = true;
+                    Label lbPrice = new Label();
+                    lbPrice.Text = itemPro.Price.ToString() + " ₫";
+                    lbPrice.Location = new Point(3, 165);
+                    lbPrice.ForeColor = Color.FromArgb(192, 64, 0);
+                    lbPrice.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
+                    lbPrice.BackColor = Color.LightGray;
+                    lbPrice.AutoSize = true;
+                    btn.Controls.Add(lbName);
+                    btn.Controls.Add(lbPrice);
+                    btn.Font = new Font(Font.FontFamily, 16);
+                    if (string.IsNullOrEmpty(Convert.ToString(itemPro.Image)) == false)
+                    {
+                        btn.BackgroundImageLayout = ImageLayout.Stretch;
+                        btn.BackgroundImage = ByteArrayToImage(itemPro.Image);
+                    }
+                    btn.Tag = itemPro;
+                    btn.Click += Btn_Click;
+                    flow.Controls.Add(btn);
+                }
+                tab.Controls.Add(flow);
+                tabControl1.Controls.Add(tab);
             }
             else
             {
-                List<Product> list = ProductDAO.Intence.findProductByName(txtFind.Text);
+
+                TabPage tab = new TabPage("Find");
+                tab.Name = "Find";
+                FlowLayoutPanel flow = new FlowLayoutPanel() { Width = 630, Height = 550 };
+                flow.AutoScroll = true;
+                List<Product> listPro = ProductDAO.Intence.findProductByName(txtFind.Text);
+                foreach (Product itemPro in listPro)
+                {
+                    Button btn = new Button() { Width = 190, Height = 190 };
+                    Label lbName = new Label();
+                    lbName.Text = itemPro.Name;
+                    lbName.Location = new Point(2, 2);
+                    lbName.BackColor = Color.FromArgb(255, 224, 192);
+                    lbName.Font = new Font("Microsoft Sans Serif", 19, FontStyle.Bold);
+                    lbName.ForeColor = Color.Black;
+                    lbName.AutoSize = true;
+                    Label lbPrice = new Label();
+                    lbPrice.Text = itemPro.Price.ToString() + " ₫";
+                    lbPrice.Location = new Point(3, 165);
+                    lbPrice.ForeColor = Color.FromArgb(192, 64, 0);
+                    lbPrice.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
+                    lbPrice.BackColor = Color.LightGray;
+                    lbPrice.AutoSize = true;
+                    btn.Controls.Add(lbName);
+                    btn.Controls.Add(lbPrice);
+                    btn.Font = new Font(Font.FontFamily, 16);
+                    if (string.IsNullOrEmpty(Convert.ToString(itemPro.Image)) == false)
+                    {
+                        btn.BackgroundImageLayout = ImageLayout.Stretch;
+                        btn.BackgroundImage = ByteArrayToImage(itemPro.Image);
+                    }
+                    btn.Tag = itemPro;
+                    btn.Click += Btn_Click;
+                    flow.Controls.Add(btn);
+                }
+                tab.Controls.Add(flow);
+                tabControl1.Controls.Add(tab);
 
             }
-            tabControl1.SelectTab("Cakes");
         }
 
         private void btnPrintBill_Click(object sender, EventArgs e)
