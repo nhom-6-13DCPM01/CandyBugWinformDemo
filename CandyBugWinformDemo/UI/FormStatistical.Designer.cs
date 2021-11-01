@@ -72,9 +72,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(849, 84);
+            this.panel1.Size = new System.Drawing.Size(637, 68);
             this.panel1.TabIndex = 2;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
@@ -83,10 +83,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dateTimePickerTo.CalendarForeColor = System.Drawing.Color.Brown;
             this.dateTimePickerTo.CalendarTitleBackColor = System.Drawing.Color.OrangeRed;
             this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerTo.Location = new System.Drawing.Point(268, 34);
-            this.dateTimePickerTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePickerTo.Location = new System.Drawing.Point(201, 28);
+            this.dateTimePickerTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
-            this.dateTimePickerTo.Size = new System.Drawing.Size(137, 22);
+            this.dateTimePickerTo.Size = new System.Drawing.Size(104, 20);
             this.dateTimePickerTo.TabIndex = 4;
             this.dateTimePickerTo.Value = new System.DateTime(2021, 10, 29, 21, 54, 57, 0);
             this.dateTimePickerTo.ValueChanged += new System.EventHandler(this.dateTimePickerTo_ValueChanged);
@@ -95,10 +95,10 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.dateTimePickerFrom.CalendarTitleBackColor = System.Drawing.Color.OrangeRed;
             this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(61, 34);
-            this.dateTimePickerFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(46, 28);
+            this.dateTimePickerFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(137, 22);
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(104, 20);
             this.dateTimePickerFrom.TabIndex = 4;
             this.dateTimePickerFrom.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFrom.ValueChanged += new System.EventHandler(this.dateTimePickerFrom_ValueChanged);
@@ -109,10 +109,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnExcel.BackColor = System.Drawing.Color.SpringGreen;
             this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcel.ForeColor = System.Drawing.Color.Black;
-            this.btnExcel.Location = new System.Drawing.Point(721, 26);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExcel.Location = new System.Drawing.Point(541, 21);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(104, 39);
+            this.btnExcel.Size = new System.Drawing.Size(78, 32);
             this.btnExcel.TabIndex = 3;
             this.btnExcel.Text = "Excel";
             this.btnExcel.UseVisualStyleBackColor = false;
@@ -124,10 +124,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnReset.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.Black;
-            this.btnReset.Location = new System.Drawing.Point(599, 26);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Location = new System.Drawing.Point(449, 21);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(104, 39);
+            this.btnReset.Size = new System.Drawing.Size(78, 32);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
@@ -138,9 +138,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(221, 36);
+            this.label2.Location = new System.Drawing.Point(166, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 18);
+            this.label2.Size = new System.Drawing.Size(23, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "To";
             // 
@@ -149,9 +150,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 36);
+            this.label1.Location = new System.Drawing.Point(5, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
+            this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "From";
             // 
@@ -163,10 +165,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel3.Controls.Add(this.btnPreviours);
             this.panel3.Controls.Add(this.btnFirst);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 578);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(0, 470);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(849, 64);
+            this.panel3.Size = new System.Drawing.Size(637, 52);
             this.panel3.TabIndex = 5;
             // 
             // btnNext
@@ -175,10 +177,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnNext.BackColor = System.Drawing.Color.Moccasin;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.Black;
-            this.btnNext.Location = new System.Drawing.Point(629, 12);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNext.Location = new System.Drawing.Point(472, 10);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(104, 39);
+            this.btnNext.Size = new System.Drawing.Size(78, 32);
             this.btnNext.TabIndex = 3;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -189,10 +191,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnLast.BackColor = System.Drawing.Color.Moccasin;
             this.btnLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLast.ForeColor = System.Drawing.Color.Black;
-            this.btnLast.Location = new System.Drawing.Point(739, 12);
-            this.btnLast.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLast.Location = new System.Drawing.Point(554, 10);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(104, 39);
+            this.btnLast.Size = new System.Drawing.Size(78, 32);
             this.btnLast.TabIndex = 3;
             this.btnLast.Text = "Last";
             this.btnLast.UseVisualStyleBackColor = false;
@@ -203,10 +205,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btPageNumber.BackColor = System.Drawing.Color.Moccasin;
             this.btPageNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPageNumber.ForeColor = System.Drawing.Color.Black;
-            this.btPageNumber.Location = new System.Drawing.Point(371, 12);
-            this.btPageNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btPageNumber.Location = new System.Drawing.Point(278, 10);
+            this.btPageNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btPageNumber.Name = "btPageNumber";
-            this.btPageNumber.Size = new System.Drawing.Size(104, 39);
+            this.btPageNumber.Size = new System.Drawing.Size(78, 32);
             this.btPageNumber.TabIndex = 3;
             this.btPageNumber.Text = "1";
             this.btPageNumber.UseVisualStyleBackColor = false;
@@ -217,10 +219,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnPreviours.BackColor = System.Drawing.Color.Moccasin;
             this.btnPreviours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreviours.ForeColor = System.Drawing.Color.Black;
-            this.btnPreviours.Location = new System.Drawing.Point(123, 12);
-            this.btnPreviours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPreviours.Location = new System.Drawing.Point(92, 10);
+            this.btnPreviours.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPreviours.Name = "btnPreviours";
-            this.btnPreviours.Size = new System.Drawing.Size(104, 39);
+            this.btnPreviours.Size = new System.Drawing.Size(78, 32);
             this.btnPreviours.TabIndex = 3;
             this.btnPreviours.Text = "Previours";
             this.btnPreviours.UseVisualStyleBackColor = false;
@@ -231,10 +233,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnFirst.BackColor = System.Drawing.Color.Moccasin;
             this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFirst.ForeColor = System.Drawing.Color.Black;
-            this.btnFirst.Location = new System.Drawing.Point(12, 12);
-            this.btnFirst.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFirst.Location = new System.Drawing.Point(9, 10);
+            this.btnFirst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(104, 39);
+            this.btnFirst.Size = new System.Drawing.Size(78, 32);
             this.btnFirst.TabIndex = 3;
             this.btnFirst.Text = "First";
             this.btnFirst.UseVisualStyleBackColor = false;
@@ -249,10 +251,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panelHienThiThongTIn.Controls.Add(this.textBoxTongTien);
             this.panelHienThiThongTIn.Controls.Add(this.textBoxTimKiem);
             this.panelHienThiThongTIn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHienThiThongTIn.Location = new System.Drawing.Point(0, 84);
-            this.panelHienThiThongTIn.Margin = new System.Windows.Forms.Padding(4);
+            this.panelHienThiThongTIn.Location = new System.Drawing.Point(0, 68);
             this.panelHienThiThongTIn.Name = "panelHienThiThongTIn";
-            this.panelHienThiThongTIn.Size = new System.Drawing.Size(849, 170);
+            this.panelHienThiThongTIn.Size = new System.Drawing.Size(637, 138);
             this.panelHienThiThongTIn.TabIndex = 6;
             this.panelHienThiThongTIn.Click += new System.EventHandler(this.panelHienThiThongTIn_Click);
             // 
@@ -260,40 +261,36 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.lblPhanThongTin.AutoSize = true;
             this.lblPhanThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhanThongTin.Location = new System.Drawing.Point(21, 2);
-            this.lblPhanThongTin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPhanThongTin.Location = new System.Drawing.Point(16, 2);
             this.lblPhanThongTin.Name = "lblPhanThongTin";
-            this.lblPhanThongTin.Size = new System.Drawing.Size(116, 20);
+            this.lblPhanThongTin.Size = new System.Drawing.Size(100, 17);
             this.lblPhanThongTin.TabIndex = 7;
             this.lblPhanThongTin.Text = "Phần thông tin";
             // 
             // labelTimKiem
             // 
             this.labelTimKiem.AutoSize = true;
-            this.labelTimKiem.Location = new System.Drawing.Point(84, 123);
-            this.labelTimKiem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTimKiem.Location = new System.Drawing.Point(63, 100);
             this.labelTimKiem.Name = "labelTimKiem";
-            this.labelTimKiem.Size = new System.Drawing.Size(68, 17);
+            this.labelTimKiem.Size = new System.Drawing.Size(52, 13);
             this.labelTimKiem.TabIndex = 6;
             this.labelTimKiem.Text = "Tìm kiếm:";
             // 
             // labelTongSoOrder
             // 
             this.labelTongSoOrder.AutoSize = true;
-            this.labelTongSoOrder.Location = new System.Drawing.Point(495, 55);
-            this.labelTongSoOrder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTongSoOrder.Location = new System.Drawing.Point(371, 45);
             this.labelTongSoOrder.Name = "labelTongSoOrder";
-            this.labelTongSoOrder.Size = new System.Drawing.Size(102, 17);
+            this.labelTongSoOrder.Size = new System.Drawing.Size(76, 13);
             this.labelTongSoOrder.TabIndex = 4;
             this.labelTongSoOrder.Text = "Tổng số order:";
             // 
             // labelTongTien
             // 
             this.labelTongTien.AutoSize = true;
-            this.labelTongTien.Location = new System.Drawing.Point(21, 55);
-            this.labelTongTien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTongTien.Location = new System.Drawing.Point(16, 45);
             this.labelTongTien.Name = "labelTongTien";
-            this.labelTongTien.Size = new System.Drawing.Size(135, 17);
+            this.labelTongTien.Size = new System.Drawing.Size(102, 13);
             this.labelTongTien.TabIndex = 3;
             this.labelTongTien.Text = " Tổng tiền Payment:";
             // 
@@ -302,10 +299,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.textBoxTongOrder.BackColor = System.Drawing.SystemColors.Info;
             this.textBoxTongOrder.Enabled = false;
             this.textBoxTongOrder.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxTongOrder.Location = new System.Drawing.Point(600, 52);
-            this.textBoxTongOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxTongOrder.Location = new System.Drawing.Point(450, 42);
             this.textBoxTongOrder.Name = "textBoxTongOrder";
-            this.textBoxTongOrder.Size = new System.Drawing.Size(132, 22);
+            this.textBoxTongOrder.Size = new System.Drawing.Size(100, 20);
             this.textBoxTongOrder.TabIndex = 2;
             // 
             // textBoxTongTien
@@ -313,20 +309,18 @@ namespace CandyBugWinformDemo.NewFolder1
             this.textBoxTongTien.BackColor = System.Drawing.SystemColors.Info;
             this.textBoxTongTien.Enabled = false;
             this.textBoxTongTien.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxTongTien.Location = new System.Drawing.Point(165, 52);
-            this.textBoxTongTien.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxTongTien.Location = new System.Drawing.Point(124, 42);
             this.textBoxTongTien.Name = "textBoxTongTien";
-            this.textBoxTongTien.Size = new System.Drawing.Size(203, 22);
+            this.textBoxTongTien.Size = new System.Drawing.Size(153, 20);
             this.textBoxTongTien.TabIndex = 1;
             // 
             // textBoxTimKiem
             // 
             this.textBoxTimKiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxTimKiem.ForeColor = System.Drawing.Color.DarkGray;
-            this.textBoxTimKiem.Location = new System.Drawing.Point(165, 119);
-            this.textBoxTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxTimKiem.Location = new System.Drawing.Point(124, 97);
             this.textBoxTimKiem.Name = "textBoxTimKiem";
-            this.textBoxTimKiem.Size = new System.Drawing.Size(475, 22);
+            this.textBoxTimKiem.Size = new System.Drawing.Size(357, 20);
             this.textBoxTimKiem.TabIndex = 0;
             this.textBoxTimKiem.Text = "Tìm kiếm theo id của item, name của item";
             this.textBoxTimKiem.Click += new System.EventHandler(this.textBoxTimKiem_Click);
@@ -338,6 +332,7 @@ namespace CandyBugWinformDemo.NewFolder1
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridViewStatistical.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewStatistical.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,8 +352,7 @@ namespace CandyBugWinformDemo.NewFolder1
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewStatistical.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewStatistical.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewStatistical.Location = new System.Drawing.Point(0, 254);
-            this.dataGridViewStatistical.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewStatistical.Location = new System.Drawing.Point(0, 206);
             this.dataGridViewStatistical.Name = "dataGridViewStatistical";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -372,23 +366,23 @@ namespace CandyBugWinformDemo.NewFolder1
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridViewStatistical.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewStatistical.Size = new System.Drawing.Size(849, 324);
+            this.dataGridViewStatistical.Size = new System.Drawing.Size(637, 264);
             this.dataGridViewStatistical.TabIndex = 7;
             // 
             // FormStatistical
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(849, 642);
+            this.ClientSize = new System.Drawing.Size(637, 522);
             this.Controls.Add(this.dataGridViewStatistical);
             this.Controls.Add(this.panelHienThiThongTIn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormStatistical";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.FormStatistical_Load);

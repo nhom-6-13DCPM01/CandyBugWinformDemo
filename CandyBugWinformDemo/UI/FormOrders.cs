@@ -87,13 +87,13 @@ namespace CandyBugWinformDemo.NewFolder1
         private void Btn_Click(object sender, EventArgs e)
         {
             Product itemPro = (((sender) as Button).Tag) as Product;
-            ifOrder temp = new ifOrder(itemPro.Name, itemPro.Price, 1,itemPro.IdPro);
-             bool containItem = listIFOder.Any(c => c.Name == temp.Name);
-                if (containItem == false)
-                {
-                    listIFOder.Add(temp);
-                    showData();
-                }
+            ifOrder temp = new ifOrder(itemPro.Name, itemPro.Price, 1, itemPro.IdPro);
+            bool containItem = listIFOder.Any(c => c.Name == temp.Name);
+            if (containItem == false)
+            {
+                listIFOder.Add(temp);
+                showData();
+            }
         }
         public void showData()
         {
@@ -118,14 +118,14 @@ namespace CandyBugWinformDemo.NewFolder1
             listIFOder.Clear();
             showData();
         }
-        
+
         private void dataGridViewCurrentOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             orderCurent = listIFOder.Where(c => c.Name == dataGridViewCurrentOrder.Rows[e.RowIndex].Cells[0].Value.ToString()).First();
 
         }
-    
+
 
         private void btnD_Click(object sender, EventArgs e)
         {
@@ -135,14 +135,18 @@ namespace CandyBugWinformDemo.NewFolder1
 
         private void btnSa_Click(object sender, EventArgs e)
         {
-            foreach(ifOrder item in listIFOder)
+            DialogResult result = MessageBox.Show("Do you want to Save ?", "Ting Ting", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
             {
-                OrdersDAO.Intance.addOrder(DateTime.Now, item.IdProduct, item.Quantity, 0);
+                foreach (ifOrder item in listIFOder)
+                {
+                    OrdersDAO.Intance.addOrder(DateTime.Now, item.IdProduct, item.Quantity, 0);
+                }
+                listIFOder.Clear();
+                MessageBox.Show("Add order succeedfull!");
+                showData();
             }
-            listIFOder.Clear();
-            MessageBox.Show("Add order succeedfull!");
-            showData();
-            }
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -155,7 +159,7 @@ namespace CandyBugWinformDemo.NewFolder1
             else
             {
                 List<Product> list = ProductDAO.Intence.findProductByName(txtFind.Text);
-               
+
             }
             tabControl1.SelectTab("Cakes");
         }
@@ -167,7 +171,7 @@ namespace CandyBugWinformDemo.NewFolder1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            orderCurent.Quantity = Convert.ToInt32 (numericUpDown1.Value);
+            orderCurent.Quantity = Convert.ToInt32(numericUpDown1.Value);
             showData();
         }
     }

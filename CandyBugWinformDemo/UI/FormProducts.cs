@@ -46,34 +46,34 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             _contextMenuAutoFill = new ContextMenuStrip();
             List<Category> list = CategoryDAO.Instence.getListCategory();
-                foreach (Category item in list)
-                {
-                    _contextMenuAutoFill.Items.Add(item.Name);
-                }
-            
-                foreach (ToolStripMenuItem mItem in _contextMenuAutoFill.Items)
-                {
-                    mItem.Click +=
-                    new System.EventHandler(this.AutoFillToolStripMenuItem_Click);
-                        if (mItem.Text.Equals("Others")) 
-                        {
+            foreach (Category item in list)
+            {
+                _contextMenuAutoFill.Items.Add(item.Name);
+            }
 
-                        }
-                        else
-                        {
-                            ToolStripMenuItem remove = new ToolStripMenuItem();
-                            remove.Text = "Remove";
-                            remove.Click += Remove_Click;
-                            remove.Tag = mItem.Text;
-                            mItem.DropDownItems.Add(remove);
-                        }
+            foreach (ToolStripMenuItem mItem in _contextMenuAutoFill.Items)
+            {
+                mItem.Click +=
+                new System.EventHandler(this.AutoFillToolStripMenuItem_Click);
+                if (mItem.Text.Equals("Others"))
+                {
+
                 }
+                else
+                {
+                    ToolStripMenuItem remove = new ToolStripMenuItem();
+                    remove.Text = "Remove";
+                    remove.Click += Remove_Click;
+                    remove.Tag = mItem.Text;
+                    mItem.DropDownItems.Add(remove);
+                }
+            }
         }
 
         private void Remove_Click(object sender, EventArgs e)
         {
             string nameCate = (((sender) as ToolStripMenuItem).Tag).ToString();
-            
+
         }
 
         //
@@ -119,15 +119,15 @@ namespace CandyBugWinformDemo.NewFolder1
                 txtItemProduct.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
                 dropdownCategoty.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
                 updownPrice.Text = dataGridViewformProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    if (string.IsNullOrEmpty(Convert.ToString(dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value)))
-                    {
-                        pictureBox1.Image = null;
-                    }
-                    else
-                    {
-                        byte[] b = (byte[])dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value;
-                        pictureBox1.Image = ByteArrayToImage(b);
-                    }
+                if (string.IsNullOrEmpty(Convert.ToString(dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value)))
+                {
+                    pictureBox1.Image = null;
+                }
+                else
+                {
+                    byte[] b = (byte[])dataGridViewformProducts.Rows[e.RowIndex].Cells[4].Value;
+                    pictureBox1.Image = ByteArrayToImage(b);
+                }
             }
             catch (Exception)
             {
@@ -153,36 +153,38 @@ namespace CandyBugWinformDemo.NewFolder1
                 string name = txtItemProduct.Text;
                 string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
                 float price = (float)Convert.ToDouble(updownPrice.Text);
-                if (testImage(pictureBox1.Image))
+                DialogResult result = MessageBox.Show("Do you want to Add ?", "Ting Ting", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
                 {
-                    byte[] b = ImageTobyArray(pictureBox1.Image);
-                    if (ProductDAO.Intence.addProduct(name, idCate, price, b))
+                    if (testImage(pictureBox1.Image))
                     {
-                        MessageBox.Show("Thêm Thành công");
-                        loadGridData();
-                        ClearTxt();
+                        byte[] b = ImageTobyArray(pictureBox1.Image);
+                        if (ProductDAO.Intence.addProduct(name, idCate, price, b))
+                        {
+                            MessageBox.Show("Add successfull");
+                            loadGridData();
+                            ClearTxt();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lỗi", "Thông báo");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Lỗi", "Thông báo");
+                        if (ProductDAO.Intence.addProductNonImage(name, idCate, price))
+                        {
+                            MessageBox.Show("Add successfull");
+                            loadGridData();
+                            ClearTxt();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lỗi", "Thông báo");
+                        }
                     }
                 }
-                else
-                {
-                    if (ProductDAO.Intence.addProductNonImage(name, idCate, price))
-                    {
-                        MessageBox.Show("Thêm Thành công");
-                        loadGridData();
-                        ClearTxt();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Lỗi", "Thông báo");
-                    }
-                }
-
             }
-
         }
         //
         //DELETE BUTTON
@@ -193,65 +195,68 @@ namespace CandyBugWinformDemo.NewFolder1
             int idPro;
             if (Int32.TryParse(txtIDProduct.Text, out idPro))
             {
-                if (ProductDAO.Intence.removeProduct(idPro))
+                DialogResult result = MessageBox.Show("Do you want to Delete ?", "Ting Ting", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
                 {
-                    MessageBox.Show("Xóa Thành công");
-                    loadGridData();
-                    ClearTxt();
-                }
-                else
-                {
-                    MessageBox.Show("Thông báo", "Lỗi");
+                    if (ProductDAO.Intence.removeProduct(idPro))
+                    {
+                        MessageBox.Show("Delete successfull");
+                        loadGridData();
+                        ClearTxt();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thông báo", "Lỗi");
+                    }
                 }
             }
             else
             {
                 MessageBox.Show("Pleace choose a product", "Lỗi");
             }
-
-
         }
         //
         //UPDATE PRODUCT
         //
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
-
             if (checkInput())
             {
                 string name = txtItemProduct.Text;
                 string idCate = CategoryDAO.Instence.getCategory(dropdownCategoty.Text);
                 float price = (float)Convert.ToDouble(updownPrice.Text);
                 int idPro = Convert.ToInt32(txtIDProduct.Text);
-                if (testImage(pictureBox1.Image))
+                DialogResult result = MessageBox.Show("Do you want to Update ?", "Ting Ting", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
                 {
-                    byte[] b = ImageTobyArray(pictureBox1.Image);
-                    if (ProductDAO.Intence.updateProduct(name, idCate, price, idPro, b))
+                    if (testImage(pictureBox1.Image))
                     {
-                        MessageBox.Show("Update Thành công");
-                        loadGridData();
-                        ClearTxt();
+                        byte[] b = ImageTobyArray(pictureBox1.Image);
+                        if (ProductDAO.Intence.updateProduct(name, idCate, price, idPro, b))
+                        {
+                            MessageBox.Show("Update Successfull ");
+                            loadGridData();
+                            ClearTxt();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lỗi", "Thông báo");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Lỗi", "Thông báo");
+                        if (ProductDAO.Intence.updateProductNonImage(name, idCate, price, idPro))
+                        {
+                            MessageBox.Show("Update Successfull ");
+                            loadGridData();
+                            ClearTxt();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lỗi", "Thông báo");
+                        }
                     }
                 }
-                else
-                {
-
-                    if (ProductDAO.Intence.updateProductNonImage(name, idCate, price, idPro))
-                    {
-                        MessageBox.Show("Update Thành công");
-                        loadGridData();
-                        ClearTxt();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Lỗi", "Thông báo");
-                    }
-                }
-
             }
         }
         //----------------------------------------------------------
@@ -346,7 +351,7 @@ namespace CandyBugWinformDemo.NewFolder1
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             int idPro;
-            if(Int32.TryParse(txtFindProduct.Text,out idPro))
+            if (Int32.TryParse(txtFindProduct.Text, out idPro))
             {
                 List<Product> list = ProductDAO.Intence.findProduct(idPro);
                 dataGridViewformProducts.DataSource = list;
