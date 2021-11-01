@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CandyBugWinformDemo.Object;
 using ComponentFactory.Krypton.Toolkit;
 using FontAwesome.Sharp;
 
@@ -19,6 +20,8 @@ namespace CandyBugWinformDemo
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+
+        public Account LoginAccount { get; private set; }
 
         //Constructor
         public Form2()
@@ -130,7 +133,7 @@ namespace CandyBugWinformDemo
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new NewFolder1.FormAdmin());
+            OpenChildForm(new NewFolder1.FormAdmin(LoginAccount));
         }
 
         private void btnHome_Click(object sender, EventArgs e)
