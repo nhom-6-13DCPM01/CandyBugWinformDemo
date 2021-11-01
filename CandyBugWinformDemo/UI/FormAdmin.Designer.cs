@@ -45,6 +45,8 @@ namespace CandyBugWinformDemo.NewFolder1
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -78,6 +80,8 @@ namespace CandyBugWinformDemo.NewFolder1
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.kryptonTextBox4);
             this.panel1.Controls.Add(this.kryptonNumericUpDown1);
             this.panel1.Controls.Add(this.btbResetPassword);
             this.panel1.Controls.Add(this.label3);
@@ -113,7 +117,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.btbResetPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btbResetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbResetPassword.Location = new System.Drawing.Point(106, 280);
+            this.btbResetPassword.Location = new System.Drawing.Point(112, 366);
             this.btbResetPassword.Name = "btbResetPassword";
             this.btbResetPassword.Size = new System.Drawing.Size(140, 46);
             this.btbResetPassword.TabIndex = 3;
@@ -249,6 +253,30 @@ namespace CandyBugWinformDemo.NewFolder1
             this.kryptonTextBox3.StateCommon.Border.Rounding = 18;
             this.kryptonTextBox3.TabIndex = 1;
             // 
+            // kryptonTextBox4
+            // 
+            this.kryptonTextBox4.Location = new System.Drawing.Point(37, 312);
+            this.kryptonTextBox4.Name = "kryptonTextBox4";
+            this.kryptonTextBox4.Size = new System.Drawing.Size(215, 39);
+            this.kryptonTextBox4.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox4.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonTextBox4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox4.StateCommon.Border.Rounding = 18;
+            this.kryptonTextBox4.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(45, 284);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "PassWord";
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -289,5 +317,7 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown kryptonNumericUpDown1;
+        private System.Windows.Forms.Label label4;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
     }
 }
