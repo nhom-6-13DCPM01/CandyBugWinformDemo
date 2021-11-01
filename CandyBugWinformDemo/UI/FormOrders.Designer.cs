@@ -38,6 +38,13 @@ namespace CandyBugWinformDemo.NewFolder1
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridViewCurrentOrder = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ifOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnClearAll = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnPrintBill = new System.Windows.Forms.Button();
@@ -49,20 +56,16 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnD = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.lbTotal1 = new System.Windows.Forms.Label();
-            this.dataGridViewCurrentOrder = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label21 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtFind = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1.SuspendLayout();
-            this.panel12.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCurrentOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ifOrderBindingSource)).BeginInit();
+            this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,9 +101,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.panel1.AutoScroll = true;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnClearAll);
             this.panel1.Controls.Add(this.panel12);
-            this.panel1.Controls.Add(this.dataGridViewCurrentOrder);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(520, 0);
@@ -108,6 +111,102 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(364, 472);
             this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridViewCurrentOrder);
+            this.panel2.Location = new System.Drawing.Point(3, 54);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(355, 222);
+            this.panel2.TabIndex = 5;
+            // 
+            // dataGridViewCurrentOrder
+            // 
+            this.dataGridViewCurrentOrder.AllowUserToAddRows = false;
+            this.dataGridViewCurrentOrder.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewCurrentOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewCurrentOrder.AutoGenerateColumns = false;
+            this.dataGridViewCurrentOrder.BackgroundColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCurrentOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewCurrentOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCurrentOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn});
+            this.dataGridViewCurrentOrder.DataSource = this.ifOrderBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCurrentOrder.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewCurrentOrder.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dataGridViewCurrentOrder.Location = new System.Drawing.Point(3, 2);
+            this.dataGridViewCurrentOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewCurrentOrder.Name = "dataGridViewCurrentOrder";
+            this.dataGridViewCurrentOrder.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCurrentOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewCurrentOrder.RowHeadersWidth = 51;
+            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewCurrentOrder.RowTemplate.Height = 24;
+            this.dataGridViewCurrentOrder.Size = new System.Drawing.Size(358, 216);
+            this.dataGridViewCurrentOrder.TabIndex = 2;
+            this.dataGridViewCurrentOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCurrentOrder_CellContentClick);
+            this.dataGridViewCurrentOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCurrentOrder_CellContentClick);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ifOrderBindingSource
+            // 
+            this.ifOrderBindingSource.DataSource = typeof(CandyBugWinformDemo.Object.ifOrder);
             // 
             // btnClearAll
             // 
@@ -121,6 +220,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnClearAll.TabIndex = 4;
             this.btnClearAll.Text = "Clear All";
             this.btnClearAll.UseVisualStyleBackColor = false;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
             // panel12
             // 
@@ -154,7 +254,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnPrintBill.TabIndex = 4;
             this.btnPrintBill.Text = "PRINT BILL";
             this.btnPrintBill.UseVisualStyleBackColor = false;
-            this.btnPrintBill.Click += new System.EventHandler(this.btnPrintBill_Click);
             // 
             // btnCa
             // 
@@ -191,6 +290,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnSa.TabIndex = 4;
             this.btnSa.Text = "Save";
             this.btnSa.UseVisualStyleBackColor = false;
+            this.btnSa.Click += new System.EventHandler(this.btnSa_Click);
             // 
             // lbTotal
             // 
@@ -229,6 +329,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnD.TabIndex = 4;
             this.btnD.Text = "Delete";
             this.btnD.UseVisualStyleBackColor = false;
+            this.btnD.Click += new System.EventHandler(this.btnD_Click);
             // 
             // label24
             // 
@@ -254,80 +355,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.lbTotal1.Size = new System.Drawing.Size(64, 26);
             this.lbTotal1.TabIndex = 0;
             this.lbTotal1.Text = "Total";
-            // 
-            // dataGridViewCurrentOrder
-            // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewCurrentOrder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewCurrentOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewCurrentOrder.AutoGenerateColumns = false;
-            this.dataGridViewCurrentOrder.BackgroundColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCurrentOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewCurrentOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCurrentOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Cost});
-            this.dataGridViewCurrentOrder.DataSource = this.dataSet1BindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCurrentOrder.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewCurrentOrder.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridViewCurrentOrder.Location = new System.Drawing.Point(3, 55);
-            this.dataGridViewCurrentOrder.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewCurrentOrder.Name = "dataGridViewCurrentOrder";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCurrentOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewCurrentOrder.RowHeadersWidth = 51;
-            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
-            this.dataGridViewCurrentOrder.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewCurrentOrder.RowTemplate.Height = 24;
-            this.dataGridViewCurrentOrder.Size = new System.Drawing.Size(358, 215);
-            this.dataGridViewCurrentOrder.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Item";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Qantity";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 110;
-            // 
-            // Cost
-            // 
-            this.Cost.HeaderText = "Price";
-            this.Cost.MinimumWidth = 6;
-            this.Cost.Name = "Cost";
-            this.Cost.Width = 140;
             // 
             // label21
             // 
@@ -375,6 +402,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtFind
             // 
@@ -407,10 +435,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.Load += new System.EventHandler(this.FormOrders_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCurrentOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ifOrderBindingSource)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCurrentOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -439,9 +468,11 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFind;
-        private System.Windows.Forms.BindingSource dataSet1BindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource ifOrderBindingSource;
+        private System.Windows.Forms.Panel panel2;
     }
 }
