@@ -25,7 +25,6 @@ namespace CandyBugWinformDemo.Object
             this.name = name;
             this.price = price;
             this.quantity = quantity;
-            
             this.idProduct = idProduct;
         }
   
