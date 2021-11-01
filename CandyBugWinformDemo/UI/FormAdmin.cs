@@ -64,9 +64,9 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             accountList.DataSource = AccountDAO.Instance.GetListAccount();
         }
-        void AddAccount(string userName, string displayName, int type)
+        void AddAccount(string userName, string displayName, string passWord, int type)
         {
-            if (AccountDAO.Instance.InsertAccount(userName, displayName, type))
+            if (AccountDAO.Instance.InsertAccount(userName, displayName, passWord, type))
             {
                 MessageBox.Show("Thêm tài khoản thành công");
             }
@@ -78,9 +78,9 @@ namespace CandyBugWinformDemo.NewFolder1
             LoadAccount();
         }
 
-        void EditAccount(string userName, string displayName, int type)
+        void EditAccount(string userName, string displayName, string passWord, int type)
         {
-            if (AccountDAO.Instance.UpdateAccount(userName, displayName, type))
+            if (AccountDAO.Instance.UpdateAccount(userName, displayName, passWord, type))
             {
                 MessageBox.Show("Cập nhật tài khoản thành công");
             }
@@ -134,9 +134,11 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             string userName = kryptonTextBox1.Text;
             string displayName = kryptonTextBox2.Text;
+            string passWord = kryptonTextBox4.Text;
             int type = (int)kryptonNumericUpDown1.Value;
 
-            AddAccount(userName, displayName, type);
+            AddAccount(userName, displayName, passWord, type);
+            kryptonTextBox4.Clear();
         }
         //delete
         private void button2_Click(object sender, EventArgs e)
@@ -150,9 +152,11 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             string userName = kryptonTextBox1.Text;
             string displayName = kryptonTextBox2.Text;
+            string password = kryptonTextBox4.Text;
             int type = (int)kryptonNumericUpDown1.Value;
 
-            EditAccount(userName, displayName, type);
+            EditAccount(userName, displayName, password, type);
+            kryptonTextBox4.Clear();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
