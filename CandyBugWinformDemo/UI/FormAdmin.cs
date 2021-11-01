@@ -38,6 +38,14 @@ namespace CandyBugWinformDemo.NewFolder1
             AddAccountBinding();
         }
 
+        public List<Account> SearchAccountByName(string name)
+        {
+            
+            List<Account> listAccount = AccountDAO.Instance.SearchAccountByName(name);
+
+            return listAccount;
+        }
+
         void ChangeAccount(Account acc)
         {
             kryptonTextBox1.Text = LoginAccount.Username;
@@ -145,6 +153,16 @@ namespace CandyBugWinformDemo.NewFolder1
             int type = (int)kryptonNumericUpDown1.Value;
 
             EditAccount(userName, displayName, type);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            accountList.DataSource = SearchAccountByName(kryptonTextBox3.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

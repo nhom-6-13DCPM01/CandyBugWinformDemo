@@ -53,6 +53,23 @@ namespace CandyBugWinformDemo.Control
             return DataProvider.Instance.ExecuteQuery("SELECT UserName, DisplayName, Type FROM dbo.Account");
         }
 
+        public List<Account> SearchAccountByName(string name)
+        {
+            List<Account> list = new List<Account>();
+
+            string query = string.Format("SELECT * FROM Account WHERE dbo.fuConvertToUnsign1(UserName) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%'", name);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Account account = new Account(item);
+                list.Add(account);
+            }
+
+            return list;
+        }
+
         public bool InsertAccount(string name, string displayName, int type)
         {
             string query = string.Format("INSERT dbo.Account ( UserName, DisplayName, Type )VALUES  ( N'{0}', N'{1}', {2})", name, displayName, type);
