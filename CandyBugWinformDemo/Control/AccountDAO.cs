@@ -90,7 +90,6 @@ namespace CandyBugWinformDemo.Control
         {
             string query = string.Format("Delete Account where UserName = N'{0}'", name);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
-
             return result > 0;
         }
 

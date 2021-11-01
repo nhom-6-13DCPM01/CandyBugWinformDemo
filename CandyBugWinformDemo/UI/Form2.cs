@@ -133,7 +133,7 @@ namespace CandyBugWinformDemo
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new NewFolder1.FormAdmin(LoginAccount));
+            OpenChildForm(new NewFolder1.FormAdmin());
         }
 
         private void btnHome_Click(object sender, EventArgs e)

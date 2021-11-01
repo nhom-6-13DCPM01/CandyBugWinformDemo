@@ -16,18 +16,21 @@ namespace CandyBugWinformDemo.NewFolder1
     public partial class FormAdmin : Form
     {
         BindingSource accountList = new BindingSource();
-        private Account loginAccount;
+       /* public Account loginAccount;
 
         public Account LoginAccount
         {
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount); }
         }
+*/
+       
+
         //constructor
-        public FormAdmin(Account acc)
+        public FormAdmin()
         {
             InitializeComponent();
-            LoginAccount = acc;
+          
             Load();
             this.dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             this.dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Red;
@@ -50,12 +53,7 @@ namespace CandyBugWinformDemo.NewFolder1
             return listAccount;
         }
 
-        void ChangeAccount(Account acc)
-        {
-            /*kryptonTextBox1.Text = LoginAccount.Username;
-            kryptonTextBox2.Text = LoginAccount.Displayname;*/
-        }
-
+        
         void AddAccountBinding()
         {
             kryptonTextBox1.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "UserName", true, DataSourceUpdateMode.Never));
@@ -98,11 +96,7 @@ namespace CandyBugWinformDemo.NewFolder1
 
         void DeleteAccount(string userName)
         {
-            if (loginAccount.Username.Equals(userName))
-            {
-                MessageBox.Show("Vui lòng đừng xóa chính bạn chứ");
-                return;
-            }
+            
             if (AccountDAO.Instance.DeleteAccount(userName))
             {
                 MessageBox.Show("Xóa tài khoản thành công");
@@ -125,6 +119,47 @@ namespace CandyBugWinformDemo.NewFolder1
             {
                 MessageBox.Show("Đặt lại mật khẩu thất bại");
             }
+        }
+        //xoa
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+
+            DeleteAccount(userName);
+        }
+
+        //them 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+            string displayName = kryptonTextBox2.Text;
+            string passWord = kryptonTextBox4.Text;
+            int type = (int)kryptonNumericUpDown1.Value;
+
+            AddAccount(userName, displayName, passWord, type);
+            kryptonTextBox4.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+            string displayName = kryptonTextBox2.Text;
+            string password = kryptonTextBox4.Text;
+            int type = (int)kryptonNumericUpDown1.Value;
+
+            EditAccount(userName, displayName, password, type);
+            kryptonTextBox4.Clear();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            accountList.DataSource = SearchAccountByName(kryptonTextBox3.Text);
+        }
+
+        private void btbResetPassword_Click(object sender, EventArgs e)
+        {
+            string userName = kryptonTextBox1.Text;
+            ResetPass(userName);
         }
     }
 }
