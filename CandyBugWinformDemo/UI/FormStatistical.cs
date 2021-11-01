@@ -181,6 +181,8 @@ namespace CandyBugWinformDemo.NewFolder1
                 {
                     load_data("SELECT Product.idPro, Product.name, Orders.quantity, CONVERT(nvarchar(50), CAST(Product.price as money),1), CONVERT(nvarchar(50), CAST(Product.price * Orders.quantity as money),1), FORMAT(FORMAT(CAST(Orders.DateCheckOut as date), 'dd/MM/yyyy'), 'dd/MM/yyyy') FROM Orders INNER JOIN Product ON Orders.idProduct = Product.idPro where Product.name = N'" + textBoxTimKiem.Text + "'");
                 }
+                textBoxTimKiem.Enabled = false;
+                textBoxTimKiem.Enabled = true;
             }
         }
 
@@ -190,8 +192,15 @@ namespace CandyBugWinformDemo.NewFolder1
             FormStatistical_Load(sender,e);
         }
 
+        //khu panel
         //Khi người dùng click phần ngoài trong khu phần thông tin thì sẽ đặt lại text cho ô tìm kiếm
         private void panelHienThiThongTIn_Click(object sender, EventArgs e)
+        {
+            textBoxTimKiem.Text = "Tìm kiếm theo id của item, name của item";
+            textBoxTimKiem.ForeColor = Color.DarkGray;
+        }
+        //Khi người dùng click phần panel của date timepicker trong khu phần thông tin thì sẽ đặt lại text cho ô tìm kiếm
+        private void panel1_Click(object sender, EventArgs e)
         {
             textBoxTimKiem.Text = "Tìm kiếm theo id của item, name của item";
             textBoxTimKiem.ForeColor = Color.DarkGray;
@@ -222,7 +231,6 @@ namespace CandyBugWinformDemo.NewFolder1
             textBoxTongOrder.Text = Convert.ToString(dataGridViewStatistical.Rows.Count - 1);
             load_data_tong_tien_so_lan_orders();
         }
-
         //thay đổi dữ liệu trên chọn ngày to thì sẽ hiển thị kết quả lên bảng danh sách
         private void dateTimePickerTo_ValueChanged(object sender, EventArgs e)
         {
