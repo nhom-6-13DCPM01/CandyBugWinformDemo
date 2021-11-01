@@ -146,6 +146,17 @@ namespace CandyBugWinformDemo.NewFolder1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            int idPro;
+            if (Int32.TryParse(txtFind.Text, out idPro))
+            {
+                List<Product> list = ProductDAO.Intence.findProduct(idPro);
+                
+            }
+            else
+            {
+                List<Product> list = ProductDAO.Intence.findProductByName(txtFind.Text);
+               
+            }
             tabControl1.SelectTab("Cakes");
         }
 
