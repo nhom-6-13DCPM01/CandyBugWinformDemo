@@ -37,7 +37,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.updownPrice = new ComponentFactory.Krypton.Toolkit.KryptonDomainUpDown();
+            this.updownPrice = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.dropdownCategoty = new ComponentFactory.Krypton.Toolkit.KryptonDropButton();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -54,11 +54,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.dataGridViewformProducts = new System.Windows.Forms.DataGridView();
-            this.idProDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.productBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.qLBKDataSet = new CandyBugWinformDemo.QLBKDataSet();
             this.productBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -71,6 +66,11 @@ namespace CandyBugWinformDemo.NewFolder1
             this.productTableAdapter = new CandyBugWinformDemo.QLBKDataSetTableAdapters.ProductTableAdapter();
             this.fKOrdersstatus72C60C4ABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordersTableAdapter = new CandyBugWinformDemo.QLBKDataSetTableAdapters.OrdersTableAdapter();
+            this.idProDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,9 +93,9 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(359, 474);
+            this.panel1.Size = new System.Drawing.Size(269, 385);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -113,18 +113,18 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 474);
+            this.panel2.Size = new System.Drawing.Size(270, 385);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox1.Location = new System.Drawing.Point(125, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(94, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -132,11 +132,25 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // updownPrice
             // 
-            this.updownPrice.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.updownPrice.Location = new System.Drawing.Point(125, 340);
-            this.updownPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updownPrice.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.updownPrice.Location = new System.Drawing.Point(94, 276);
+            this.updownPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.updownPrice.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.updownPrice.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.updownPrice.Name = "updownPrice";
-            this.updownPrice.Size = new System.Drawing.Size(215, 38);
+            this.updownPrice.Size = new System.Drawing.Size(161, 34);
             this.updownPrice.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.updownPrice.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.updownPrice.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -145,15 +159,20 @@ namespace CandyBugWinformDemo.NewFolder1
             this.updownPrice.StateCommon.Border.Rounding = 18;
             this.updownPrice.TabIndex = 10;
             this.updownPrice.TabStop = false;
+            this.updownPrice.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.updownPrice.Validating += new System.ComponentModel.CancelEventHandler(this.updownPrice_Validating);
             // 
             // dropdownCategoty
             // 
             this.dropdownCategoty.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Gallery;
-            this.dropdownCategoty.Location = new System.Drawing.Point(125, 276);
-            this.dropdownCategoty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dropdownCategoty.Location = new System.Drawing.Point(94, 224);
+            this.dropdownCategoty.Margin = new System.Windows.Forms.Padding(2);
             this.dropdownCategoty.Name = "dropdownCategoty";
-            this.dropdownCategoty.Size = new System.Drawing.Size(215, 39);
+            this.dropdownCategoty.Size = new System.Drawing.Size(161, 32);
             this.dropdownCategoty.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.dropdownCategoty.StateNormal.Back.Color2 = System.Drawing.Color.White;
             this.dropdownCategoty.StateNormal.Border.Color1 = System.Drawing.Color.Black;
@@ -173,9 +192,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(15, 340);
+            this.label4.Location = new System.Drawing.Point(11, 276);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 25);
+            this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Price";
             // 
@@ -184,10 +204,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(220, 393);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(165, 319);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(120, 50);
+            this.btnRefresh.Size = new System.Drawing.Size(90, 41);
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -198,9 +218,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(15, 81);
+            this.label5.Location = new System.Drawing.Point(11, 66);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 25);
+            this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Picture";
             // 
@@ -209,18 +230,19 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(15, 276);
+            this.label2.Location = new System.Drawing.Point(11, 224);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 25);
+            this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Category";
             // 
             // txtItemProduct
             // 
-            this.txtItemProduct.Location = new System.Drawing.Point(127, 217);
-            this.txtItemProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtItemProduct.Location = new System.Drawing.Point(95, 176);
+            this.txtItemProduct.Margin = new System.Windows.Forms.Padding(2);
             this.txtItemProduct.Name = "txtItemProduct";
-            this.txtItemProduct.Size = new System.Drawing.Size(215, 39);
+            this.txtItemProduct.Size = new System.Drawing.Size(161, 35);
             this.txtItemProduct.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtItemProduct.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtItemProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -235,20 +257,21 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(15, 217);
+            this.label3.Location = new System.Drawing.Point(11, 176);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 25);
+            this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Item";
             // 
             // txtIDProduct
             // 
             this.txtIDProduct.Enabled = false;
-            this.txtIDProduct.Location = new System.Drawing.Point(125, 158);
-            this.txtIDProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDProduct.Location = new System.Drawing.Point(94, 128);
+            this.txtIDProduct.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDProduct.Name = "txtIDProduct";
             this.txtIDProduct.ReadOnly = true;
-            this.txtIDProduct.Size = new System.Drawing.Size(215, 39);
+            this.txtIDProduct.Size = new System.Drawing.Size(161, 35);
             this.txtIDProduct.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtIDProduct.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtIDProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -262,9 +285,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(15, 158);
+            this.label1.Location = new System.Drawing.Point(11, 128);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 25);
+            this.label1.Size = new System.Drawing.Size(28, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "ID";
             // 
@@ -276,20 +300,20 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel3.Controls.Add(this.btnDeleteProduct);
             this.panel3.Controls.Add(this.btnAddProduct);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(359, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(269, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(676, 90);
+            this.panel3.Size = new System.Drawing.Size(507, 73);
             this.panel3.TabIndex = 5;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(228, 30);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(171, 24);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 26);
+            this.pictureBox2.Size = new System.Drawing.Size(26, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -298,10 +322,10 @@ namespace CandyBugWinformDemo.NewFolder1
             // txtFindProduct
             // 
             this.txtFindProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFindProduct.Location = new System.Drawing.Point(7, 24);
-            this.txtFindProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFindProduct.Location = new System.Drawing.Point(5, 20);
+            this.txtFindProduct.Margin = new System.Windows.Forms.Padding(2);
             this.txtFindProduct.Name = "txtFindProduct";
-            this.txtFindProduct.Size = new System.Drawing.Size(215, 39);
+            this.txtFindProduct.Size = new System.Drawing.Size(161, 35);
             this.txtFindProduct.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.txtFindProduct.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.txtFindProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -315,10 +339,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnUpdateProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdateProduct.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnUpdateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProduct.Location = new System.Drawing.Point(535, 20);
-            this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(401, 16);
+            this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
-            this.btnUpdateProduct.Size = new System.Drawing.Size(120, 50);
+            this.btnUpdateProduct.Size = new System.Drawing.Size(90, 41);
             this.btnUpdateProduct.TabIndex = 3;
             this.btnUpdateProduct.Text = "Update";
             this.btnUpdateProduct.UseVisualStyleBackColor = false;
@@ -329,10 +353,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnDeleteProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteProduct.BackColor = System.Drawing.Color.OrangeRed;
             this.btnDeleteProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteProduct.Location = new System.Drawing.Point(409, 20);
-            this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(307, 16);
+            this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
-            this.btnDeleteProduct.Size = new System.Drawing.Size(120, 50);
+            this.btnDeleteProduct.Size = new System.Drawing.Size(90, 41);
             this.btnDeleteProduct.TabIndex = 3;
             this.btnDeleteProduct.Text = "Delete";
             this.btnDeleteProduct.UseVisualStyleBackColor = false;
@@ -343,10 +367,10 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.Location = new System.Drawing.Point(283, 20);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddProduct.Location = new System.Drawing.Point(212, 16);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(120, 50);
+            this.btnAddProduct.Size = new System.Drawing.Size(90, 41);
             this.btnAddProduct.TabIndex = 3;
             this.btnAddProduct.Text = "Add";
             this.btnAddProduct.UseVisualStyleBackColor = false;
@@ -363,6 +387,7 @@ namespace CandyBugWinformDemo.NewFolder1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewformProducts.AutoGenerateColumns = false;
+            this.dataGridViewformProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewformProducts.BackgroundColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -389,64 +414,19 @@ namespace CandyBugWinformDemo.NewFolder1
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewformProducts.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewformProducts.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridViewformProducts.Location = new System.Drawing.Point(366, 94);
-            this.dataGridViewformProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewformProducts.Location = new System.Drawing.Point(274, 76);
+            this.dataGridViewformProducts.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewformProducts.Name = "dataGridViewformProducts";
             this.dataGridViewformProducts.ReadOnly = true;
             this.dataGridViewformProducts.RowHeadersWidth = 51;
             this.dataGridViewformProducts.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dataGridViewformProducts.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridViewformProducts.RowTemplate.Height = 24;
-            this.dataGridViewformProducts.Size = new System.Drawing.Size(669, 372);
+            this.dataGridViewformProducts.Size = new System.Drawing.Size(502, 302);
             this.dataGridViewformProducts.TabIndex = 6;
             this.dataGridViewformProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellContentClick);
             this.dataGridViewformProducts.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellContentClick);
             this.dataGridViewformProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewformProducts_CellContentClick);
-            // 
-            // idProDataGridViewTextBoxColumn
-            // 
-            this.idProDataGridViewTextBoxColumn.DataPropertyName = "idPro";
-            this.idProDataGridViewTextBoxColumn.HeaderText = "idPro";
-            this.idProDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idProDataGridViewTextBoxColumn.Name = "idProDataGridViewTextBoxColumn";
-            this.idProDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idProDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
-            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // imageDataGridViewImageColumn
-            // 
-            this.imageDataGridViewImageColumn.DataPropertyName = "image";
-            this.imageDataGridViewImageColumn.HeaderText = "image";
-            this.imageDataGridViewImageColumn.MinimumWidth = 6;
-            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
-            this.imageDataGridViewImageColumn.ReadOnly = true;
-            this.imageDataGridViewImageColumn.Width = 125;
             // 
             // productBindingSource4
             // 
@@ -503,19 +483,59 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.ordersTableAdapter.ClearBeforeFill = true;
             // 
+            // idProDataGridViewTextBoxColumn
+            // 
+            this.idProDataGridViewTextBoxColumn.DataPropertyName = "idPro";
+            this.idProDataGridViewTextBoxColumn.HeaderText = "idPro";
+            this.idProDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idProDataGridViewTextBoxColumn.Name = "idProDataGridViewTextBoxColumn";
+            this.idProDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // imageDataGridViewImageColumn
+            // 
+            this.imageDataGridViewImageColumn.DataPropertyName = "image";
+            this.imageDataGridViewImageColumn.HeaderText = "image";
+            this.imageDataGridViewImageColumn.MinimumWidth = 6;
+            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
+            this.imageDataGridViewImageColumn.ReadOnly = true;
+            // 
             // FormProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1035, 474);
+            this.ClientSize = new System.Drawing.Size(776, 385);
             this.Controls.Add(this.dataGridViewformProducts);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormProducts";
             this.Text = "FormProducts";
             this.TransparencyKey = System.Drawing.Color.Black;
@@ -552,7 +572,7 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Label label2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtItemProduct;
         private System.Windows.Forms.Label label3;
-        private ComponentFactory.Krypton.Toolkit.KryptonDomainUpDown updownPrice;
+        private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown updownPrice;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnUpdateProduct;
         private System.Windows.Forms.Button btnDeleteProduct;
@@ -576,11 +596,11 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.BindingSource fKOrdersstatus72C60C4ABindingSource;
         private QLBKDataSetTableAdapters.OrdersTableAdapter ordersTableAdapter;
         private System.Windows.Forms.BindingSource productBindingSource4;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
-        private System.Windows.Forms.Button btnRefresh;
     }
 }

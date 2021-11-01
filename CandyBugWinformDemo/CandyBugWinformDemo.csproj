@@ -60,6 +60,7 @@
     <Compile Include="Control\ProductDAO.cs" />
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\Category.cs" />
+    <Compile Include="Object\ifOrder.cs" />
     <Compile Include="Object\Orders.cs" />
     <Compile Include="Object\Product.cs" />
     <Compile Include="QLBKDataSet.Designer.cs">
@@ -147,6 +148,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CandyBugWinformDemo.Object.ifOrder.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
