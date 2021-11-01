@@ -17,7 +17,7 @@ namespace CandyBugWinformDemo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CandyBugWinformDemo.NewFolder1.FormStatistical());
+            Application.Run(new FormLogin());
         }
     }
 }
