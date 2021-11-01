@@ -181,8 +181,6 @@ namespace CandyBugWinformDemo.NewFolder1
                 {
                     load_data("SELECT Product.idPro, Product.name, Orders.quantity, CONVERT(nvarchar(50), CAST(Product.price as money),1), CONVERT(nvarchar(50), CAST(Product.price * Orders.quantity as money),1), FORMAT(FORMAT(CAST(Orders.DateCheckOut as date), 'dd/MM/yyyy'), 'dd/MM/yyyy') FROM Orders INNER JOIN Product ON Orders.idProduct = Product.idPro where Product.name = N'" + textBoxTimKiem.Text + "'");
                 }
-                textBoxTimKiem.Enabled = false;
-                textBoxTimKiem.Enabled = true;
             }
         }
 
@@ -192,15 +190,8 @@ namespace CandyBugWinformDemo.NewFolder1
             FormStatistical_Load(sender,e);
         }
 
-        //Khu panel
         //Khi người dùng click phần ngoài trong khu phần thông tin thì sẽ đặt lại text cho ô tìm kiếm
         private void panelHienThiThongTIn_Click(object sender, EventArgs e)
-        {
-            textBoxTimKiem.Text = "Tìm kiếm theo id của item, name của item";
-            textBoxTimKiem.ForeColor = Color.DarkGray;
-        }
-        //Khi người dùng click phần ngoài trong khu phần thông tin thì sẽ đặt lại text cho ô của date time picker và các nút
-        private void panel1_Click(object sender, EventArgs e)
         {
             textBoxTimKiem.Text = "Tìm kiếm theo id của item, name của item";
             textBoxTimKiem.ForeColor = Color.DarkGray;
@@ -218,7 +209,7 @@ namespace CandyBugWinformDemo.NewFolder1
         //Nhấn nút này sẽ truyền dữ liệu sang excel
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            exportToExcel(dataGridViewStatistical, @"D:\Users\Public\OneDrive\Tài liệu\Exel", "CandyBugThongKe");
+            exportToExcel(dataGridViewStatistical, @"C:\Tài liệu\", "CandyBugThongKe");
         }
 
         //Khu date tim picker

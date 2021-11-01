@@ -74,7 +74,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(637, 68);
             this.panel1.TabIndex = 2;
-            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // dateTimePickerTo
             // 
