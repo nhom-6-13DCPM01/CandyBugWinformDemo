@@ -148,5 +148,10 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             tabControl1.SelectTab("Cakes");
         }
+
+        private void btnPrintBill_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
