@@ -61,12 +61,21 @@ namespace CandyBugWinformDemo.NewFolder1
                         }
                         else
                         {
-                            mItem.DropDownItems.Add("remove");
-                           
+                            ToolStripMenuItem remove = new ToolStripMenuItem();
+                            remove.Text = "Remove";
+                            remove.Click += Remove_Click;
+                            remove.Tag = mItem.Text;
+                            mItem.DropDownItems.Add(remove);
                         }
-                
                 }
         }
+
+        private void Remove_Click(object sender, EventArgs e)
+        {
+            string nameCate = (((sender) as ToolStripMenuItem).Tag).ToString();
+            
+        }
+
         //
         //
         private void dropdownCategoty_DropDown(object sender, ComponentFactory.Krypton.Toolkit.ContextPositionMenuArgs e)
@@ -81,10 +90,6 @@ namespace CandyBugWinformDemo.NewFolder1
             dropdownCategoty.Text = m;
         }
 
-        private void RemoveItem_Click(object sender, EventArgs e)
-        {
-            
-        }
         //
         public void loadGridData()
         {
