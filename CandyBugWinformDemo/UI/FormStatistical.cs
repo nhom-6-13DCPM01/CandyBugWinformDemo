@@ -10,17 +10,32 @@ using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel; //using vô
 using App = Microsoft.Office.Interop.Excel.Application; //đây là gán giá trị luôn lấy lớp cho ngắn
 using System.Data.SqlClient;
+using CandyBugWinformDemo.Object;
 
 namespace CandyBugWinformDemo.NewFolder1
 {
     public partial class FormStatistical : Form
     {
-       
-            
-        public FormStatistical()
+        //dung account de phan quyen sta...
+        public Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount); }
+        }
+
+        void ChangeAccount(Account acc)
+        {
+
+        }
+        //
+        public FormStatistical(Account acc)
         {
             InitializeComponent();
+            LoginAccount = acc;
         }
+               
         //thuộc tính
         SqlConnection connection;
         String connectionString = "Data Source=nhomsix.database.windows.net;Initial Catalog=QLBK;User ID=nhom6;Password=123456789aA";

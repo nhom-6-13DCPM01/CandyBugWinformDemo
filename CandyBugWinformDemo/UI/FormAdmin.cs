@@ -15,6 +15,7 @@ namespace CandyBugWinformDemo.NewFolder1
 {
     public partial class FormAdmin : Form
     {
+
         BindingSource accountList = new BindingSource();
         public Account loginAccount;
 
@@ -23,6 +24,7 @@ namespace CandyBugWinformDemo.NewFolder1
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount); }
         }
+
 
 
 
@@ -47,8 +49,8 @@ namespace CandyBugWinformDemo.NewFolder1
 
         void ChangeAccount(Account acc)
         {
-            kryptonTextBox1.Text = LoginAccount.Username;
-            kryptonTextBox2.Text = LoginAccount.Displayname;
+            /*kryptonTextBox1.Text = LoginAccount.Username;
+            kryptonTextBox2.Text = LoginAccount.Displayname;*/
         }
 
         public List<Account> SearchAccountByName(string name)
