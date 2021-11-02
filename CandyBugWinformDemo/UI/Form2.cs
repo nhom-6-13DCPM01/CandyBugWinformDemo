@@ -21,10 +21,16 @@ namespace CandyBugWinformDemo
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
-        public Account LoginAccount { get; private set; }
+        private Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.Type); }
+        }
 
         //Constructor
-        public Form2()
+        public Form2(Account acc)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -48,8 +54,16 @@ namespace CandyBugWinformDemo
 
         }
 
-        
+
         //Method
+
+
+        void ChangeAccount(bool type)
+        {
+            btnAdmin.Enabled = type == true;
+            
+        }
+
         private void ActivateButton(object senderBtn, Color color)
         {
             if(senderBtn != null)
@@ -133,7 +147,7 @@ namespace CandyBugWinformDemo
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new NewFolder1.FormAdmin());
+            OpenChildForm(new NewFolder1.FormAdmin(LoginAccount));
         }
 
         private void btnHome_Click(object sender, EventArgs e)

@@ -16,21 +16,21 @@ namespace CandyBugWinformDemo.NewFolder1
     public partial class FormAdmin : Form
     {
         BindingSource accountList = new BindingSource();
-       /* public Account loginAccount;
+        public Account loginAccount;
 
         public Account LoginAccount
         {
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount); }
         }
-*/
-       
+
+
 
         //constructor
-        public FormAdmin()
+        public FormAdmin(Account acc)
         {
             InitializeComponent();
-          
+            LoginAccount = acc;
             Load();
             this.dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             this.dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Red;
@@ -43,6 +43,12 @@ namespace CandyBugWinformDemo.NewFolder1
             dataGridView1.DataSource = accountList;
             LoadAccount();
             AddAccountBinding();
+        }
+
+        void ChangeAccount(Account acc)
+        {
+            kryptonTextBox1.Text = LoginAccount.Username;
+            kryptonTextBox2.Text = LoginAccount.Displayname;
         }
 
         public List<Account> SearchAccountByName(string name)
