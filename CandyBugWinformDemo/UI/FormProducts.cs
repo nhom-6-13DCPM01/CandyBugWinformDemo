@@ -42,11 +42,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
-        void ChangeAccount(Account acc)
-        {
-            /*kryptonTextBox1.Text = LoginAccount.Username;
-            kryptonTextBox2.Text = LoginAccount.Displayname;*/
-        }
+       
 
         //
         //FUNTION CLEAR
