@@ -118,7 +118,7 @@ namespace CandyBugWinformDemo.NewFolder1
             worksheet.Range["A1", "F1048576"].Font.Size = 14;
             worksheet.Range["A1", "F1"].Font.Bold = true;
             //Kẻ bảng
-            int soDong = dataGridViewStatistical.Rows.Count;
+            int soDong = dataGridViewStatistical.Rows.Count + 1;
             worksheet.Range["A1", "F" + soDong].Borders.LineStyle = 1;
             //Căn lề
             worksheet.Range["A1", "F1048576"].HorizontalAlignment = 3;
