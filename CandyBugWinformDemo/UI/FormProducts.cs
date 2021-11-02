@@ -15,16 +15,39 @@ namespace CandyBugWinformDemo.NewFolder1
 {
     public partial class FormProducts : Form
     {
+        //dung account de phan quen product
+        public Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount); }
+        }
+
+        void ChangeAccount(Account acc)
+        {
+            
+        }
+
         private ContextMenuStrip _contextMenuAutoFill;
 
-        public FormProducts()
+        
+        public FormProducts(Account acc)
         {
             InitializeComponent();
+            LoginAccount = acc;
             this.dataGridViewformProducts.DefaultCellStyle.ForeColor = Color.Black;
             this.dataGridViewformProducts.DefaultCellStyle.SelectionForeColor = Color.Red;
             this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle.ForeColor = Color.Black;
             this.dataGridViewformProducts.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
         }
+
+        void ChangeAccount(Account acc)
+        {
+            /*kryptonTextBox1.Text = LoginAccount.Username;
+            kryptonTextBox2.Text = LoginAccount.Displayname;*/
+        }
+
         //
         //FUNTION CLEAR
         //

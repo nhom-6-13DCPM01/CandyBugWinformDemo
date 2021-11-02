@@ -21,12 +21,19 @@ namespace CandyBugWinformDemo
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
-        public Account LoginAccount { get; private set; }
+        private Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.Type); }
+        }
 
         //Constructor
-        public Form2()
+        public Form2(Account acc)
         {
             InitializeComponent();
+            this.LoginAccount = acc;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -48,8 +55,17 @@ namespace CandyBugWinformDemo
 
         }
 
-        
+
         //Method
+
+        //tat chuc nang doi voi tk thuong
+        void ChangeAccount(bool type)
+        {
+            btnAdmin.Enabled = type == true;
+            btnStatistical.Enabled = type == true;
+            btnProduct.Enabled = type == true;          
+        }
+
         private void ActivateButton(object senderBtn, Color color)
         {
             if(senderBtn != null)
@@ -120,20 +136,20 @@ namespace CandyBugWinformDemo
         private void btnProduct_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new NewFolder1.FormProducts());
+            OpenChildForm(new NewFolder1.FormProducts(LoginAccount));
         }
 
        
         private void btnMarketing_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new NewFolder1.FormStatistical());
+            OpenChildForm(new NewFolder1.FormStatistical(LoginAccount));
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new NewFolder1.FormAdmin());
+            OpenChildForm(new NewFolder1.FormAdmin(LoginAccount));
         }
 
         private void btnHome_Click(object sender, EventArgs e)
