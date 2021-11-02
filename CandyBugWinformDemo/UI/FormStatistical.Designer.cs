@@ -29,18 +29,16 @@ namespace CandyBugWinformDemo.NewFolder1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnLast = new System.Windows.Forms.Button();
@@ -48,14 +46,16 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnPreviours = new System.Windows.Forms.Button();
             this.btnFirst = new System.Windows.Forms.Button();
             this.panelHienThiThongTIn = new System.Windows.Forms.Panel();
-            this.lblPhanThongTin = new System.Windows.Forms.Label();
-            this.labelTimKiem = new System.Windows.Forms.Label();
-            this.labelTongSoOrder = new System.Windows.Forms.Label();
-            this.labelTongTien = new System.Windows.Forms.Label();
             this.textBoxTongOrder = new System.Windows.Forms.TextBox();
             this.textBoxTongTien = new System.Windows.Forms.TextBox();
             this.textBoxTimKiem = new System.Windows.Forms.TextBox();
             this.dataGridViewStatistical = new System.Windows.Forms.DataGridView();
+            this.kryptonLabelFrom = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabelTo = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabelPhanThongTIn = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabelTongTien = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabelTongLanOrder = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabelTimKiem = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelHienThiThongTIn.SuspendLayout();
@@ -64,12 +64,12 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.kryptonLabelTo);
+            this.panel1.Controls.Add(this.kryptonLabelFrom);
             this.panel1.Controls.Add(this.dateTimePickerTo);
             this.panel1.Controls.Add(this.dateTimePickerFrom);
             this.panel1.Controls.Add(this.btnExcel);
             this.panel1.Controls.Add(this.btnReset);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -83,7 +83,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.dateTimePickerTo.CalendarForeColor = System.Drawing.Color.Brown;
             this.dateTimePickerTo.CalendarTitleBackColor = System.Drawing.Color.OrangeRed;
             this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerTo.Location = new System.Drawing.Point(201, 28);
+            this.dateTimePickerTo.Location = new System.Drawing.Point(219, 28);
             this.dateTimePickerTo.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
             this.dateTimePickerTo.Size = new System.Drawing.Size(104, 20);
@@ -95,7 +95,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.dateTimePickerFrom.CalendarTitleBackColor = System.Drawing.Color.OrangeRed;
             this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(46, 28);
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(64, 28);
             this.dateTimePickerFrom.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
             this.dateTimePickerFrom.Size = new System.Drawing.Size(104, 20);
@@ -132,30 +132,6 @@ namespace CandyBugWinformDemo.NewFolder1
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(166, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "To";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "From";
             // 
             // panel3
             // 
@@ -243,10 +219,10 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             // panelHienThiThongTIn
             // 
-            this.panelHienThiThongTIn.Controls.Add(this.lblPhanThongTin);
-            this.panelHienThiThongTIn.Controls.Add(this.labelTimKiem);
-            this.panelHienThiThongTIn.Controls.Add(this.labelTongSoOrder);
-            this.panelHienThiThongTIn.Controls.Add(this.labelTongTien);
+            this.panelHienThiThongTIn.Controls.Add(this.kryptonLabelTimKiem);
+            this.panelHienThiThongTIn.Controls.Add(this.kryptonLabelTongLanOrder);
+            this.panelHienThiThongTIn.Controls.Add(this.kryptonLabelTongTien);
+            this.panelHienThiThongTIn.Controls.Add(this.kryptonLabelPhanThongTIn);
             this.panelHienThiThongTIn.Controls.Add(this.textBoxTongOrder);
             this.panelHienThiThongTIn.Controls.Add(this.textBoxTongTien);
             this.panelHienThiThongTIn.Controls.Add(this.textBoxTimKiem);
@@ -257,49 +233,12 @@ namespace CandyBugWinformDemo.NewFolder1
             this.panelHienThiThongTIn.TabIndex = 6;
             this.panelHienThiThongTIn.Click += new System.EventHandler(this.panelHienThiThongTIn_Click);
             // 
-            // lblPhanThongTin
-            // 
-            this.lblPhanThongTin.AutoSize = true;
-            this.lblPhanThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhanThongTin.Location = new System.Drawing.Point(16, 2);
-            this.lblPhanThongTin.Name = "lblPhanThongTin";
-            this.lblPhanThongTin.Size = new System.Drawing.Size(100, 17);
-            this.lblPhanThongTin.TabIndex = 7;
-            this.lblPhanThongTin.Text = "Phần thông tin";
-            // 
-            // labelTimKiem
-            // 
-            this.labelTimKiem.AutoSize = true;
-            this.labelTimKiem.Location = new System.Drawing.Point(63, 100);
-            this.labelTimKiem.Name = "labelTimKiem";
-            this.labelTimKiem.Size = new System.Drawing.Size(52, 13);
-            this.labelTimKiem.TabIndex = 6;
-            this.labelTimKiem.Text = "Tìm kiếm:";
-            // 
-            // labelTongSoOrder
-            // 
-            this.labelTongSoOrder.AutoSize = true;
-            this.labelTongSoOrder.Location = new System.Drawing.Point(371, 45);
-            this.labelTongSoOrder.Name = "labelTongSoOrder";
-            this.labelTongSoOrder.Size = new System.Drawing.Size(76, 13);
-            this.labelTongSoOrder.TabIndex = 4;
-            this.labelTongSoOrder.Text = "Tổng số order:";
-            // 
-            // labelTongTien
-            // 
-            this.labelTongTien.AutoSize = true;
-            this.labelTongTien.Location = new System.Drawing.Point(16, 45);
-            this.labelTongTien.Name = "labelTongTien";
-            this.labelTongTien.Size = new System.Drawing.Size(102, 13);
-            this.labelTongTien.TabIndex = 3;
-            this.labelTongTien.Text = " Tổng tiền Payment:";
-            // 
             // textBoxTongOrder
             // 
             this.textBoxTongOrder.BackColor = System.Drawing.SystemColors.Info;
             this.textBoxTongOrder.Enabled = false;
             this.textBoxTongOrder.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxTongOrder.Location = new System.Drawing.Point(450, 42);
+            this.textBoxTongOrder.Location = new System.Drawing.Point(455, 44);
             this.textBoxTongOrder.Name = "textBoxTongOrder";
             this.textBoxTongOrder.Size = new System.Drawing.Size(100, 20);
             this.textBoxTongOrder.TabIndex = 2;
@@ -309,7 +248,7 @@ namespace CandyBugWinformDemo.NewFolder1
             this.textBoxTongTien.BackColor = System.Drawing.SystemColors.Info;
             this.textBoxTongTien.Enabled = false;
             this.textBoxTongTien.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxTongTien.Location = new System.Drawing.Point(124, 42);
+            this.textBoxTongTien.Location = new System.Drawing.Point(129, 44);
             this.textBoxTongTien.Name = "textBoxTongTien";
             this.textBoxTongTien.Size = new System.Drawing.Size(153, 20);
             this.textBoxTongTien.TabIndex = 1;
@@ -318,7 +257,7 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.textBoxTimKiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxTimKiem.ForeColor = System.Drawing.Color.DarkGray;
-            this.textBoxTimKiem.Location = new System.Drawing.Point(124, 97);
+            this.textBoxTimKiem.Location = new System.Drawing.Point(129, 99);
             this.textBoxTimKiem.Name = "textBoxTimKiem";
             this.textBoxTimKiem.Size = new System.Drawing.Size(357, 20);
             this.textBoxTimKiem.TabIndex = 0;
@@ -331,46 +270,94 @@ namespace CandyBugWinformDemo.NewFolder1
             // 
             this.dataGridViewStatistical.AllowUserToAddRows = false;
             this.dataGridViewStatistical.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewStatistical.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewStatistical.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewStatistical.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStatistical.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStatistical.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewStatistical.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewStatistical.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStatistical.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewStatistical.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewStatistical.Location = new System.Drawing.Point(0, 206);
             this.dataGridViewStatistical.Name = "dataGridViewStatistical";
             this.dataGridViewStatistical.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStatistical.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStatistical.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewStatistical.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewStatistical.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewStatistical.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewStatistical.Size = new System.Drawing.Size(637, 264);
             this.dataGridViewStatistical.TabIndex = 7;
+            // 
+            // kryptonLabelFrom
+            // 
+            this.kryptonLabelFrom.Location = new System.Drawing.Point(20, 28);
+            this.kryptonLabelFrom.Name = "kryptonLabelFrom";
+            this.kryptonLabelFrom.Size = new System.Drawing.Size(39, 20);
+            this.kryptonLabelFrom.TabIndex = 8;
+            this.kryptonLabelFrom.Values.Text = "From";
+            // 
+            // kryptonLabelTo
+            // 
+            this.kryptonLabelTo.Location = new System.Drawing.Point(190, 28);
+            this.kryptonLabelTo.Name = "kryptonLabelTo";
+            this.kryptonLabelTo.Size = new System.Drawing.Size(24, 20);
+            this.kryptonLabelTo.TabIndex = 9;
+            this.kryptonLabelTo.Values.Text = "To";
+            // 
+            // kryptonLabelPhanThongTIn
+            // 
+            this.kryptonLabelPhanThongTIn.Location = new System.Drawing.Point(20, 5);
+            this.kryptonLabelPhanThongTIn.Name = "kryptonLabelPhanThongTIn";
+            this.kryptonLabelPhanThongTIn.Size = new System.Drawing.Size(91, 20);
+            this.kryptonLabelPhanThongTIn.TabIndex = 7;
+            this.kryptonLabelPhanThongTIn.Values.Text = "Phần thông tin";
+            // 
+            // kryptonLabelTongTien
+            // 
+            this.kryptonLabelTongTien.Location = new System.Drawing.Point(60, 44);
+            this.kryptonLabelTongTien.Name = "kryptonLabelTongTien";
+            this.kryptonLabelTongTien.Size = new System.Drawing.Size(65, 20);
+            this.kryptonLabelTongTien.TabIndex = 8;
+            this.kryptonLabelTongTien.Values.Text = "Tổng tiền:";
+            // 
+            // kryptonLabelTongLanOrder
+            // 
+            this.kryptonLabelTongLanOrder.Location = new System.Drawing.Point(355, 44);
+            this.kryptonLabelTongLanOrder.Name = "kryptonLabelTongLanOrder";
+            this.kryptonLabelTongLanOrder.Size = new System.Drawing.Size(94, 20);
+            this.kryptonLabelTongLanOrder.TabIndex = 9;
+            this.kryptonLabelTongLanOrder.Values.Text = "Tổng lần order:";
+            // 
+            // kryptonLabelTimKiem
+            // 
+            this.kryptonLabelTimKiem.Location = new System.Drawing.Point(63, 99);
+            this.kryptonLabelTimKiem.Name = "kryptonLabelTimKiem";
+            this.kryptonLabelTimKiem.Size = new System.Drawing.Size(60, 20);
+            this.kryptonLabelTimKiem.TabIndex = 10;
+            this.kryptonLabelTimKiem.Values.Text = "Tìm kiếm";
             // 
             // FormStatistical
             // 
@@ -401,8 +388,6 @@ namespace CandyBugWinformDemo.NewFolder1
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnExcel;
@@ -414,13 +399,15 @@ namespace CandyBugWinformDemo.NewFolder1
         private System.Windows.Forms.Button btnPreviours;
         private System.Windows.Forms.Button btnFirst;
         private System.Windows.Forms.Panel panelHienThiThongTIn;
-        private System.Windows.Forms.Label labelTongSoOrder;
-        private System.Windows.Forms.Label labelTongTien;
         private System.Windows.Forms.TextBox textBoxTongOrder;
         private System.Windows.Forms.TextBox textBoxTongTien;
         private System.Windows.Forms.TextBox textBoxTimKiem;
-        private System.Windows.Forms.Label labelTimKiem;
         private System.Windows.Forms.DataGridView dataGridViewStatistical;
-        private System.Windows.Forms.Label lblPhanThongTin;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabelFrom;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabelTo;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabelTimKiem;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabelTongLanOrder;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabelTongTien;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabelPhanThongTIn;
     }
 }

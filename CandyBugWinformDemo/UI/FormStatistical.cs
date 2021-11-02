@@ -32,10 +32,14 @@ namespace CandyBugWinformDemo.NewFolder1
         //
         public FormStatistical(Account acc)
         {
-            InitializeComponent();
             LoginAccount = acc;
+            InitializeComponent();
         }
-               
+        public FormStatistical()
+        {
+            InitializeComponent();
+        }
+
         //thuộc tính
         SqlConnection connection;
         String connectionString = "Data Source=nhomsix.database.windows.net;Initial Catalog=QLBK;User ID=nhom6;Password=123456789aA";
