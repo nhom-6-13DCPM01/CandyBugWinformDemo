@@ -223,6 +223,8 @@ namespace CandyBugWinformDemo.NewFolder1
         {
             textBoxTimKiem.Text = "Tìm kiếm theo id của item, name của item";
             textBoxTimKiem.ForeColor = Color.DarkGray;
+            textBoxTimKiem.Enabled = false;
+            textBoxTimKiem.Enabled = true;
         }
 
         //Khu Button
@@ -232,6 +234,8 @@ namespace CandyBugWinformDemo.NewFolder1
             load_data("SELECT Product.idPro, Product.name, Orders.quantity, CONVERT(nvarchar(50), CAST(Product.price as money),1), CONVERT(nvarchar(50), CAST(Product.price * Orders.quantity as money),1), FORMAT(CAST(Orders.DateCheckOut as date), 'dd/MM/yyyy') FROM Orders INNER JOIN Product ON Orders.idProduct = Product.idPro");
             textBoxTimKiem.Text = "Tìm kiếm theo id của item, name của item";
             textBoxTimKiem.ForeColor = Color.DarkGray;
+            textBoxTimKiem.Enabled = false;
+            textBoxTimKiem.Enabled = true;
         }
 
         //Nhấn nút này sẽ truyền dữ liệu sang excel
